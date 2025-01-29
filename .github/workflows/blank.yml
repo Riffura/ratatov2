@@ -4,6 +4,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
   schedule:
     - cron: '0 */5 * * *'  # Run every 5 hours
 
@@ -12,17 +13,23 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1  
+          persist-credentials: true
+          token: ${{ secrets.FINE_GRAINED_PAT }}  
 
       - uses: graalvm/setup-graalvm@v1
         with:
           java-version: '22'
           distribution: 'graalvm'
-
-      - name: Download and Install Cloudflared
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Install Cloudflared (Latest)
         run: |
           wget https://github.com/cloudflare/cloudflared/releases/download/2025.1.0/cloudflared-linux-amd64
           chmod +x cloudflared-linux-amd64
           sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+          cloudflared --version
 
       - name: Setup Cloudflared Configuration
         env:
@@ -33,26 +40,23 @@ jobs:
           mkdir -p ~/.cloudflared
           echo "${CF_TUNNEL_CERT}" > ~/.cloudflared/cert.pem
           echo "${CF_TUNNEL_UUID_CONTENT}" > ~/.cloudflared/credentials.json
-          
+
           cat <<EOF > ~/.cloudflared/tunnel-config.yml
           url: tcp://localhost:25565
           tunnel: ${CF_TUNNEL_UUID}
           credentials-file: ~/.cloudflared/credentials.json
           EOF
 
-          echo "==== DEBUG: List Cloudflared Directory ===="
+          echo "==== DEBUG: List ~/.cloudflared Directory ===="
           ls -lah ~/.cloudflared
 
           echo "==== DEBUG: Show Cloudflared Configuration ===="
           cat ~/.cloudflared/tunnel-config.yml
-          
-          echo "==== DEBUG: Show Cloudflared Credentials ===="
-          cat ~/.cloudflared/credentials.json
 
       - name: Run Spigot and Cloudflared
         run: |
-          echo "Starting Spigot server..."
+          echo "Starting Spigot..."
           java -Xms16G -Xmx16G -jar server.jar nogui &
 
           echo "Starting Cloudflared tunnel..."
-          cloudflared tunnel --config ~/.cloudflared/tunnel-config.yml run ${CF_TUNNEL_UUID}
+          cloudflared tunnel --config ~/.cloudflared/tunnel-config.yml run ${CF_TUNNEL_UUID} &
