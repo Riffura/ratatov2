@@ -27,7 +27,7 @@ jobs:
       - name: Setup Cloudflared Configuration
         env:
           CF_TUNNEL_CERT: ${{ secrets.CF_CERT }}
-          CF_TUNNEL_UUID: ${{ secrets.CF_TUNNEL_UUID_1 }}
+          CF_TUNNEL_UUID: ${{ secrets.CF_TUNNEL_UUID }}
           CF_TUNNEL_UUID_CONTENT: ${{ secrets.CF_TUNNEL_UUID_CONTENT }}
         run: |
           mkdir -p ~/.cloudflared
