@@ -68,7 +68,7 @@ jobs:
           }
 
           start_cloudflared() {
-            cloudflared tunnel --config tunnel-config.yml run ${CF_TUNNEL_UUID} &
+            cloudflared tunnel --config ./tunnel-config.yml run ${CF_TUNNEL_UUID} &
             CLOUDFLARED_PID=$!
             echo "Cloudflare Tunnel started with PID $CLOUDFLARED_PID"
           }
