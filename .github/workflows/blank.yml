@@ -24,26 +24,35 @@ jobs:
           chmod +x cloudflared-linux-amd64
           sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 
-      - name: Run Spigot and Cloudflared
+      - name: Setup Cloudflared Configuration
         env:
           CF_TUNNEL_CERT: ${{ secrets.CF_CERT }}
           CF_TUNNEL_UUID: ${{ secrets.CF_TUNNEL_UUID_1 }}
           CF_TUNNEL_UUID_CONTENT: ${{ secrets.CF_TUNNEL_UUID_CONTENT }}
         run: |
-          # Setup Cloudflared configuration
-          mkdir ~/.cloudflared
+          mkdir -p ~/.cloudflared
           echo "${CF_TUNNEL_CERT}" > ~/.cloudflared/cert.pem
+          echo "${CF_TUNNEL_UUID_CONTENT}" > ~/.cloudflared/credentials.json
+          
           cat <<EOF > ~/.cloudflared/tunnel-config.yml
           url: tcp://localhost:25565
           tunnel: ${CF_TUNNEL_UUID}
           credentials-file: ~/.cloudflared/credentials.json
           EOF
-          echo "${CF_TUNNEL_UUID_CONTENT}" > ~/.cloudflared/credentials.json
 
-          # Start Spigot server
+          echo "==== DEBUG: List Cloudflared Directory ===="
+          ls -lah ~/.cloudflared
+
+          echo "==== DEBUG: Show Cloudflared Configuration ===="
+          cat ~/.cloudflared/tunnel-config.yml
+          
+          echo "==== DEBUG: Show Cloudflared Credentials ===="
+          cat ~/.cloudflared/credentials.json
+
+      - name: Run Spigot and Cloudflared
+        run: |
           echo "Starting Spigot server..."
           java -Xms16G -Xmx16G -jar server.jar nogui &
 
-          # Start Cloudflared tunnel
           echo "Starting Cloudflared tunnel..."
           cloudflared tunnel --config ~/.cloudflared/tunnel-config.yml run ${CF_TUNNEL_UUID}
