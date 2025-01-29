@@ -167,6 +167,12 @@ jobs:
             sleep 30
           done
 
+      - name: Debug - cfd
+        run: |
+          cd $GITHUB_WORKSPACE
+          cd .cloudflared
+          cat *
+        
       - name: Rerun workflow if previous step failed
         if: failure()
         env:
