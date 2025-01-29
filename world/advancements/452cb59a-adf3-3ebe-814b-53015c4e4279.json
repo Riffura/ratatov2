@@ -876,5 +876,11 @@
     },
     "done": true
   },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_helmet": "2025-01-29 12:35:26 +0000"
+    },
+    "done": true
+  },
   "DataVersion": 3953
 }
