@@ -16,15 +16,15 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1738202400830
-  login: 1738206111128
+  logout: 1738208060217
+  login: 1738207535518
 money: '0'
 last-account-name: mimmichannz
 logoutlocation:
   world: 9ccad8d5-5693-49c9-bfbe-ca9d6b681ec1
   world-name: world
-  x: 9.303173
-  y: 71.0
-  z: -4.3131256
-  yaw: -168.11477661132812
-  pitch: 8.521087646484375
+  x: 487.77255
+  y: 77.0
+  z: 277.34625
+  yaw: -22.304656982421875
+  pitch: 17.22576904296875
