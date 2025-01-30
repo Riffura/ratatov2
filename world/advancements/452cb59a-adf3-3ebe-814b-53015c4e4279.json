@@ -7,6 +7,7 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:beach": "2025-01-30 13:45:09 +0000",
       "minecraft:forest": "2025-01-30 09:18:21 +0000",
       "minecraft:river": "2025-01-30 09:26:26 +0000",
       "minecraft:plains": "2025-01-30 09:21:21 +0000"
@@ -129,6 +130,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "mutton": "2025-01-30 13:53:34 +0000",
       "apple": "2025-01-30 09:30:17 +0000",
       "bread": "2025-01-30 09:25:49 +0000"
     },
@@ -591,6 +593,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/blue_dye": {
+    "criteria": {
+      "has_lapis_lazuli": "2025-01-30 13:52:06 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_chestplate": {
     "criteria": {
       "has_iron_ingot": "2025-01-30 13:32:12 +0000"
@@ -602,6 +610,12 @@
       "minecraft:woods": "2025-01-30 13:36:21 +0000"
     },
     "done": false
+  },
+  "minecraft:recipes/building_blocks/lapis_block": {
+    "criteria": {
+      "has_lapis_lazuli": "2025-01-30 13:52:06 +0000"
+    },
+    "done": true
   },
   "minecraft:recipes/food/cooked_chicken": {
     "criteria": {
