@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 0:0:0:0:0:0:0:1%0
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1738196726829
+  login: 1738196631933
+money: '0'
+last-account-name: NadhifX
+logoutlocation:
+  world: 9ccad8d5-5693-49c9-bfbe-ca9d6b681ec1
+  world-name: world
+  x: 7.149952
+  y: 72.0
+  z: 5.160352
+  yaw: -167.63075256347656
+  pitch: 10.421112060546875
