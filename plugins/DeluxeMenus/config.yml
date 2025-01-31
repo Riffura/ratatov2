@@ -12,3 +12,8 @@ gui_menus:
     file: advanced_menu.yml
   requirements_menu:
     file: requirements_menu.yml
+  buy_arcane_stachel:
+    file: ae_config/buy_arcane_satchel.yml
+  buy_random_enchantrcbook:
+    file: ae_config/buy_random_enchantrcbook.yml
+
