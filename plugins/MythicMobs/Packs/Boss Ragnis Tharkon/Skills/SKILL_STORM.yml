@@ -1,0 +1,44 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+SKILL_STORM:
+  Cooldown: 10
+  Skills:
+  - setstance{stance=THARKON_STORM} @self
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=12;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30} @PIR{r=30} 0.5
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=12;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30;repeat=2;repeatinterval=10} @RandomLocationsNearOrigin{a=2to3;r=10;minr=2;s=3}
+  - delay 20
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=10;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30} @PIR{r=30} 0.5
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=10;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30;repeat=2;repeatinterval=10} @RandomLocationsNearOrigin{a=4to5;r=15;minr=4;s=3}
+  - delay 20
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=8;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30} @PIR{r=30} 0.5
+  - projectile{onTick=THARKON_PROJECTILE_STORM-Tick;onHit=THARKON_PROJECTILE_STORM-Hit;v=8;i=1;hR=1;vR=1;sfo=-10;tyo=0;syo=30;repeat=2;repeatinterval=10} @RandomLocationsNearOrigin{a=6to8;r=20;minr=8;s=3}
+  - delay 60
+  - setstance{stance=THARKON_NORMAL} @self
+
+THARKON_PROJECTILE_STORM-Tick:
+  Skills:
+  - effect:particles{particle=SMALL_FLAME;amount=2;hS=0.1;vS=0.1;speed=0} @origin
+  - effect:particles{particle=SMOKE_NORMAL;amount=1;hS=0;vS=0;speed=0} @origin
+
+THARKON_PROJECTILE_STORM-Hit:
+  Skills:
+  - damage{a=5to10;i=false}
+  - ignite{ticks=100} 0.5
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

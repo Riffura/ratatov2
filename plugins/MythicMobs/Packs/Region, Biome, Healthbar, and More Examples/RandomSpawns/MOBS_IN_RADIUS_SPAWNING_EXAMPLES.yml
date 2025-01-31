@@ -1,0 +1,30 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# This will spawn the same mob with a spawn limit on 10 entities in a radius of 200 blocks. 
+# Why is it 10, when it says 9? I really dont know, but it works that way. 
+# If you example set it to (>0) = 1 entity, (>1) = 2 entities, (>2) = 3 entities, I think that because we use ">" it increases with 1 rather than setting it to equal "=" 0.
+#
+MOBS_IN_RADIUS_EXAMPLE_1:
+  Type: LEVELLING_EXAMPLE_1
+  Worlds: world
+  Chance: 0.0 # Increase this to "1.0" to have a 100% chance of spawning
+  Priority: 1
+  Action: ADD #Change "GenerateSpawnPoints: false" to "GenerateSpawnPoints: true" in the config.yml and it will ADD those mobs
+  Conditions:
+  - mobsInRadius{types=LEVELLING_EXAMPLE_1;amount=>9;radius=200} false
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,199 @@
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ██╗████████╗███████╗███╗░░░███╗░██████╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██║╚══██╔══╝██╔════╝████╗░████║██╔════╝
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ██║░░░██║░░░█████╗░░██╔████╔██║╚█████╗░
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ██║░░░██║░░░██╔══╝░░██║╚██╔╝██║░╚═══██╗
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ██║░░░██║░░░███████╗██║░╚═╝░██║██████╔╝
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ╚═╝░░░╚═╝░░░╚══════╝╚═╝░░░░░╚═╝╚═════╝░
+#
+# The Greatest Knight's Equipment
+#
+THE_GREATEST_KNIGHT_HEAD:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMDJhZjEwMWJjYzBlYzViMTU5YjljNzdiMmMwMzA1YjlkMzAwMGQ5MzFmYzUzMjljZmRjMGIwMzc0YjY5MiJ9fX0=
+    HideFlags: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:2
+THE_GREATEST_KNIGHT_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Options:
+    HideFlags: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:2
+THE_GREATEST_KNIGHT_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Options:
+    HideFlags: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:2
+THE_GREATEST_KNIGHT_BOOTS:
+  Id: NETHERITE_BOOTS
+  Options:
+    HideFlags: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_FALL:1
+THE_GREATEST_KNIGHT_SWORD:
+  Id: NETHERITE_SWORD
+  Options:
+    HideFlags: false
+  Enchantments:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:3
+#
+# The Greatest Knight's Item Drops
+#
+THE_GREATEST_KNIGHT_HEAD_DROP:
+  Id: PLAYER_HEAD
+  Display: '<gradient:#00e5ff:#ffffff><bold>Undying Valor Headpiece</gradient>'
+  Lore:
+  - '&7'
+  - '&7Crafted from darkened steel with an ominous plume,'
+  - '&7this headpiece reflects The Greatest Knight''s'
+  - '&7unyielding loyalty, symbolizing a commitment to darkness.'
+  - '&7'
+  - '&3Acquired from defeating The Greatest Knight boss.'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMDJhZjEwMWJjYzBlYzViMTU5YjljNzdiMmMwMzA1YjlkMzAwMGQ5MzFmYzUzMjljZmRjMGIwMzc0YjY5MiJ9fX0=
+    Unbreakable: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - OXYGEN:4
+THE_GREATEST_KNIGHT_CHESTPLATE_DROP:
+  Id: NETHERITE_CHESTPLATE
+  Display: '<gradient:#00e5ff:#ffffff><bold>Dreadforged Chestplate</gradient>'
+  Lore:
+  - '&7'
+  - '&7Forged from obsidian and dark alloys,'
+  - '&7this chestplate embodies The Greatest Knight''s'
+  - '&7formidable power, a visual testament to'
+  - '&7unwavering dedication to shadows.'
+  - '&7'
+  - '&3Acquired from defeating The Greatest Knight boss.'
+  Options:
+    Unbreakable: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - DURABILITY:3
+  - MENDING:1
+  - THORNS:2
+THE_GREATEST_KNIGHT_LEGGINGS_DROP:
+  Id: NETHERITE_LEGGINGS
+  Display: '<gradient:#00e5ff:#ffffff><bold>Shadowweave Legplates</gradient>'
+  Lore:
+  - '&7'
+  - '&7Crafted from enchanted shadows,'
+  - '&7these leggings grant eerie nimbleness,'
+  - '&7symbolizing The Greatest Knight''s'
+  - '&7commitment to the realms of shadow.'
+  - '&7'
+  - '&3Acquired from defeating The Greatest Knight boss.'
+  Options:
+    Unbreakable: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - DURABILITY:3
+  - MENDING:1
+  - THORNS:2
+THE_GREATEST_KNIGHT_BOOTS_DROP:
+  Id: NETHERITE_BOOTS
+  Display: '<gradient:#00e5ff:#ffffff><bold>Sinister Tread Boots</gradient>'
+  Lore:
+  - '&7'
+  - '&7Crafted from malevolent creature skin,'
+  - '&7these boots leave a chilling imprint,'
+  - '&7emphasizing The Greatest Knight''s'
+  - '&7determination to traverse the realms of darkness.'
+  - '&7'
+  - '&3Acquired from defeating The Greatest Knight boss.'
+  Options:
+    Unbreakable: false
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - DURABILITY:3
+  - MENDING:1
+  - THORNS:2
+  - PROTECTION_FALL:4
+  - DEPTH_STRIDER:3
+THE_GREATEST_KNIGHT_SWORD_DROP:
+  Id: NETHERITE_SWORD
+  Display: '<gradient:#00e5ff:#ffffff><bold>Maleficent Blade</gradient>'
+  Lore:
+  - '&7'
+  - '&7The Maleficent Blade, forged with dark metals and'
+  - '&7shadow-infused crystals, symbolizes'
+  - '&7The Greatest Knight''s commitment to nefarious deeds,'
+  - '&7leaving lingering darkness with each swing.'
+  - '&7'
+  - '&3Acquired from defeating The Greatest Knight boss.'
+  Options:
+    Unbreakable: false
+  Enchantments:
+  - DAMAGE_ALL:4
+  - MENDING:1
+#
+# The Greatest Knight's Minion Items
+#
+THE_GREATEST_KNIGHT_MINION_HEAD:
+  Id: PLAYER_HEAD
+  Display: '<gradient:#00e5ff:#ffffff><bold>The Greatest Knight''s Minion Head</gradient>'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU3OGIzNmJlMGNkMGNjODQ4ZDYxNzQyNmNlODZlYTQ3MmE2MzAyMTE5ZTBhMzJmYWIxZWFkZDhmOGI1M2RiOCJ9fX0=
+
+THE_GREATEST_KNIGHT_MINION_CHESTPLATE:
+  Id: LEATHER_CHESTPLATE
+  Options:
+    Color: BLACK
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+
+THE_GREATEST_KNIGHT_MINION_LEGGINGS:
+  Id: LEATHER_LEGGINGS
+  Options:
+    Color: BLACK
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+
+THE_GREATEST_KNIGHT_MINION_BOOTS:
+  Id: LEATHER_BOOTS
+  Options:
+    Color: BLACK
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+
+THE_GREATEST_KNIGHT_MINION_SWORD:
+  Id: IRON_SWORD
+  Enchantments:
+  - DAMAGE_ALL:1
+#
+# The Greatest Knight's Turret Items
+#
+THE_GREATEST_KNIGHT_TURRET_HEAD:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTY4OTA4ODk2MjczOCwKICAicHJvZmlsZUlkIiA6ICJmODFhNzJhZWZjMjY0MjU0YTQ5NzE0OWYzMjJiZjJlNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJEZXJsYW5fODgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODg1NzIxMTRiMjg1OWE5ODlmZjYxYTM5ZjJmZjRkY2U4ODdkYWU5NmIyYzZiNDE3MjUzNjcxMzBiMGMxMzM0MCIKICAgIH0KICB9Cn0=
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

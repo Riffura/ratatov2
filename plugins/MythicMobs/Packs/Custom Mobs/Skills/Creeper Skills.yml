@@ -1,0 +1,97 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#░█████╗░██████╗░███████╗███████╗██████╗░███████╗██████╗░░██████╗
+#██╔══██╗██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔══██╗██╔════╝
+#██║░░╚═╝██████╔╝█████╗░░█████╗░░██████╔╝█████╗░░██████╔╝╚█████╗░
+#██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██╔═══╝░██╔══╝░░██╔══██╗░╚═══██╗
+#╚█████╔╝██║░░██║███████╗███████╗██║░░░░░███████╗██║░░██║██████╔╝
+#░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░
+#
+### CREEPER BLUFF ###
+CREEPER_BLUFF:
+  Skills:
+  - effect:itemspray{item=crimson_fungus;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=red_tulip;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=dandelion;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=blue_orchid;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=allium;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=azure_bluet;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=poppy;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=oxeye_daisy;amount=5;velocity=1;d=60} @self 0.9
+  - effect:itemspray{item=cornflower;amount=5;velocity=1;d=60} @self 0.9
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### CREEPER_ORE ###
+CREEPER_RANDOMORE:
+  Conditions:
+  - (nearClaim 10 || inClaim) castinstead CREEPER_REMOVE
+  - (region{r=testarea} || region{r=someregion} || region{r=someregion} || region{r=someregion}) castinstead CREEPER_REMOVE # Disable all worldguard regions here
+  Skills:
+  - randomskill{skills=COAL_ORE 10,COPPER_ORE 6,REDSTONE_ORE 6,IRON_ORE 5,LAPIS_ORE 2,GOLD_ORE 1,EMERALD_ORE 1,DIAMOND_ORE 0.5}
+COAL_ORE:
+  Skills:
+  - setblock{m=COAL_ORE} @BlocksInRadius{r=5to7;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+IRON_ORE:
+  Skills:
+  - setblock{m=IRON_ORE} @BlocksInRadius{r=2to3;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+GOLD_ORE:
+  Skills:
+  - setblock{m=GOLD_ORE} @BlocksInRadius{r=3to4;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+LAPIS_ORE:
+  Skills:
+  - setblock{m=LAPIS_ORE} @BlocksInRadius{r=3to4;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+COPPER_ORE:
+  Skills:
+  - setblock{m=COPPER_ORE} @BlocksInRadius{r=3to4;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+REDSTONE_ORE:
+  Skills:
+  - setblock{m=REDSTONE_ORE} @BlocksInRadius{r=2to4;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+EMERALD_ORE:
+  Skills:
+  - setblock{m=EMERALD_ORE} @BlocksInRadius{r=1to2;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+DIAMOND_ORE:
+  Skills:
+  - setblock{m=DIAMOND_ORE} @BlocksInRadius{r=1to2;shape=sphere;n=20;blocktype=STONE,ANDESITE}
+
+CREEPER_REMOVE:
+  Skills:
+  - remove @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

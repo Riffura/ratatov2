@@ -1,0 +1,126 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#░█████╗░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░░░░██████╗
+#██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██╔════╝
+#██║░░╚═╝██████╔╝░╚████╔╝░╚█████╗░░░░██║░░░███████║██║░░░░░╚█████╗░
+#██║░░██╗██╔══██╗░░╚██╔╝░░░╚═══██╗░░░██║░░░██╔══██║██║░░░░░░╚═══██╗
+#╚█████╔╝██║░░██║░░░██║░░░██████╔╝░░░██║░░░██║░░██║███████╗██████╔╝
+#░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═════╝░
+# World Crystal
+WORLD_CRYSTAL_EFFECTS:
+  Conditions:
+  - playerwithin{d=30} true
+  Skills:
+  - effect:particlesphere{p=reddust;color=#1cfc03;amount=15;radius=0.5;y=0.18} @self
+  - effect:particles{p=reddust;color=#1cfc03;amount=1;hS=0;vS=0;speed=0;y=1.60} @self
+  - effect:particles{p=reddust;color=#1cfc03;amount=1;hS=0;vS=0;speed=0;y=-0.82} @self
+
+WORLD_CRYSTAL_DROP:
+  Conditions:
+  - chance{chance=0.8} orElseCast WORLD_CRYSTAL_EXPLODE # 20% chance of exploding instead
+  Skills:
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - dropitem{i=TierIIIDrops} @Self
+  - remove @self
+
+WORLD_CRYSTAL_EXPLODE:
+  Skills:
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0} @Self
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - effect:explosion @self
+  - damage{a=10;ia=true;ieff=true;ir=true;ii=true;} @PIR{r=5}
+  - throw{velocity=20;velocityY=5} @PlayersInRadius{r=5}
+  - remove @self
+
+# Nether Crystal
+WORLD_NETHER_CRYSTAL_EFFECTS:
+  Conditions:
+  - playerwithin{d=30} true
+  Skills:
+  - effect:particlesphere{p=reddust;color=#ff1100;amount=15;radius=0.5;y=0.18} @self
+  - effect:particles{p=reddust;color=#ff1100;hS=0;vS=0;speed=0;y=1.60} @self
+  - effect:particles{p=reddust;color=#ff1100;hS=0;vS=0;speed=0;y=-0.82} @self
+
+WORLD_NETHER_CRYSTAL_DROP:
+  Conditions:
+  - chance{chance=0.6} orElseCast WORLD_NETHER_CRYSTAL_EXPLODE # 40% chance of exploding instead
+  Skills:
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - dropitem{i=TierIVDrops} @Self
+  - remove @self
+
+WORLD_NETHER_CRYSTAL_EXPLODE:
+  Skills:
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0} @Self
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - effect:explosion @self
+  - damage{a=15;ia=true;ieff=true;ir=true;ii=true;} @PIR{r=5}
+  - throw{velocity=20;velocityY=5} @PlayersInRadius{r=5}
+  - remove @self
+
+# The End Crystal
+WORLD_END_CRYSTAL_EFFECTS:
+  Conditions:
+  - playerwithin{d=30} true
+  Skills:
+  - effect:particlesphere{p=reddust;color=#b8009f;amount=15;radius=0.5;y=0.18} @self
+  - effect:particles{p=reddust;color=#b8009f;amount=1;hS=0;vS=0;speed=0;y=1.60} @self
+  - effect:particles{p=reddust;color=#b8009f;amount=1;hS=0;vS=0;speed=0;y=-0.82} @self
+
+WORLD_END_CRYSTAL_DROP:
+  Conditions:
+  - chance{chance=0.5} orElseCast WORLD_END_CRYSTAL_EXPLODE # 50% chance of exploding instead
+  Skills:
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - dropitem{i=TierVDrops} @Self
+  - remove @self
+
+WORLD_END_CRYSTAL_EXPLODE:
+  Skills:
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0} @Self
+  - sound{s=block.amethyst_block.break;v=1.0;p=1.5} @Self
+  - effect:explosion @self
+  - damage{a=18;ia=true;ieff=true;ir=true;ii=true;} @PIR{r=5}
+  - throw{velocity=20;velocityY=5} @PlayersInRadius{r=5}
+  - remove @self
+
+# All Crystals
+CRYSTAL_MOVING:
+  Conditions:
+  - playerwithin{d=10} true
+  TargetConditions:
+  - crouching false
+  - moving true
+  Skills:
+  - effect:particles{particle=END_ROD;amount=10;hS=0.5;vS=1.2;speed=0;y=0.60} @self
+  - teleport{spreadh=0;spreadv=0} @RandomLocationsNearCaster{a=1;r=20;minr=5;s=3}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

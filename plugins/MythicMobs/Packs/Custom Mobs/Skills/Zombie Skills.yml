@@ -1,0 +1,447 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███████╗░█████╗░███╗░░░███╗██████╗░██╗███████╗░██████╗
+#╚════██║██╔══██╗████╗░████║██╔══██╗██║██╔════╝██╔════╝
+#░░███╔═╝██║░░██║██╔████╔██║██████╦╝██║█████╗░░╚█████╗░
+#██╔══╝░░██║░░██║██║╚██╔╝██║██╔══██╗██║██╔══╝░░░╚═══██╗
+#███████╗╚█████╔╝██║░╚═╝░██║██████╦╝██║███████╗██████╔╝
+#╚══════╝░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝╚══════╝╚═════╝░
+#
+### ZOMBIE HORDE ###
+SUMMON_HORDE_SUMMON:
+  Skills:
+  - summon{type=ZOMBIE_HORDE;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=2to6;r=6;s=1;onsurface=true}
+  - skill{s=SUMMON_HORDE_RANDOM} @self 0.3
+  - skill{s=SUMMON_HORDE_RANDOM} @self 0.1
+  - skill{s=SUMMON_HORDE_RANDOM} @self 0.01
+  - delay 5
+  - remove @self
+SUMMON_HORDE_RANDOM:
+  Skills:
+  - randomskill{
+      skills=
+      SUMMON_HORDE_ZOMBIE_EXPLOSIVE,
+      SUMMON_HORDE_ZOMBIE_SPRINTER,
+      SUMMON_HORDE_ZOMBIE_JUMPER,
+      SUMMON_HORDE_ZOMBIE_THROWER,
+      SUMMON_HORDE_ZOMBIE_STEALTH,
+      SUMMON_HORDE_ZOMBIE_SKILLED,
+      SUMMON_HORDE_ZOMBIE_STUNNER,
+      SUMMON_HORDE_ZOMBIE_SCRAMBLER,
+      SUMMON_HORDE_ZOMBIE_BOMBER,
+      SUMMON_HORDE_ZOMBIE_NINJA
+      }
+SUMMON_HORDE_ZOMBIE_EXPLOSIVE:
+  Skills:
+  - summon{type=ZOMBIE_EXPLOSIVE;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_EXPLOSIVE;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_SPRINTER:
+  Skills:
+  - summon{type=ZOMBIE_SPRINTER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_SPRINTER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_JUMPER:
+  Skills:
+  - summon{type=ZOMBIE_JUMPER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_JUMPER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_THROWER:
+  Skills:
+  - summon{type=ZOMBIE_THROWER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_THROWER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_STEALTH:
+  Skills:
+  - summon{type=ZOMBIE_STEALTH;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_STEALTH;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_SKILLED:
+  Skills:
+  - summon{type=ZOMBIE_SKILLED;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_SKILLED;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_STUNNER:
+  Skills:
+  - summon{type=ZOMBIE_STUNNER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_STUNNER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_SCRAMBLER:
+  Skills:
+  - summon{type=ZOMBIE_SCRAMBLER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_SCRAMBLER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_BOMBER:
+  Skills:
+  - summon{type=ZOMBIE_BOMBER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_BOMBER;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+SUMMON_HORDE_ZOMBIE_NINJA:
+  Skills:
+  - summon{type=ZOMBIE_NINJA;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true}
+  - summon{type=ZOMBIE_NINJA;amount=1;radius=0;s=true} @RandomLocationsNearCaster{a=1;r=6;s=1;onsurface=true} 0.01
+
+ZOMBIE_HORDE_SLOWDOWN:
+  Conditions:
+  - (entitytype{t=ZOMBIE} true || entitytype{t=ZOMBIE_EXPLOSIVE} true || entitytype{t=ZOMBIE_SPRINTER} true || entitytype{t=ZOMBIE_JUMPER} true || entitytype{t=ZOMBIE_THROWER} true || entitytype{t=ZOMBIE_STEALTH} true || entitytype{t=ZOMBIE_SKILLED} true || entitytype{t=ZOMBIE_STUNNER} true || entitytype{t=ZOMBIE_SCRAMBLER} true || entitytype{t=ZOMBIE_BOMBER} true || entitytype{t=ZOMBIE_NINJA} true)
+  - livinginradius{a=>5;r=4} true
+  Skills:
+  - delay 1
+  - potion{type=SLOW;duration=60;level=3;force=true;p=false;i=false} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE BLEEDING EFFECT ###
+ZOMBIE_BLEEDING:
+  Cooldown: 30
+  Conditions:
+  - playerwithin 2
+  Skills:
+  - delay 1
+  - message{msg="&cYou are now bleeding..."} @target
+  - effect:bloodyScreen{d=150} @target
+  - damage{a=4;repeat=10;repeatInterval=15} @target
+  - effect:sound{s=entity.generic.hurt;v=1;p=1;repeat=10;repeatInterval=15} @target
+  - effect:particles{p=reddust;color=#c40000;vs=1;hs=1;a=5;s=0;y=1;repeat=10;repeatInterval=15} @target
+  - effect:particles{p=reddust;color=#5e0000;vs=1;hs=1;a=5;s=0;y=1;repeat=10;repeatInterval=15} @target
+  - effect:particles{p=FALLING_LAVA;vs=0.3;hs=1;a=5;s=0;y=1;repeat=10;repeatInterval=15} @target
+  - potion{type=SLOW;duration=150;level=1;force=true;p=false;i=false} @target
+  - delay 150
+  - message{msg="&cYou are not bleeding anymore."} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE EXPLOSIVE ###
+ZOMBIE_EXPLOSIVE:
+  Skills:
+  - effect:particlesphere{particle=FLAME;amount=40;radius=6;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=10;radius=6;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=30;radius=5;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=10;radius=5;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=20;radius=4;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=12;radius=4;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=20;radius=3;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=8;radius=3;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=10;radius=2;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=5;radius=2;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=10;radius=1;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=3;radius=1;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - effect:particlesphere{particle=FLAME;amount=10;radius=0;s=0.01} @self
+  - effect:particlesphere{particle=CAMPFIRE_COSY_SMOKE;amount=1;radius=0;s=0.01} @self
+  - sound{s=entity.creeper.primed;p=1.0;v=1.0} @self
+  - delay 6
+  - fakeexplosion @self
+  - throw{velocity=25;velocityY=3} @EIR{r=10}
+  - damage{amount=15} @EIR{r=10}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE SPRINTER ###
+ZOMBIE_RUNNER:
+  Cooldown: 10
+  Conditions:
+  - playerwithin 25
+  Skills:
+  - Aura{auraName=ZOMBIE_RUNNER_EFFECTS;onStart=ZOMBIE_RUNNER_Start;onTick=ZOMBIE_RUNNER_Tick;onEnd=ZOMBIE_RUNNER_End;interval=2;duration=100} @self
+ZOMBIE_RUNNER_Start:
+  Skills:
+  - potion{type=SPEED;duration=9999;level=1;p=false;force=true} @self
+ZOMBIE_RUNNER_Tick:
+  Conditions:
+  - moving true
+  Skills:
+  - effect:particles{particle=CRIT;amount=3;hS=0.3;vS=0.1;s=0.01;y=0.1;sfo=-1} @self
+  - effect:particles{particle=electric_spark;amount=1;hS=0.3;vS=0.1;s=0.01;y=0.1;sfo=-1} @self
+ZOMBIE_RUNNER_End:
+  Skills:
+  - potion{type=SPEED;duration=1;level=1;p=false;force=true} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE JUMPER ###
+ZOMBIE_RANDOM_JUMPER:
+  Conditions:
+  - playerwithin 15
+  - stance{s=JUMP_TOWARDS} false
+  Skills:
+  - setstance{stance=RANDOM_JUMPER} @self
+  - sound{s=entity.armor_stand.fall;p=0.5;v=1.0} @self
+  - jump{v=0.6}
+  - delay 15
+  - jump{v=-0.6}
+  - sound{s=entity.armor_stand.fall;p=0.5;v=1.0} @self
+  - setstance{stance=NORMAL_JUMPER} @self
+
+ZOMBIE_JUMP_TOWARDS:
+  Conditions:
+  - playerwithin 15 true
+  - incombat true
+  - stance{s=RANDOM_JUMPER} false
+  Skills:
+  - setstance{stance=JUMP_TOWARDS} @self
+  - delay 30
+  - sound{s=entity.armor_stand.fall;p=0.5;v=1.0} @self
+  - lunge{velocity=1;velocityY=0.6} @Target
+  - delay 15
+  - damage{a=10;i=true} @PIR{r=3}
+  - setstance{stance=NORMAL_JUMPER} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE THROWER ###
+ZOMBIE_THROW:
+  Skills:
+  - throw{velocity=20;velocityY=12} @EIR{r=3;target=players,animals;limit=1;sort=NEAREST}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE STEALTH ###
+ZOMBIE_STEALTH_BLOCKMASK:
+  Conditions:
+  - onblock{m=dirt_path} false
+  Skills:
+  - delay 1
+  - effect:blockmask{m=dirt_path;r=1;d=40} @self
+  - effect:particles{particle=block;m=dirt;amount=10;hS=0.5;vS=0.1;s=0.01;y=0.1} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE SKILLED ###
+SKILLED_BASH:
+  Conditions:
+  - playerwithin 3
+  Skills:
+  - throw{velocity=5;velocityY=5} @EIR{r=2;target=players;limit=1;sort=NEAREST}
+  - effect:sound{s=block.anvil.land;v=1;p=1;} @target
+  - potion{t=SLOW;d=60;l=1} @target
+  - damage{a=6;i=true} @target
+  - delay 5
+  - teleport{spreadh=0;spreadv=0} @RandomLocationsNearTargets{a=1;r=6}
+#
+SKILLED_POTION_ATTACK:
+  Conditions:
+  - playerwithin 15
+  Skills:
+  - disengage @self
+  - delay 2
+  - disengage @self
+  - delay 2
+  - disengage @self
+  - delay 2
+  - disengage @self
+  - delay 2
+  - disengage @self
+  - delay 2
+  - disengage @self
+  - delay 2
+  - shootpotion{type=SLOW;duration=200;level=4;velocity=2} @target
+  - delay 4
+  - shootpotion{type=DARKNESS;duration=200;level=4;velocity=2} @target
+  - delay 4
+  - shootpotion{type=POISON;duration=200;level=4;velocity=2} @target
+  - delay 4
+  - shootpotion{type=HARM;duration=1;level=1;velocity=2} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE_STUNNER ###
+STUN_ENTITIES_AROUND:
+  Skills:
+  - delay 1
+  - stun{d=100;f=true} @EntitiesInRadius{r=10;target=monsters,animals,players;limit=10;sort=NEAREST}
+  - delay 100
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE_ITEMS_SCRAMBLER ###
+ZOMBIE_GOTO_ITEMS:
+  Skills:
+  - goto{speedModifier=10;sh=0;sv=0} @ItemsInRadius{r=15}
+#
+ZOMBIE_THROW_ITEMS:
+  Skills:
+  - throw{velocity=15;velocityY=10} @ItemsInRadius{r=3}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### BOMBER ###
+BOMBER_PLACE:
+  Skills:
+  - summon{type=ZOMBIE_BOMBER_DUMMY;amount=1;radius=0;s=true} @Forward{f=-3;y=0.0;sideOffset=0.0}
+
+BOMBER_HIT:
+  Conditions:
+  - playerwithin{d=3} true
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=1;p=1} @self
+  - effect:explosion @self
+  - throw{velocity=5;velocityY=10} @EIR{r=3;target=players}
+  - damage{amount=8to10;i=true} @EIR{r=3;target=players}
+  - remove @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE NINJA ###
+NINJA_ATTACK:
+  Conditions:
+  - playerwithin{d=12} true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @target
+  - effect:spin{duration=15;velocity=80} @self
+#
+NINJA_DAMAGE:
+  Conditions:
+  - playerwithin{d=3} true
+  Skills:
+  - effect:particles{particle=SWEEP_ATTACK;amount=4;hS=0.5;vS=0.5;speed=0;y=1.2;sfo=1} @self
+  - damage{amount=5to8} @target
+  - throw{velocity=10;velocityY=5} @target
+#
+NINJA_EQUIPMENT:
+  Skills:
+  - equip{item=ZombieNinjaHead:4}
+  - equip{item=NINJA_CHESTPLATE:3}
+  - equip{item=NINJA_LEGGINGS:2}
+  - equip{item=NINJA_BOOTS:1}
+  - equip{item=IRON_HOE:HAND}
+  - equip{item=IRON_HOE:OFFHAND}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ZOMBIE CAVE MINER ###
+CAVE_MINER_SUMMON_TNT:
+  Conditions:
+  - playerwithin{d=15} true
+  - incombat true
+  - (nearClaim 5 || inClaim) false
+  Skills:
+  - sound{s=entity.ender_eye.launch;p=1;v=1.0} @self
+  - effect:particles{p=VILLAGER_ANGRY;amount=5;hS=0.1;vS=0.1;speed=0.01;y=2.4} @self
+  - delay 20
+  - sound{s=entity.ender_eye.launch;p=1;v=1.0} @self
+  - effect:particles{p=VILLAGER_ANGRY;amount=5;hS=0.1;vS=0.1;speed=0.01;y=2.4} @self
+  - delay 20
+  - sound{s=entity.ender_eye.launch;p=1;v=1.0} @self
+  - effect:particles{p=VILLAGER_ANGRY;amount=5;hS=0.1;vS=0.1;speed=0.01;y=2.4} @self
+  - delay 20
+  - sound{s=entity.evoker.prepare_summon;p=1;v=1.0} @self
+  - effect:particles{p=VILLAGER_ANGRY;amount=10;hS=1;vS=1;speed=0.01;y=2.4} @self
+  - summon{type=ZOMBIE_CAVE_MINER_TNT;amount=1;radius=0;s=true} @self
+  - delay 5
+  - remove @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

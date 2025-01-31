@@ -1,0 +1,269 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+# ██╗██████╗░░█████╗░███╗░░██╗░██████╗██████╗░██╗██████╗░███████╗  ░█████╗░██╗░░░░░░█████╗░███╗░░██╗
+# ██║██╔══██╗██╔══██╗████╗░██║██╔════╝██╔══██╗██║██╔══██╗██╔════╝  ██╔══██╗██║░░░░░██╔══██╗████╗░██║
+# ██║██████╔╝██║░░██║██╔██╗██║╚█████╗░██████╔╝██║██████╔╝█████╗░░  ██║░░╚═╝██║░░░░░███████║██╔██╗██║
+# ██║██╔══██╗██║░░██║██║╚████║░╚═══██╗██╔═══╝░██║██╔══██╗██╔══╝░░  ██║░░██╗██║░░░░░██╔══██║██║╚████║
+# ██║██║░░██║╚█████╔╝██║░╚███║██████╔╝██║░░░░░██║██║░░██║███████╗  ╚█████╔╝███████╗██║░░██║██║░╚███║
+# ╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝  ░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝
+#
+IRONSPIRE_CLAN_OVERLORD:
+  MobType: WITHER_SKELETON
+  Display: '<gradient:#04e097:#0796b0>Ironspire Overlord</gradient>'
+  Health: 100
+  Damage: 8
+  BossBar:
+    Enabled: true
+    Title: '<gradient:#04e097:#0796b0>Ironspire Overlord</gradient> &b<caster.hp>&4♥'
+    Range: 20
+    Color: WHITE
+    Style: SOLID
+  Mount: IRONSPIRE_CLAN_MOUNT
+  Faction: IRONSPIRE_CLAN
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  - ownerattacker
+  - OwnerTarget
+  - NearestOtherFactionMonsters
+  Equipment:
+  - IRONSPIRE_OVERLORD_HEAD HEAD
+  - IRONSPIRE_OVERLORD_CHESTPLATE CHEST
+  - IRONSPIRE_OVERLORD_LEGGINGS LEGS
+  - IRONSPIRE_OVERLORD_BOOTS FEET
+  - IRONSPIRE_OVERLORD_SWORD HAND
+  - IRONSPIRE_OVERLORD_SHIELD OFFHAND
+  DamageModifiers:
+  - WITHER 0.0
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=IRONSPIRE_CLAN_OVERLORD_ATTACK} ~onAttack 1
+  - summon{type=IRONSPIRE_CLAN_BANNER_HOLDER;amount=1;radius=2;s=true} @self ~onSpawn 1
+  - skill{s=IRONSPIRE_MOUNT_DESPAWNING} ~onDeath 1
+  Drops:
+  - TierVDrops 1 0.1
+  - IronspireOverlordDrops 1 0.1
+  - exp 50-100 1.0
+#
+#
+#
+IRONSPIRE_CLAN_MOUNT:
+  MobType: RAVAGER
+  Display: '<gradient:#04e097:#0796b0>Ironspire Stormrider</gradient>'
+  Health: 30
+  Damage: 1
+  Faction: IRONSPIRE_CLAN
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  - ownerattacker
+  - OwnerTarget
+  - NearestOtherFactionMonsters
+  Options:
+    DigOutOfGround: true
+    Despawn: true
+    PreventOtherDrops: true
+    PreventLeashing: true
+    Saddled: true
+  Skills:
+  - skill{s=IRONSPIRE_CLAN_MOUNT_DMG} ~onAttack 1.0
+  Drops:
+  - TierIIIDrops 1 0.1
+  - IronspireMountDrops 1 0.1
+#
+#
+#
+IRONSPIRE_CLAN_WEAPON:
+  MobType: WITHER_SKELETON
+  Display: '<gradient:#04e097:#0796b0>Ironspire Bladeguard</gradient>'
+  Health: 40
+  Damage: 4
+  Faction: IRONSPIRE_CLAN
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  - ownerattacker
+  - OwnerTarget
+  - NearestOtherFactionMonsters
+  Equipment:
+  - IRONSPIRE_MINION_HEAD HEAD
+  - IRONSPIRE_MINION_CHESTPLATE CHEST
+  - IRONSPIRE_MINION_LEGGINGS LEGS
+  - IRONSPIRE_MINION_BOOTS FEET
+  - IRONSPIRE_MINION_AXE HAND
+  - IRONSPIRE_MINION_SHIELD OFFHAND
+  DamageModifiers:
+  - WITHER 0.0
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=IRONSPIRE_CLAN_MINION_ATTACK} ~onAttack 1
+  Drops:
+  - TierIVDrops 1 0.1
+  - IronspireMinionDrops 1 0.1
+  - exp 15 1.0
+#
+#
+#
+IRONSPIRE_CLAN_ARCHER:
+  MobType: WITHER_SKELETON
+  Display: '<gradient:#04e097:#0796b0>Ironspire Windpiercer</gradient>'
+  Health: 20
+  Damage: 3
+  Faction: IRONSPIRE_CLAN
+  AIGoalSelectors:
+  - clear
+  - bowattack{speed=1;amin=20;radius=15}
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  - ownerattacker
+  - OwnerTarget
+  - NearestOtherFactionMonsters
+  Equipment:
+  - IRONSPIRE_MINION_HEAD HEAD
+  - IRONSPIRE_MINION_CHESTPLATE CHEST
+  - IRONSPIRE_MINION_LEGGINGS LEGS
+  - IRONSPIRE_MINION_BOOTS FEET
+  - IRONSPIRE_MINION_BOW HAND
+  DamageModifiers:
+  - WITHER 0.0
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  - bowattack{amin=20;radius=50}
+  AITargetSelectors:
+  - clear
+  - players
+  Drops:
+  - TierIVDrops 1 0.1
+  - IronspireMinionDrops 1 0.1
+  - exp 15 1.0
+#
+#
+#
+IRONSPIRE_CLAN_BANNER_HOLDER:
+  MobType: WITHER_SKELETON
+  Display: '<gradient:#04e097:#0796b0>Ironspire Warbearer</gradient>'
+  Health: 10
+  Damage: 2
+  Faction: IRONSPIRE_CLAN
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  - ownerattacker
+  - OwnerTarget
+  - NearestOtherFactionMonsters
+  Equipment:
+  - IRONSPIRE_MINION_BANNER HEAD
+  - IRONSPIRE_MINION_CHESTPLATE CHEST
+  - IRONSPIRE_MINION_LEGGINGS LEGS
+  - IRONSPIRE_MINION_BOOTS FEET
+  - IRONSPIRE_MINION_STONE_SWORD HAND
+  DamageModifiers:
+  - WITHER 0.0
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - summon{type=IRONSPIRE_CLAN_WEAPON;amount=0to4;radius=6;s=true} @self ~onSpawn 1
+  - summon{type=IRONSPIRE_CLAN_ARCHER;amount=0to4;radius=6;s=true} @self ~onSpawn 1
+
+  - skill{s=IRONSPIRE_MINION_DESPAWNING} ~onDeath 1
+  Drops:
+  - TierIVDrops 1 0.1
+  - IronspireMinionDrops 1 0.1
+  - exp 15 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

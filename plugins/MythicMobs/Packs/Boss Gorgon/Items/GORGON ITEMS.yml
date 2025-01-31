@@ -1,0 +1,149 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+GORGON_HELMET:
+  Id: NETHERITE_HELMET
+  Display: '<gradient:#0062ff:#001a45><bold>Ragebristle Headguard</gradient>'
+  Lore:
+  - '&7'
+  - '&7Crafted from the fierce tusks of Nether boars,'
+  - '&7the Ragebristle Headguard shields the fearsome gaze of Gorgon.'
+  - '&7This headpiece intensifies the Piglin boss''s anger,'
+  - '&7evident in the deadly precision with which it hurls'
+  - '&7its golden axes, keeping intruders at a distance.'
+  - '&7'
+  - '&3Acquired from defeating Gorgon boss.'
+  Attributes:
+    Head:
+      Armor: '-3to3 ADD'
+      ArmorToughness: '-0.5to0.5 ADD'
+      Health: '-5to20 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+GORGON_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Display: '<gradient:#0062ff:#001a45><bold>Furyhide Chestguard</gradient>'
+  Lore:
+  - '&7'
+  - '&7Molded from the hides of enraged creatures,'
+  - '&7the Furyhide Chestguard encapsulates Gorgon''s untamed wrath.'
+  - '&7The boss''s disdain for close quarters is embodied'
+  - '&7in the chestplate''s design, offering both protection against'
+  - '&7its own golden axes and a visual testament to its ferocity.'
+  - '&7'
+  - '&3Acquired from defeating Gorgon boss.'
+  Attributes:
+    Chest:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+GORGON_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Display: '<gradient:#0062ff:#001a45><bold>Swiftshadow Legwraps</gradient>'
+  Lore:
+  - '&7'
+  - '&7Woven from the shadows of the Nether and enchanted with rapid'
+  - '&7swiftness, the Swiftshadow Legwraps empower'
+  - '&7Gorgon with extraordinary speed. As minions are summoned,'
+  - '&7the boss swiftly navigates the battlefield,'
+  - '&7evading attacks with ruthless efficiency.'
+  - '&7'
+  - '&3Acquired from defeating Gorgon boss.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8-10
+  Attributes:
+    Legs:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+GORGON_BOOTS:
+  Id: NETHERITE_BOOTS
+  Display: '<gradient:#0062ff:#001a45><bold>Snarlstep Boots</gradient>'
+  Lore:
+  - '&7'
+  - '&7Forged from the menacing snarls of the Nether''s creatures,'
+  - '&7the Snarlstep Boots enable Gorgon to traverse the'
+  - '&7terrain with unmatched agility.'
+  - '&7The boss''s aversion to close proximity is evident'
+  - '&7as it swiftly maneuvers, ensuring none'
+  - '&7can encroach upon its personal space.'
+  - '&7'
+  - '&3Acquired from defeating Gorgon boss.'
+  Attributes:
+    Feet:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - PROTECTION_FALL:0to1
+#
+GORGON_AXE:
+  Id: GOLD_AXE
+  Display: '<gradient:#0062ff:#001a45><bold>Gilded Fury - Axes of Anguish</gradient>'
+  Lore:
+  - '&7'
+  - '&7The Gilded Fury, also known as the Axes of Anguish,'
+  - '&7are the favored weapons of Gorgon.'
+  - '&7Forged from enchanted gold and fueled by unbridled anger,'
+  - '&7these golden axes are hurled with deadly accuracy, keeping foes at bay.'
+  - '&7Gorgon''s mastery of ranged attacks and'
+  - '&7minion-summoning showcases its'
+  - '&7determination to remain unapproachable.'
+  - '&7'
+  - '&3Acquired from defeating Gorgon boss.'
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to0.5 ADD'
+      Damage: '-0.05to80 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - DAMAGE_ALL:0to5
+  - DURABILITY:0to5
+  - FIRE_ASPECT:0to2
+  - KNOCKBACK:0to3
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

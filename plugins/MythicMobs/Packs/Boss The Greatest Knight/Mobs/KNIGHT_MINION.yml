@@ -1,0 +1,70 @@
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ██████╗░░█████╗░░██████╗░██████╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THE_GREATEST_KNIGHT_MINION:
+  MobType: BABY_ZOMBIE
+  Health: 10
+  Damage: 2
+  Faction: THE_GREATEST_KNIGHT_BOSS
+  Display: '<gradient:#00e5ff:#ffffff>Knight Minion</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: false
+    FollowRange: 30
+    MovementSpeed: 0.25
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 1
+  - ENTITY_ATTACK 1
+  Equipment:
+  - THE_GREATEST_KNIGHT_MINION_HEAD HEAD
+  - THE_GREATEST_KNIGHT_MINION_CHESTPLATE CHEST
+  - THE_GREATEST_KNIGHT_MINION_LEGGINGS LEGS
+  - THE_GREATEST_KNIGHT_MINION_BOOTS FEET
+  - THE_GREATEST_KNIGHT_MINION_SWORD HAND
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  Drops:
+  - THE_GREATEST_KNIGHT_MINION_DROPS
+  - exp 5to10 1
+  Skills:
+#Sounds
+  - sound{s=entity.armor_stand.hit;v=0.4;p=1.0} @self ~onDamaged 1
+  - sound{s=entity.armor_stand.fall;v=0.4;p=1.0} @self ~onDamaged 1
+  - sound{s=entity.wither_skeleton.hurt;v=0.9;p=0.8} @self ~onDamaged 1
+  - sound{s=entity.pillager.death;v=1.0;p=0.8} @self ~onDeath 1
+  - sound{s=entity.wither.break_block;v=0.5;p=0.6} @self ~onDeath 1
+  - sound{s=entity.wither_skeleton.ambient;v=0.5;p=0.6} @self ~onTimer:30 1
+#
+#
+#Skills
+  - remove{delay=1200} @self ~onSpawn 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

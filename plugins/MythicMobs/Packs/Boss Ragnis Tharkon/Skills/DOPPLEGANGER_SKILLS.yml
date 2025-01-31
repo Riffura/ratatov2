@@ -1,0 +1,90 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THARKON_DOPPELGANGER_COMBAT:
+  Conditions:
+  - playerwithin{d=2} true
+  Skills:
+  - damage{a=1-4;i=false} @target
+#
+THARKON_DOPPELGANGER_COMBAT_FLYING:
+  Cooldown: 10
+  Conditions:
+  - altitude{a=>2}
+  Skills:
+  - setstance{stance=THARKON_COMBAT_FLYING} @self
+  - potion{type=SLOW;duration=9999;level=10;force=true;p=false} @self
+  - disengage @self
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=0.6;sfo=0;sso=2;eso=0} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 10
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=0.6;sfo=0;sso=-2;eso=0} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 10
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=-2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=-2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=-2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 20
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 10
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=1.6;sfo=0;sso=-2;eso=0;g=0.12;hn=10} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 10
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=0.6;sfo=0;sso=2;eso=0} @PIR{r=15;limit=2;sort=NEAREST}
+  - delay 10
+  - projectile{onTick=THARKON_DOPPELGANGER_PROJECTILE-Tick;onHit=THARKON_DOPPELGANGER_PROJECTILE-Hit;onEnd=THARKON_DOPPELGANGER_PROJECTILE-End;v=12;i=1;hR=1;vR=1;tyo=0.6;sfo=0;sso=-2;eso=0} @PIR{r=15;limit=2;sort=NEAREST}
+  - potion{type=SLOW;duration=1;level=1;force=true;p=false} @self
+  - setstance{stance=THARKON_NORMAL} @self
+THARKON_DOPPELGANGER_PROJECTILE-Tick:
+  Skills:
+  - effect:particles{particle=FLAME;amount=2;hS=0.1;vS=0.1;speed=0} @origin
+  - effect:particles{particle=ELECTRIC_SPARK;amount=2;hS=0.1;vS=0.1;speed=0} @origin
+THARKON_DOPPELGANGER_PROJECTILE-Hit:
+  Skills:
+  - damage{a=4to8;i=true}
+  - ignite{ticks=100} 0.5
+THARKON_DOPPELGANGER_PROJECTILE-End:
+  Skills:
+  - sound{s=block.lava.extinguish;v=0.3;p=1} @origin
+  - effect:blockmask{m=LAVA;r=1;d=60} @origin
+  - damage{a=4to6;i=true} @ENO{r=2}
+  - delay 10
+  - damage{a=4to6;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=4to6;i=true} @ENO{r=2}
+  - delay 10
+  - damage{a=4to6;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=4to6;i=true} @ENO{r=2}
+  - delay 10
+  - damage{a=4to6;i=false} @ENO{r=2}
+#
+THARKON_DOPPELGANGER_ONSPAWN_AI:
+  Skills:
+  - delay 2
+  - runaitargetselector{target=players} @self
+  - runaigoalselector{goal=float} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - runaigoalselector{goal=randomFly} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,35 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+GORGON_HEAD:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDAyNjE5NGQ2NGNlM2I5MDQxMDNmZWYwZDUzM2Y5M2U5N2Q2M2QxZDc5OGRkMmIwYmExZDE3MTc3ZWY5NzQxZCJ9fX0=
+
+GORGON_HEAD_DAMAGED:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTcwMTIwMjU0MTcwMiwKICAicHJvZmlsZUlkIiA6ICJmYzFhOTdlNTgxM2Y0NDI2YTNmZTI4ZjJiNDc1ZjA4ZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJnZXRPbmxpbmVQbGF5ZXJzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzRlZmIyMTI5Mjc5YTQwN2VhY2Y5NmQ1NjExZTQ5OWVlYTU0NzBjNTY3MjI0MTY4ZWFlMzU3ZTNmYzc0YTM1MDMiCiAgICB9CiAgfQp9
+
+GORGON_HEAD_DEATH:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTcwMTIwMjYzNjI5NiwKICAicHJvZmlsZUlkIiA6ICI0NDcyYzcwMjgwY2Q0NjZhODkxYjcyMzQwMGQ5MDUyNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaGFkb3dNWCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yZmQ0MmYyNGQ0M2EzNmRkYWU4NDg5MmE1YmJjZDgwY2U1Y2QyNmNlNjE5YmQ3ZWYxNDgzYzk2YzkzNzZhOGRmIgogICAgfQogIH0KfQ==
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,141 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# These mob is being used to show you how "setlevel" mechanic works.
+#
+LEVELLING_EXAMPLE_1:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 1 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - setlevel{action=set;level=5} ~onSpawn #This will set the level to 5.
+
+LEVELLING_EXAMPLE_2:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 2 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - setlevel{action=set;level=10-20} ~onSpawn #This will randomize the level between 10-20.
+
+LEVELLING_EXAMPLE_3:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 3 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - setlevel{action=set;level=10} ~onSpawn #This will set the level to 10.
+  - setlevel{action=add;level=1-5} ~onKillPlayer #This will add a randomized level between 1-5 whenever it kills a player.
+
+LEVELLING_EXAMPLE_4:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 4 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - setlevel{action=set;level=100-500} ~onSpawn #This will randomize the level between 100-500.
+
+LEVELLING_EXAMPLE_5:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 5 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=SETLEVEL_DAY} ~onSpawn 1.0
+  - skill{s=SETLEVEL_NIGHT} ~onSpawn 1.0
+
+LEVELLING_EXAMPLE_6:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 6 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=DISTANCE_FROM_SPAWN_LEVELLING_UNDER_100_BLOCKS} ~onSpawn 1
+  - skill{s=DISTANCE_FROM_SPAWN_LEVELLING_OVER_100_BLOCKS} ~onSpawn 1
+  - skill{s=DISTANCE_FROM_SPAWN_LEVELLING_OVER_500_BLOCKS} ~onSpawn 1
+
+LEVELLING_EXAMPLE_7:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fLVL Example 7 &8|'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - setname{name=<caster.name> &6<mob.level>;delay=2} @self ~onSpawn 1
+  - setlevel{action=set;level=5to25} ~onSpawn #This will set the level between 5-25.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

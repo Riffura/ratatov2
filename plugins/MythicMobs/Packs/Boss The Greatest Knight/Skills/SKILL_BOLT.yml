@@ -1,0 +1,54 @@
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ░██████╗██╗░░██╗██╗██╗░░░░░██╗░░░░░░██████╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██╔════╝██║░██╔╝██║██║░░░░░██║░░░░░██╔════╝
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ╚█████╗░█████═╝░██║██║░░░░░██║░░░░░╚█████╗░
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ░╚═══██╗██╔═██╗░██║██║░░░░░██║░░░░░░╚═══██╗
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ██████╔╝██║░╚██╗██║███████╗███████╗██████╔╝
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ╚═════╝░╚═╝░░╚═╝╚═╝╚══════╝╚══════╝╚═════╝░
+#
+THE_GREATEST_KNIGHT_BOLT_1:
+  Conditions:
+  - stance{stance=THE_GREATEST_KNIGHT_SPAWN_1} true
+  Skills:
+  - projectile{onTick=THE_GREATEST_KNIGHT_BOLT-Tick;onHit=THE_GREATEST_KNIGHT_BOLT-Hit;v=8;i=1;hR=1;vR=1;hnp=true} @target
+  - projectile{onTick=THE_GREATEST_KNIGHT_BOLT-Tick;onHit=THE_GREATEST_KNIGHT_BOLT-Hit;v=8;i=1;hR=1;vR=1;hnp=true;delay=40} @target 0.5
+THE_GREATEST_KNIGHT_BOLT-Tick:
+  Skills:
+  - effect:particles{particle=blockcrack;material=CRYING_OBSIDIAN;amount=25;hS=0.5;vS=0.5;s=0.05} @origin
+  - effect:particles{particle=CLOUD;amount=5;hS=0;vS=0;s=0.05} @origin
+THE_GREATEST_KNIGHT_BOLT-Hit:
+  Skills:
+  - damage{amount=6to8;i=true}
+  - potion{type=WITHER;duration=120;lvl=1;force=true;p=false}
+  - potion{type=DARKNESS;duration=120;lvl=1;force=true;p=false}
+
+THE_GREATEST_KNIGHT_BOLT_2:
+  Conditions:
+  - stance{stance=THE_GREATEST_KNIGHT_SPAWN_2} true
+  Skills:
+  - projectile{onTick=THE_GREATEST_KNIGHT_BOLT-Tick;onHit=THE_GREATEST_KNIGHT_BOLT-Hit;v=12;i=1;hR=1;vR=1;hnp=true} @target
+  - delay 10
+  - projectile{onTick=THE_GREATEST_KNIGHT_BOLT-Tick;onHit=THE_GREATEST_KNIGHT_BOLT-Hit;v=12;i=1;hR=1;vR=1;hnp=true} @target
+  - delay 10
+  - projectile{onTick=THE_GREATEST_KNIGHT_BOLT-Tick;onHit=THE_GREATEST_KNIGHT_BOLT-Hit;v=12;i=1;hR=1;vR=1;hnp=true;delay=40} @target 0.5
+THE_GREATEST_KNIGHT_BOLT-Tick:
+  Skills:
+  - effect:particles{particle=blockcrack;material=CRYING_OBSIDIAN;amount=25;hS=0.5;vS=0.5;s=0.05} @origin
+  - effect:particles{particle=CLOUD;amount=5;hS=0;vS=0;s=0.05} @origin
+THE_GREATEST_KNIGHT_BOLT-Hit:
+  Skills:
+  - damage{amount=12to15;i=true}
+  - potion{type=WITHER;duration=240;lvl=1;force=true;p=false}
+  - potion{type=DARKNESS;duration=240;lvl=1;force=true;p=false}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

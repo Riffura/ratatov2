@@ -1,0 +1,199 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+# ██╗██████╗░░█████╗░███╗░░██╗░██████╗██████╗░██╗██████╗░███████╗  ░█████╗░██╗░░░░░░█████╗░███╗░░██╗
+# ██║██╔══██╗██╔══██╗████╗░██║██╔════╝██╔══██╗██║██╔══██╗██╔════╝  ██╔══██╗██║░░░░░██╔══██╗████╗░██║
+# ██║██████╔╝██║░░██║██╔██╗██║╚█████╗░██████╔╝██║██████╔╝█████╗░░  ██║░░╚═╝██║░░░░░███████║██╔██╗██║
+# ██║██╔══██╗██║░░██║██║╚████║░╚═══██╗██╔═══╝░██║██╔══██╗██╔══╝░░  ██║░░██╗██║░░░░░██╔══██║██║╚████║
+# ██║██║░░██║╚█████╔╝██║░╚███║██████╔╝██║░░░░░██║██║░░██║███████╗  ╚█████╔╝███████╗██║░░██║██║░╚███║
+# ╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝  ░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝
+#
+#
+# Ironspire Overlord Items
+#
+IRONSPIRE_OVERLORD_HEAD:
+  Id: PLAYER_HEAD
+  Display: '&fIronspire''s Overlord Head'
+  Attributes:
+    Head:
+      Armor: '1.0to3.0 ADD'
+      ArmorToughness: '0.1to0.5 ADD'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVkNDIzOGY4OGQwZDkxYzA4YjY1YWU4ZDRhNDZjMDg3ZDRlOWFiZGI2OWM0NzgyODFhMjljZDgyODMwNjI2YSJ9fX0=
+
+IRONSPIRE_OVERLORD_CHESTPLATE:
+  Id: IRON_CHESTPLATE
+  Display: '&fIronspire''s Overlord Chestplate'
+  Attributes:
+    Chest:
+      Armor: '1.0to3.0 ADD'
+      ArmorToughness: '0.1to0.5 ADD'
+  Enchantments:
+  - PROTECTION 0to5
+  - UNBREAKING 0to5
+  - THORNS 0to3
+  - MENDING 0to1
+
+IRONSPIRE_OVERLORD_LEGGINGS:
+  Id: IRON_LEGGINGS
+  Display: '&fIronspire''s Overlord Leggings'
+  Attributes:
+    Legs:
+      Armor: '1.0to3.0 ADD'
+      ArmorToughness: '0.1to0.5 ADD'
+  Enchantments:
+  - PROTECTION 0to5
+  - UNBREAKING 0to5
+  - THORNS 0to3
+  - MENDING 0to1
+
+IRONSPIRE_OVERLORD_BOOTS:
+  Id: IRON_BOOTS
+  Display: '&fIronspire''s Overlord Boots'
+  Attributes:
+    Feet:
+      Armor: '1.0to3.0 ADD'
+      ArmorToughness: '0.1to0.5 ADD'
+  Enchantments:
+  - PROTECTION 0to5
+  - UNBREAKING 0to5
+  - THORNS 0to3
+  - MENDING 0to1
+
+IRONSPIRE_OVERLORD_SWORD:
+  Id: IRON_SWORD
+  Display: '&fIronspire''s Overlord Sword'
+  Enchantments:
+  - UNBREAKING 0to5
+  - FIRE_ASPECT 0to1
+  - SHARPNESS 0to5
+  - KNOCKBACK 0to3
+  - MENDING 0to1
+
+IRONSPIRE_OVERLORD_SHIELD:
+  Id: SHIELD
+  Display: '&fIronspire''s Overlord Shield'
+  BannerLayers:
+  - BLACK BASE
+  - GRAY GRADIENT_UP
+  - GRAY TRIANGLES_BOTTOM
+  - RED CROSS
+  - BLACK RHOMBUS
+  Enchantments:
+  - UNBREAKING 0to5
+  - MENDING 0to1
+#
+# Ironspire Minion Items
+#
+IRONSPIRE_MINION_HEAD:
+  Id: PLAYER_HEAD
+  Display: '&fIronspire''s Minion Head'
+  Attributes:
+    Head:
+      Armor: '1.0to3.0 ADD'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJkNjExNTk5MzIxOTIzYTRjZGZkZDA4MWUzNjIzMTRiMGZkN2Y2NjNiZTM0ZTRmMGYyODAxNjM1OGUyMGQyOCJ9fX0=
+
+IRONSPIRE_MINION_CHESTPLATE:
+  Id: IRON_CHESTPLATE
+  Display: '&fIronspire''s Minion Chestplate'
+  Attributes:
+    Chest:
+      Armor: '1.0to3.0 ADD'
+  Enchantments:
+  - PROTECTION:0to5
+  - UNBREAKING:0to5
+
+IRONSPIRE_MINION_LEGGINGS:
+  Id: IRON_LEGGINGS
+  Display: '&fIronspire''s Minion Leggings'
+  Attributes:
+    Legs:
+      Armor: '1.0to3.0 ADD' 
+  Enchantments:
+  - PROTECTION:0to5
+  - UNBREAKING:0to5
+
+IRONSPIRE_MINION_BOOTS:
+  Id: IRON_BOOTS
+  Display: '&fIronspire''s Minion Boots'
+  Attributes:
+    Feet:
+      Armor: '1.0to3.0 ADD'
+  Enchantments:
+  - PROTECTION:0to5
+  - UNBREAKING:0to5
+
+IRONSPIRE_MINION_AXE:
+  Id: IRON_AXE
+  Display: '&fIronspire''s Minion Axe'
+  Enchantments:
+  - UNBREAKING:0to3
+  - FIRE_ASPECT:0to1
+  - SHARPNESS:0to3
+
+IRONSPIRE_MINION_STONE_SWORD:
+  Id: STONE_SWORD
+  Display: '&fIronspire''s Minion Sword'
+  Enchantments:
+  - UNBREAKING:0to3
+  - FIRE_ASPECT:0to1
+  - SHARPNESS:0to3
+
+IRONSPIRE_MINION_BOW:
+  Id: BOW
+  Display: '&fIronspire''s Minion Bow'
+  Enchantments:
+  - ARROW_FIRE:0to1
+  - ARROW_INFINITE:0to1
+  - ARROW_DAMAGE:0to3
+  - ARROW_KNOCKBACK:0to3
+
+IRONSPIRE_MINION_BANNER:
+  Id: WHITE_BANNER
+  Display: '&fIronspire''s Banner'
+  BannerLayers:
+  - BLACK BASE
+  - GRAY GRADIENT_UP
+  - GRAY TRIANGLES_BOTTOM
+  - RED CROSS
+  - BLACK RHOMBUS
+
+IRONSPIRE_MINION_SHIELD:
+  Id: SHIELD
+  Display: '&fIronspire''s Minion Shield'
+  BannerLayers:
+  - BLACK BASE
+  - GRAY GRADIENT_UP
+  - GRAY TRIANGLES_BOTTOM
+  - RED CROSS
+  - BLACK RHOMBUS
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

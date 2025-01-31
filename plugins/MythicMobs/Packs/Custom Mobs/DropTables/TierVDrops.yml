@@ -1,0 +1,108 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+TierVDrops:
+  TotalItems: 2
+  MinItems: 0
+  MaxItems: 2
+  BonusLuckItems: 0.1to6
+  BonusLevelItems: 0.2to2
+  Drops:
+#  - money 50-100 1
+#
+  - CUSTOM_DIAMOND_HELMET 1 0.1
+  - CUSTOM_DIAMOND_CHESTPLATE 1 0.1
+  - CUSTOM_DIAMOND_LEGGINGS 1 0.1
+  - CUSTOM_DIAMOND_BOOTS 1 0.1
+  - CUSTOM_DIAMOND_SWORD 1 0.1
+  - CUSTOM_NETHERITE_HELMET 1 0.01
+  - CUSTOM_NETHERITE_CHESTPLATE 1 0.01
+  - CUSTOM_NETHERITE_LEGGINGS 1 0.01
+  - CUSTOM_NETHERITE_BOOTS 1 0.01
+  - CUSTOM_NETHERITE_SWORD 1 0.01
+  - KNOCKBACK_STICK 1 0.01
+  - UNBREAKABLE_NETHERITE_HELMET 1 0.001
+  - UNBREAKABLE_NETHERITE_CHESTPLATE 1 0.001
+  - UNBREAKABLE_NETHERITE_LEGGINGS 1 0.001
+  - UNBREAKABLE_NETHERITE_BOOTS 1 0.001
+  - UNBREAKABLE_NETHERITE_SWORD 1 0.001
+#
+  - nether_star 3-5 0.1
+  - totem_of_undying 1-2 0.1
+  - dragon_egg 1 0.1
+  - elytra 1 0.1
+  - enchanted_golden_apple 4-7 0.1
+  - diamond_horse_armor 1-2 0.1
+  - name_tag 2-3 0.1
+  - saddle 1-2 0.1
+  - emerald_ore 2-3 0.1
+  - diamond_block 1-2 0.1
+  - ender_pearl 3-4 0.1
+  - blaze_rod 2-4 0.1
+  - nether_quartz_ore 1-2 0.1
+  - obsidian 2-3 0.1
+  - nether_wart 1-2 0.1
+  - anvil 3-4 0.1
+  - nether_brick 2-3 0.1
+  - ender_chest 1-2 0.1
+  - emerald_block 2-3 0.1
+#
+# 1.20+ Items, delete if using 1.19
+#
+  - netherite_upgrade_smithing_template 1 0.05
+  - sentry_armor_trim_smithing_template 1 0.05
+  - vex_armor_trim_smithing_template 1 0.05
+  - wild_armor_trim_smithing_template 1 0.05
+  - coast_armor_trim_smithing_template 1 0.05
+  - dune_armor_trim_smithing_template 1 0.05
+  - wayfinder_armor_trim_smithing_template 1 0.05
+  - raiser_armor_trim_smithing_template 1 0.05
+  - shaper_armor_trim_smithing_template 1 0.05
+  - host_armor_trim_smithing_template 1 0.05
+  - ward_armor_trim_smithing_template 1 0.05
+  - silence_armor_trim_smithing_template 1 0.05
+  - tide_armor_trim_smithing_template 1 0.05
+  - snout_armor_trim_smithing_template 1 0.05
+  - rib_armor_trim_smithing_template 1 0.05
+  - eye_armor_trim_smithing_template 1 0.05
+  - spire_armor_trim_smithing_template 1 0.05
+#
+# 1.21.1+ Items
+#
+  - mace 1 0.01
+  - wolf_armor 1 0.01
+  - wind_charge 16to32 0.01
+  - ominous_bottle 1 0.01
+  - breeze_rod 2to4 0.01
+  - heavy_core 1 0.01
+  - armadillo_scute 1to2 0.01
+  - trial_key 1 0.01
+  - ominous_trial_key 1 0.01
+  - bolt_armor_trim_smithing_template 1 0.01
+  - flow_armor_trim_smithing_template 1 0.01
+  - brush 1 0.01
+
+
+
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

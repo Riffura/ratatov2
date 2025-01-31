@@ -1,0 +1,47 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+SKILL_DOPPELGANGER:
+  Cooldown: 10
+  Skills:
+  - setstance{stance=THARKON_DOPPELGANGER} @self
+  - projectile{bulletType=MOB;mob=THARKON_DOPPELGANGER;onTick=SKILL_DOPPELGANGER_PROJECTILE-Tick;onEnd=SKILL_DOPPELGANGER_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;mr=5} @Ring{r=6to15;p=3to6}
+  - projectile{bulletType=MOB;mob=THARKON_DOPPELGANGER;onTick=SKILL_DOPPELGANGER_PROJECTILE-Tick;onEnd=SKILL_DOPPELGANGER_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;mr=5} @PIR{r=30} 0.5
+  - delay 20
+  - Aura{auraName=SKILL_DOPPELGANGER;onTick=SKILL_DOPPELGANGER_Tick;interval=60;duration=480} @self
+  - delay 500
+  - setstance{stance=THARKON_NORMAL} @self
+
+SKILL_DOPPELGANGER_Tick:
+  Conditions:
+  - stance{stance=SKILL_DOPPELGANGER} true
+  Skills:
+  - swap @MobsInRadius{r=30;types=THARKON_DOPPELGANGER;limit=2}
+
+SKILL_DOPPELGANGER_PROJECTILE-Tick:
+  Skills:
+  - effect:particles{particle=SOUL_FIRE_FLAME;amount=1;hS=0;vS=0;speed=0} @origin
+
+SKILL_DOPPELGANGER_PROJECTILE-End:
+  Skills:
+  - damage{a=5to10;i=false} @ENO{r=3}
+  - ignite{ticks=100} @ENO{r=3} 0.5
+  - throw{velocity=10;velocityY=2} @ENO{r=3}
+  - summon{type=THARKON_DOPPELGANGER;amount=1;radius=0;s=true} @origin
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

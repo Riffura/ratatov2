@@ -1,0 +1,134 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ░█████╗░██╗░░░░░░█████╗░███╗░░██╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██╔══██╗██║░░░░░██╔══██╗████╗░██║
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ██║░░╚═╝██║░░░░░███████║██╔██╗██║
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ██║░░██╗██║░░░░░██╔══██║██║╚████║
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ╚█████╔╝███████╗██║░░██║██║░╚███║
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝
+### KNIGHT_RIDER / MOUNT_HORSE / KNIGHT_MINION_WEAPON / KNIGHT_MINION_ARCHER / KNIGHT_MINION_BANNER_HOLDER ###
+DESPAWN_IF_BANNER_HOLDER_IS_DEAD:
+  Skills:
+  - delay 15
+  - effect:lightning{repeat=5;repeatInterval=3} @Children
+  - delay 15
+  - effect:explosion @Children
+  - remove @Children
+
+KNIGHT_MOUNT_DAMAGE:
+  Conditions:
+  - playerwithin{d=3} true
+  Skills:
+  - damage{amount=4to6;i=true} @target
+
+KNIGHT_CLAN_NAMES_MOUNT:
+  Skills:
+  - randomskill{
+      skills=
+      KNIGHT_CLAN_NAMES_MOUNT_1,
+      KNIGHT_CLAN_NAMES_MOUNT_2,
+      KNIGHT_CLAN_NAMES_MOUNT_3
+      }
+KNIGHT_CLAN_NAMES_MOUNT_1:
+  Skills:
+  - setname{name=&fThunderhoof the Valiant} @self
+KNIGHT_CLAN_NAMES_MOUNT_2:
+  Skills:
+  - setname{name=&fSilvermane the Noble} @self
+KNIGHT_CLAN_NAMES_MOUNT_3:
+  Skills:
+  - setname{name=&fBlazeheart the Steadfast} @self
+
+KNIGHT_CLAN_NAMES_WEAPON:
+  Skills:
+  - randomskill{
+      skills=
+      KNIGHT_CLAN_NAMES_WEAPON_1,
+      KNIGHT_CLAN_NAMES_WEAPON_2,
+      KNIGHT_CLAN_NAMES_WEAPON_3
+      }
+KNIGHT_CLAN_NAMES_WEAPON_1:
+  Skills:
+  - setname{name=&fThorne Axebane} @self
+KNIGHT_CLAN_NAMES_WEAPON_2:
+  Skills:
+  - setname{name=&fGideon Ironcleaver} @self
+KNIGHT_CLAN_NAMES_WEAPON_3:
+  Skills:
+  - setname{name=&fRagnor Battleforge} @self
+
+KNIGHT_CLAN_NAMES_ARCHER:
+  Skills:
+  - randomskill{
+      skills=
+      KNIGHT_CLAN_NAMES_ARCHER_1,
+      KNIGHT_CLAN_NAMES_ARCHER_2,
+      KNIGHT_CLAN_NAMES_ARCHER_3
+      }
+KNIGHT_CLAN_NAMES_ARCHER_1:
+  Skills:
+  - setname{name=&fAether Windwhisper} @self
+KNIGHT_CLAN_NAMES_ARCHER_2:
+  Skills:
+  - setname{name=&fRowan Arrowheart} @self
+KNIGHT_CLAN_NAMES_ARCHER_3:
+  Skills:
+  - setname{name=&fNova Moonshadow} @self
+
+KNIGHT_CLAN_NAMES_BANNER:
+  Skills:
+  - randomskill{
+      skills=
+      KNIGHT_CLAN_NAMES_BANNER_1,
+      KNIGHT_CLAN_NAMES_BANNER_2,
+      KNIGHT_CLAN_NAMES_BANNER_3
+      }
+KNIGHT_CLAN_NAMES_BANNER_1:
+  Skills:
+  - setname{name=&fAsher Standardbearer} @self
+KNIGHT_CLAN_NAMES_BANNER_2:
+  Skills:
+  - setname{name=&fEmber Crestbearer} @self
+KNIGHT_CLAN_NAMES_BANNER_3:
+  Skills:
+  - setname{name=&fQuinn Ironbanner} @self
+
+KNIGHT_HASPARENT:
+  Conditions:
+  - hasparent true
+  Skills:
+  - setparent @MIR{r=20;t=KNIGHTMINIONBANNERHOLDER;limit=1;sort=NEAREST}
+
+KNIGHT_MOUNT:
+  Skills:
+  - mount{type=KNIGHTMOUNTHORSE} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

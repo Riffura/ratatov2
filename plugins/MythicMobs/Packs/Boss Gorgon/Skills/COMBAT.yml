@@ -1,0 +1,44 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+GORGON_COMBAT:
+  Conditions:
+  - playerwithin{d=3} true
+  - stance{stance=GORGON_NORMAL} true
+  - stance{stance=GORGON_RAPID_ONSLAUGHT} false
+  Skills:
+  - damage{a=4to8;i=false}
+  - skill{s=GORGON_HIT}
+
+GORGON_HIT:
+  Conditions:
+  - stance{stance=GORGON_NORMAL} true
+  Skills:
+  - randomskill{skills=GORGON_SLOW,GORGON_POISON,GORGON_WEAKNESS}
+GORGON_SLOW:
+  Skills:
+  - potion{type=SLOW;duration=60;level=1;force=true;p=false} @trigger
+GORGON_POISON:
+  Skills:
+  - potion{type=POISON;duration=60;level=1;force=true;p=false} @trigger
+GORGON_WEAKNESS:
+  Skills:
+  - potion{type=WEAKNESS;duration=90;level=1;force=true;p=false} @trigger
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

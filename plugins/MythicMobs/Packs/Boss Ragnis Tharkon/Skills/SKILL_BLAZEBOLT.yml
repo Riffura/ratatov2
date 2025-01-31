@@ -1,0 +1,60 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+SKILL_BLAZEBOLT_TARGET_SINGLE:
+  Cooldown: 3
+  Skills:
+  - setstance{stance=THARKON_BLAZEBOLT_TARGET_SINGLE} @self
+  - projectile{onTick=SKILL_BLAZEBOLT-Tick;onHit=SKILL_BLAZEBOLT-Hit;onEnd=SKILL_BLAZEBOLT-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0.5;g=0.05;tyo=1} @target
+  - delay 60
+  - setstance{stance=THARKON_NORMAL} @self
+SKILL_BLAZEBOLT_TARGET_ALL:
+  Cooldown: 10
+  Skills:
+  - setstance{stance=THARKON_BLAZEBOLT_TARGET_ALL} @self
+  - projectile{onTick=SKILL_BLAZEBOLT-Tick;onHit=SKILL_BLAZEBOLT-Hit;onEnd=SKILL_BLAZEBOLT-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0.5;g=0.05;tyo=1} @PIR{r=30}
+  - delay 60
+  - setstance{stance=THARKON_NORMAL} @self
+SKILL_BLAZEBOLT_TARGET_RANDOM:
+  Cooldown: 10
+  Skills:
+  - setstance{stance=THARKON_BLAZEBOLT_TARGET_RANDOM} @self
+  - projectile{onTick=SKILL_BLAZEBOLT-Tick;onHit=SKILL_BLAZEBOLT-Hit;onEnd=SKILL_BLAZEBOLT-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0.5;g=0.1;tyo=1} @RandomLocationsNearCaster{a=5to10;r=8to14;s=3}
+  - delay 10
+  - projectile{onTick=SKILL_BLAZEBOLT-Tick;onHit=SKILL_BLAZEBOLT-Hit;onEnd=SKILL_BLAZEBOLT-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0.5;g=0.15;tyo=1} @RandomLocationsNearCaster{a=5to10;r=10to15;s=3}
+  - delay 10
+  - projectile{onTick=SKILL_BLAZEBOLT-Tick;onHit=SKILL_BLAZEBOLT-Hit;onEnd=SKILL_BLAZEBOLT-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0.5;g=0.2;tyo=1} @RandomLocationsNearCaster{a=5to10;r=10to20;s=3}
+  - delay 60
+  - setstance{stance=THARKON_NORMAL} @self
+#
+SKILL_BLAZEBOLT-Tick:
+  Skills:
+  - effect:particles{particle=FLAME;amount=1;hS=0.1;vS=0.1;speed=0} @origin
+  - effect:particles{particle=FALLING_LAVA;amount=1;hS=0.1;vS=0.1;speed=0} @origin
+SKILL_BLAZEBOLT-Hit:
+  Skills:
+  - damage{a=5to10;i=false}
+  - ignite{ticks=100} 0.5
+SKILL_BLAZEBOLT-End:
+  Skills:
+  - sound{s=block.lava.extinguish;v=0.3;p=1} @origin
+  - effect:blockmask{m=LAVA;r=1;d=80} @origin
+  - damage{a=10;i=false;repeat=16;repeatinterval=5} @ENO{r=1}
+  - delay 100
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,656 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███████╗░█████╗░███╗░░░███╗██████╗░██╗███████╗░██████╗
+#╚════██║██╔══██╗████╗░████║██╔══██╗██║██╔════╝██╔════╝
+#░░███╔═╝██║░░██║██╔████╔██║██████╦╝██║█████╗░░╚█████╗░
+#██╔══╝░░██║░░██║██║╚██╔╝██║██╔══██╗██║██╔══╝░░░╚═══██╗
+#███████╗╚█████╔╝██║░╚═╝░██║██████╦╝██║███████╗██████╔╝
+#╚══════╝░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝╚══════╝╚═════╝░
+#
+ZOMBIE_HORDE_SUMMONER:
+  MobType: ARMOR_STAND
+  Display: '&fHorde Summoner'
+  Options:
+    Silent: true
+    Invisible: true
+    NoGravity: true
+    HasGravity: false
+    Small: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_HORDE} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=SUMMON_HORDE_SUMMON} ~onSpawn 1.0
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+ZOMBIE_HORDE:
+  MobType: ZOMBIE
+  Health: 15
+  Damage: 3
+  Faction: ZOMBIES
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - ZombieHordeHead HEAD
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - gotoparent
+  AITargetSelectors:
+  - clear
+  - players
+  Options:
+    FollowRange: 20
+    Despawn: true
+    MaxCombatDistance: 30
+    MovementSpeed: 0.2
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    DigOutOfGround: true
+    PreventSunburn: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_HORDE} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieHordeHead 1 0.01
+  - exp 12 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_EXPLOSIVE:
+  MobType: ZOMBIE
+  Health: 16
+  Damage: 4
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieExplosiveHead HEAD
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_EXPLOSIVE} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_EXPLOSIVE} ~onDeath 1.0
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieExplosiveHead 1 0.01
+  - exp 20 1.0
+  - gunpowder 1-5 0.4
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_SPRINTER:
+  MobType: ZOMBIE
+  Display: '&fRunner'
+  Health: 12
+  Damage: 2
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieSprinterHead HEAD
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_SPRINTER} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_RUNNER} ~onTimer:200 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieSprinterHead 1 0.01
+  - exp 16 1.0
+  - sugar 1-4 0.4
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_JUMPER:
+  MobType: ZOMBIE
+  Display: '&fJumper'
+  Health: 12
+  Damage: 3
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieJumperHead HEAD
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FALL 0.0
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_JUMPER} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_RANDOM_JUMPER} ~onTimer:60
+  - skill{s=ZOMBIE_JUMP_TOWARDS} ~onTimer:100
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  - setstance{stance=NORMAL_JUMPER} @self ~onSpawn 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieJumperHead 1 0.01
+  - exp 13 1.0
+  - slime_ball 1-4 0.4
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_THROWER:
+  MobType: ZOMBIE
+  Display: '&fThrower'
+  Health: 15
+  Damage: 3
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieThrowerHead HEAD
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_THROWER} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_THROW} ~onTimer:120 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieThrowerHead 1 0.01
+  - exp 18 1.0
+  - glistering_melon_slice 1-2 0.4
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_STEALTH:
+  MobType: ZOMBIE
+  Display: '&fHider'
+  Health: 5
+  Damage: 2
+  Faction: ZOMBIES
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventSunburn: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+    Invisible: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_STEALTH} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=ZOMBIE_STEALTH_BLOCKMASK} ~onTimer:10 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  - effect:blockunmask{r=50} @self ~onDeath 1
+  - sound{s=entity.pillager.celebrate;p=2.0;v=0.4} @self ~onTimer:60 1.0
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - ZombieStealthHead 1 0.01
+  - exp 30 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_SKILLED:
+  MobType: ZOMBIE
+  Display: '&fSkilled Zombie'
+  Health: 50
+  Damage: 4
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieSkilledHead HEAD
+  Options:
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    MaxCombatDistance: 30
+    FollowRange: 16
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventSunburn: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_SKILLED} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=SKILLED_BASH} ~onAttack 0.6
+  - skill{s=SKILLED_POTION_ATTACK} ~onTimer:200 0.7
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - ZombieSkilledHead 1 0.01
+  - exp 50to100 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_STUNNER:
+  MobType: ZOMBIE
+  Display: '&fStunner'
+  Health: 5
+  Damage: 1
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieStunnerHead HEAD
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_STUNNER} ~onSpawn 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=STUN_ENTITIES_AROUND} ~onDeath 1.0
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieStunnerHead 1 0.01
+  - exp 8 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_SCRAMBLER:
+  MobType: ZOMBIE
+  Display: '&fScrambler'
+  Health: 10
+  Damage: 0
+  Faction: ZOMBIES
+  Equipment:
+  - ZombieScramblerHead HEAD
+  Options:
+    MovementSpeed: 0.3
+    Despawn: true
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  - fleeplayers{d=20;s=1.5;ss=1}
+  - fleegolems
+  - fleewolf
+  - fleesun
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_SCRAMBLER} ~onSpawn 1
+  - skill{s=ZOMBIE_GOTO_ITEMS} ~onTimer:60 1
+  - skill{s=ZOMBIE_THROW_ITEMS} ~onTimer:30 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - ZombieScramblerHead 1 0.01
+  - exp 18 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_BOMBER_DUMMY:
+  MobType: ARMOR_STAND
+  Display: ''
+  Options:
+    DigOutOfGround: true
+    Silent: true
+    Invisible: true
+    Small: true
+    Collidable: false
+    Invincible: true
+  Skills:
+  - cancelevent{sync=true} @self ~onDamaged 1
+  - effect:particlering{particle=reddust;color=#cc4214;points=10;radius=0.3;amount=2;speed=0.1;yOffset=0.12;vd=64} @self ~onTimer:5 1
+  - skill{s=BOMBER_HIT} ~onTimer:20 1
+  - remove{delay=400} @self ~onSpawn
+
+ZOMBIE_BOMBER:
+  MobType: ZOMBIE
+  Display: '&fBomber'
+  Health: 10
+  Damage: 3
+  Faction: ZOMBIES
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+  Equipment:
+  - BomberHead HEAD
+  DamageModifiers:
+  - ENTITY_EXPLOSION 0.0
+  - BLOCK_EXPLOSION 0.0
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_BOMBER} ~onSpawn 1
+  - skill{s=BOMBER_PLACE} ~onTimer:80 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - BomberHead 1 0.01
+  - exp 15 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_NINJA:
+  MobType: ZOMBIE
+  Display: '&fNinja Zombie'
+  Health: 20
+  Damage: 1
+  Faction: ZOMBIES
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  DamageModifiers:
+  - FALL 0.0
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=RANDOM_NAME_ZOMBIE_NINJA} ~onSpawn 1
+  - skill{s=NINJA_EQUIPMENT} ~onEnterCombat 1
+  - skill{s=NINJA_ATTACK} ~onTimer:160 1
+  - skill{s=NINJA_DAMAGE} ~onAttack 1
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - ZombieNinjaHead 1 0.01
+  - exp 6 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_END:
+  MobType: ZOMBIE
+  Display: '&fEnd Zombie'
+  Health: 20
+  Damage: 1
+  Faction: ENDMOBS
+  Equipment:
+  - EndZombieHead:4
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  DamageModifiers:
+  - POISON 0.0
+  - MAGIC 0.0
+  - DRAGON_BREATH 0.0
+  - WITHER 0.0
+  AITargetSelectors:
+  - clear
+  - players
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - EndZombieHead 1 0.01
+  - exp 45 1.0
+  - Shulker_Shell 1 0.1
+  Skills:
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=END_ZOMBIE_SHIELD} ~onDamaged 0.5
+  - skill{s=END_ZOMBIE_DAMAGE} ~onAttack 1
+  - skill{s=END_ZOMBIE_DAMAGE_STREAK} ~onAttack 1
+  - modifytargetscore{objective=ENDDAMAGESCORE;action=add;value=1} @trigger ~onDamaged
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZOMBIE_CAVE_MINER:
+  MobType: ZOMBIE
+  Display: '&fCave Miner Zombie'
+  Health: 20
+  Damage: 3
+  Faction: ZOMBIES
+  Equipment:
+  - ZOMBIE_CAVE_MINER_HEAD:HEAD
+  - DIAMOND_PICKAXE:HAND
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  AITargetSelectors:
+  - clear
+  - players
+  Drops:
+  - TierIDrops 1 0.1
+  - CaveMinerDrops 1 1
+  - ZOMBIE_CAVE_MINER_HEAD 1 0.01
+  - exp 45 1.0
+  Skills:
+  - skill{s=CAVE_MINER_SUMMON_TNT} ~onTimer:100 0.3
+  - skill{s=ZOMBIE_HORDE_SLOWDOWN} ~onAttack 1
+ZOMBIE_CAVE_MINER_TNT:
+  MobType: TNT
+  Options:
+    Incendiary: true
+    ExplosionYield: 5
+    FuseTicks: 100
+    DigOutOfGround: true
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

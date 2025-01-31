@@ -1,0 +1,1002 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███╗░░░███╗██╗░██████╗░█████╗░
+#████╗░████║██║██╔════╝██╔══██╗
+#██╔████╔██║██║╚█████╗░██║░░╚═╝
+#██║╚██╔╝██║██║░╚═══██╗██║░░██╗
+#██║░╚═╝░██║██║██████╔╝╚█████╔╝
+#╚═╝░░░░░╚═╝╚═╝╚═════╝░░╚════╝░
+#
+### WATER CREATURE ###
+WATER_BOLT:
+  Skills:
+  - projectile{onTick=WATER_BOLT-Tick;onHit=WATER_BOLT-Hit;v=8;i=1;hR=1.5;vR=1.5;hS=false;g=0.25;tyo=8}
+WATER_BOLT-Tick:
+  Skills:
+  - effect:particles{particle=WATER_BUBBLE;amount=20;hS=0;vS=0;speed=1} @origin
+WATER_BOLT-Hit:
+  Skills:
+  - damage{a=2}
+  - potion{type=SLOW;duration=1200;lvl=2;force=true;p=false}
+  - potion{type=WEAKNESS;duration=1200;lvl=2;force=true;p=false}
+
+WATER_CREATURE_MOVE:
+  Conditions:
+  - inblock{b=WATER} true
+  - playerwithin{d=25} true
+  TargetConditions:
+  - inblock{b=WATER} true
+  Skills:
+  - jump{velocity=-0.5}
+  - delay 20
+  - leap{velocity=180} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### SAM THE SNOWMAN ###
+SNOW_SINGLESHOT:
+  Conditions:
+  - health{h=>25} orElseCast SNOW_TRIPPLESHOOTER
+  - playerwithin{d=25} true
+  Skills:
+  - projectile{onTick=SNOW_SINGLESHOT-Tick;onHit=SNOW_SINGLESHOT-Hit;v=10;i=1;hR=1;vR=1;syo=1.45;tyo=1;mr=15;sfo=0.5;g=0.05} @Forward{f=15}
+SNOW_SINGLESHOT-Tick:
+  Skills:
+  - effect:particles{p=SNOWBALL;amount=2;speed=0;hS=0;vS=0} @origin
+SNOW_SINGLESHOT-Hit:
+  Skills:
+  - damage{amount=6}
+  - freeze{ticks=200}
+  - potion{type=WEAKNESS;duration=120;lvl=0}
+#
+SNOW_TRIPPLESHOOTER:
+  Skills:
+  - projectile{onTick=SNOW_TRIPPLESHOOTER-Tick;onHit=SNOW_TRIPPLESHOOTER-Hit;v=10;i=1;hR=1;vR=1;syo=1.45;tyo=1;mr=13;sfo=0.5;eso=1;g=0.05} @Forward{f=15}
+  - projectile{onTick=SNOW_TRIPPLESHOOTER-Tick;onHit=SNOW_TRIPPLESHOOTER-Hit;v=10;i=1;hR=1;vR=1;syo=1.45;tyo=1;mr=15;sfo=0.5;eso=0;g=0.05} @Forward{f=15}
+  - projectile{onTick=SNOW_TRIPPLESHOOTER-Tick;onHit=SNOW_TRIPPLESHOOTER-Hit;v=10;i=1;hR=1;vR=1;syo=1.45;tyo=1;mr=13;sfo=0.5;eso=-1;g=0.05} @Forward{f=15}
+SNOW_TRIPPLESHOOTER-Tick:
+  Skills:
+  - effect:particles{p=SNOWBALL;amount=3;speed=0.05;hS=0;vS=0} @origin
+  - effect:particles{p=SNOWFLAKE;amount=3;speed=0.05;hS=0;vS=0} @origin
+SNOW_TRIPPLESHOOTER-Hit:
+  Skills:
+  - damage{amount=12}
+  - freeze{ticks=300}
+  - potion{type=WEAKNESS;duration=200;lvl=0}
+#
+SNOW_EFFECT:
+  Conditions:
+  - playerwithin{d=25} true
+  Skills:
+  - effect:particles{particle=SNOWFLAKE;amount=5;hS=0.4;vS=0;y=0.1} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ALPHA-WOLF ###
+WOLF_HOWL:
+  Skills:
+  - effect:particles{particle=VILLAGER_ANGRY;amount=1;hS=0;vS=0;speed=0;y=0.8} @self
+  - effect:itemspray{item=BONE;amount=4;velocity=0.6;d=40;yo=0.2;} @self
+  - sound{s=entity.wolf.howl;p=0.5;v=1.0} @self
+  - delay 20
+  - summon{type=WOLF_BABY;amount=1;radius=3;s=true} @self
+  - summon{type=WOLF_BABY;amount=1;radius=4;s=true} @self
+  - summon{type=WOLF_BABY;amount=1;radius=7;s=true} @self
+  - summon{type=WOLF_BABY;amount=1;radius=8;s=true} @self
+  - delay 40
+  - rally{types=WOLF_BABY;radius=20;ot=false} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### END WITCH ###
+WITCH_PROJECTILE_SLOW:
+  Cooldown: 10
+  Skills:
+  - skill{s=WITCH_PROJECTILE_S} @Target
+  - delay 15
+  - skill{s=WITCH_PROJECTILE_S} @Target
+  - delay 15
+  - skill{s=WITCH_PROJECTILE_S} @Target
+WITCH_PROJECTILE_S:
+    Skills:
+    - projectile{onTick=WITCH_PROJECTILE_S-Tick;onHit=WITCH_PROJECTILE_S-Hit;v=8;i=1;hR=1;vR=1;mr=30}
+WITCH_PROJECTILE_S-Tick:
+    Skills:
+    - effect:particles{p=WITCH;amount=15;speed=1;hS=0.2;vS=0.2} @origin
+WITCH_PROJECTILE_S-Hit:
+    Skills:
+    - damage{a=16}
+    - skill{s=WITCH_RANDOM_POTION} @Target
+#
+WITCH_PROJECTILE_FAST:
+  Cooldown: 5
+  Skills:
+  - skill{s=WITCH_PROJECTILE_F} @Target
+  - delay 15
+  - skill{s=WITCH_PROJECTILE_F} @Target
+  - delay 15
+  - skill{s=WITCH_PROJECTILE_F} @Target
+WITCH_PROJECTILE_F:
+    Skills:
+    - projectile{onTick=WITCH_PROJECTILE_F-Tick;onHit=WITCH_PROJECTILE_F-Hit;v=14;i=1;hR=1;vR=1;mr=15}
+WITCH_PROJECTILE_F-Tick:
+    Skills:
+    - effect:particles{p=WITCH;amount=15;speed=1;hS=0.2;vS=0.2} @origin
+WITCH_PROJECTILE_F-Hit:
+    Skills:
+    - damage{a=6}
+    - skill{s=WITCH_RANDOM_POTION} @Target
+#
+WITCH_RANDOM_POTION:
+  Skills:
+  - randomskill{skills=POTION_1,POTION_2,POTION_3,POTION_4,POTION_5,POTION_6,POTION_7,POTION_8,POTION_9,POTION_10}
+POTION_1:
+  Skills:
+  - potion{type=SLOW;duration=100;level=1}
+POTION_2:
+  Skills:
+  - potion{type=BLINDNESS;duration=100;level=1}
+POTION_3:
+  Skills:
+  - potion{type=CONFUSION;duration=90;level=1}
+POTION_4:
+  Skills:
+  - potion{type=DARKNESS;duration=100;level=1}
+POTION_5:
+  Skills:
+  - potion{type=HARM;duration=2;level=1}
+POTION_6:
+  Skills:
+  - potion{type=WEAKNESS;duration=100;level=1}
+POTION_7:
+  Skills:
+  - potion{type=HUNGER;duration=100;level=1}
+POTION_8:
+  Skills:
+  - potion{type=LEVITATION;duration=160;level=1}
+POTION_9:
+  Skills:
+  - potion{type=POISON;duration=100;level=1}
+POTION_10:
+  Skills:
+  - potion{type=WITHER;duration=100;level=1}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### HARDCORE PILLAGER ###
+PILLAGER_DAMAGE_1:
+  Conditions:
+  - playerwithin 2 true
+  Skills:
+  - effect:sound{s=entity.player.attack.crit;v=0.4;p=0.4} @target
+  - effect:particles{particle=SWEEP_ATTACK;amount=3;hS=0.1;vS=0.1;speed=0;forwardOffset=1;y=1.2} @target
+  - damage{a=5;i=false;repeat=2;repeatInterval=2} @target
+#
+PILLAGER_DAMAGE_2:
+  Conditions:
+  - playerwithin 2 true
+  Skills:
+  - effect:sound{s=entity.player.attack.crit;v=0.4;p=0.4} @target
+  - effect:particles{particle=SWEEP_ATTACK;amount=3;hS=0.1;vS=0.1;speed=0;forwardOffset=1;y=1.2} @target
+  - damage{a=7;i=false;repeat=2;repeatInterval=2} @target
+#
+PILLAGER_DAMAGE_3:
+  Conditions:
+  - playerwithin 2 true
+  Skills:
+  - effect:sound{s=entity.player.attack.crit;v=0.4;p=0.4} @target
+  - effect:particles{particle=SWEEP_ATTACK;amount=3;hS=0.1;vS=0.1;speed=0;forwardOffset=1;y=1.2} @target
+  - damage{a=9;i=false;repeat=2;repeatInterval=2} @target
+#
+PILLAGER_DAMAGE_4:
+  Conditions:
+  - playerwithin 2 true
+  Skills:
+  - effect:sound{s=entity.player.attack.crit;v=0.4;p=0.4} @target
+  - effect:particles{particle=SWEEP_ATTACK;amount=3;hS=0.1;vS=0.1;speed=0;forwardOffset=1;y=1.2} @target
+  - damage{a=12;i=false;repeat=2;repeatInterval=2} @target
+#
+PILLAGER_GRIP:
+  Conditions:
+  - playerwithin 15 true
+  - playerwithin 3 false
+  Skills:
+  - pull{velocity=8} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### LAVA CUBE ###
+MAGMA_SUMMONER_1:
+  Skills:
+  - summon{type=LAVA_CUBE_2;amount=5;radius=3} @self
+
+MAGMA_SUMMONER_2:
+  Skills:
+  - summon{type=LAVA_CUBE_3;amount=3;radius=3} @self
+
+MAGMA_FIRE:
+  Skills:
+  - ignite{ticks=200} @target
+  - damage{a=2;i=true}
+
+MAGMA_BLOCKMASK_1:
+  Conditions:
+  - onblock{m=NETHERRACK,SOUL_SAND,SOUL_SOIL} true
+  - onground true
+  Skills:
+  - effect:blockmask{m=MAGMA_BLOCK;r=6;d=200;n=5} @self
+
+MAGMA_BLOCKMASK_2:
+  Conditions:
+  - onblock{m=NETHERRACK,SOUL_SAND,SOUL_SOIL} true
+  - onground true
+  Skills:
+  - effect:blockmask{m=MAGMA_BLOCK;r=4;d=200;n=5} @self
+
+MAGMA_BLOCKMASK_3:
+  Conditions:
+  - onblock{m=NETHERRACK,SOUL_SAND,SOUL_SOIL} true
+  - onground true
+  Skills:
+  - effect:blockmask{m=MAGMA_BLOCK;r=2;d=200;n=5} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### END ZOMBIE ###
+END_ZOMBIE_DAMAGE:
+  Conditions:
+  - playerwithin 2
+  Skills:
+  - potion{type=WITHER;duration=100;level=1} @target 0.5
+  - damage{amount=4;ignoreArmor=true} @target
+
+END_ZOMBIE_DAMAGE_STREAK:
+  Conditions:
+  - playerwithin 2
+  TriggerConditions:
+  - score{objective=ENDDAMAGESCORE;value=>5} true
+  Skills:
+  - settargetscore{objective=ENDDAMAGESCORE;value=1} @trigger
+  - damage{amount=6;ignoreArmor=true} @target
+  - potion{type=WITHER;duration=600;level=1} @target
+
+END_ZOMBIE_SHIELD:
+  Conditions:
+  - playerwithin 5
+  Skills:
+  - orbital{onTick=END_ZOMBIE_SHIELD-Tick;onHit=END_ZOMBIE_SHIELD-Hit;points=20;interval=1;duration=60;charges=5;oy=1.5;rx=1-2;rz=1-2;ry=1-2} @self
+END_ZOMBIE_SHIELD-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#ff00dd;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=reddust;color=#000000;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+END_ZOMBIE_SHIELD-Hit:
+  Skills:
+  - damage{a=10;ignoreArmor=true}
+  - potion{type=WITHER;duration=200;lvl=1}
+  - potion{type=DARKNESS;duration=200;lvl=1}
+  - potion{type=WEAKNESS;duration=200;lvl=1}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### END SKELETON ###
+END_SKELETON_DAMAGE:
+  Skills:
+  - potion{type=WITHER;duration=100;level=1} @target 0.5
+
+END_SKELETON_EQUIP:
+  Skills:
+  - setstance{stance=SKELETON_RANDOM_EQUIP} @self
+  - delay 10
+  - randomskill{skills=END_SKELETON_EQUIP_1 10,END_SKELETON_EQUIP_2 10}
+END_SKELETON_EQUIP_1:
+  Skills:
+  - equip{item=END_SKELETON_SWORD:HAND}
+  - setstance{stance=END_SKELETON_NORMAL} @self
+END_SKELETON_EQUIP_2:
+  Skills:
+  - equip{item=END_SKELETON_BOW:HAND}
+  - setstance{stance=END_SKELETON_NORMAL} @self
+END_SKELETON_WARP:
+  Conditions:
+  - playerwithin 16
+  Skills:
+  - delay 1
+  - teleport{spreadh=10;spreadv=0} @target
+  - effect:itemspray{item=DRIED_KELP;amount=5;velocity=0.1;d=40} @self
+
+END_SKELETON_SHIELD:
+  Conditions:
+  - playerwithin 8
+  Skills:
+  - orbital{onTick=END_SKELETON_SHIELD-Tick;onHit=END_SKELETON_SHIELD-Hit;points=20;interval=1;duration=60;charges=5;oy=1.5;rx=1-2;rz=1-2;ry=1-2} @self
+END_SKELETON_SHIELD-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#ff00dd;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=reddust;color=#000000;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+END_SKELETON_SHIELD-Hit:
+  Skills:
+  - damage{a=10;ignoreArmor=true}
+  - potion{type=WITHER;duration=200;lvl=1}
+  - potion{type=DARKNESS;duration=200;lvl=1}
+  - potion{type=WEAKNESS;duration=200;lvl=1}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### BEE ###
+BEE_DAMAGE:
+  Cooldown: 99
+  Skills:
+  - potion{type=POISON;duration=100;level=1} @target
+  - potion{type=CONFUSION;duration=100;level=1} @target
+  - damagepercent{percent=0.5;ia=true;pi=true} @target
+  - stun{d=100;f=true} @target
+  - delay 60
+  - suicide @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### TANK ###
+TANK_SHIELD_BREAK:
+  Skills:
+  - shieldbreak{duration=600} @target
+
+TANK_DAMAGE:
+  Conditions:
+  - playerwithin 2 true
+  Skills:
+  - damage{a=7-9;is=true;ir=true;ia=true}
+
+TANK_CHARGE:
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaitargetselector{target=clear} @self
+  - delay 1
+  - look{headOnly=true;immediately=true} @self
+  - stun{d=50;f=true;nokb=true} @self
+  - delay 50
+  - look{headOnly=true;immediately=true} @self
+  - goto{speedModifier=1;sh=0;sv=0} @Forward{f=14;lockpitch=true}
+  - potion{type=SPEED;duration=60;level=6;force=true} @self
+  - delay 50
+  - potion{type=SPEED;duration=0;level=1;force=true} @self
+  - runaitargetselector{target=players} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - damage{amount=20;ignoreArmor=true} @EntitiesInRadius{r=3;target=players}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### END BLAZE ###
+END_BLAZE_PROJECTILE:
+  Conditions:
+  - stance END_BLAZE_NORMAL true
+  - stance END_BLAZE_BURST false
+  Skills:
+  - disengage @self 0.6
+  - delay 5
+  - lunge{velocity=1;velocityY=-0.5to1} @ENO{r=12;target=players;limit=1;sort=RANDOM}
+  - potion{type=LEVITATION;duration=10;lvl=2;force=true;p=false} @self
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_1;onEnd=END_BLAZE_PROJECTILE-END;v=2;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+END_BLAZE_PROJECTILE-TICK_1:
+  Skills:
+  - effect:particles{particle=reddust;color=#eb00cf;amount=3;speed=0.01;hS=0.2;vS=0.2} @origin
+  - sound{s=entity.allay.item_taken;v=1.0;p=1.0} @origin
+  - damage{a=2to3} @ENO{r=1.5;target=players}
+  - throw{velocity=2;velocityY=0.5} @ENO{r=1.5;target=players}
+END_BLAZE_PROJECTILE_BURST:
+  Conditions:
+  - stance END_BLAZE_NORMAL true
+  Skills:
+  - setstance{stance=END_BLAZE_BURST} @self
+  - disengage @self 0.6
+  - delay 5
+  - lunge{velocity=1;velocityY=-0.5to1} @ENO{r=12;target=players;limit=1;sort=RANDOM}
+  - potion{type=LEVITATION;duration=10;lvl=2;force=true;p=false} @self
+  - delay 20
+  - stun{d=80;f=false;kb=true;g=true} @self
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=8;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=8;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=5;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=5;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=4;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=4;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1.0;p=1.5} @origin
+  - projectile{onTick=END_BLAZE_PROJECTILE-TICK_2;onEnd=END_BLAZE_PROJECTILE-END;v=2;i=1;sb=true;se=false;d=200;mr=20;sfo=0;tyo=1.2;syo=0.5} @ENO{r=12;target=players;limit=2;sort=RANDOM}
+  - setstance{stance=END_BLAZE_NORMAL} @self
+END_BLAZE_PROJECTILE-TICK_2:
+  Skills:
+  - effect:particles{particle=reddust;color=#eb00cf;amount=3;speed=0.01;hS=0.2;vS=0.2} @origin
+  - sound{s=entity.allay.item_taken;v=1.0;p=1.0} @origin
+  - damage{a=2to4} @ENO{r=1.5;target=players}
+  - throw{velocity=2;velocityY=0.5} @ENO{r=1.5;target=players}
+END_BLAZE_PROJECTILE-END:
+  Skills:
+  - damage{a=15;ia=true} @ENO{r=5;target=players}
+  - throw{velocity=2;velocityY=0.8;fromorigin=true} @ENO{r=5;target=players}
+  - throw{velocity=10;velocityY=3} @ENO{r=5;target=players}
+  - effect:explosion @origin
+
+END_BLAZE_EFFECTS:
+  Skills:
+  - particleorbital{p=reddust;color=#eb00cf;r=1;points=12;a=2;t=50;i=1;vy=20;rZ=5} @self
+  - particleorbital{p=reddust;color=#000000;r=1;points=12;a=2;t=50;i=1;vy=20;rX=5} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### TORNADO ###
+TORNADO:
+  Skills:
+  - effect:particletornado{p=CRIT;cp=CLOUD;mr=1;h=2;i=2;d=100;rs=2;sh=1;cs=1;ca=1;chs=0.1;cvs=0.1;cps=0;cyo=0.2} @self
+  - effect:particletornado{p=CRIT;cp=CLOUD;mr=1;h=3;i=2;d=100;rs=3;sh=1;cs=1;ca=1;chs=0.1;cvs=0.1;cps=0;cyo=0.2} @self
+
+TORNADO-ATTACK:
+  Skills:
+  - damage{a=2} @PlayersInRadius{r=3}
+  - damage{a=4} @PlayersInRadius{r=2}
+
+TORNADO-PULL:
+  Skills:
+  - pull{v=4;to=true} @PIR{r=6}
+  - pull{v=3;to=true} @PIR{r=5}
+  - pull{v=3;to=true} @PIR{r=4}
+  - pull{v=2;to=true} @PIR{r=3}
+  - pull{v=2;to=true} @PIR{r=2}
+  - pull{v=1;to=true} @PIR{r=1}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### POISON_FROG ###
+POISON_FROG_LEAP:
+  Conditions:
+  - stance POISON_FROG_NORMAL true
+  Skills:
+  - setstance{stance=POISON_FROG_LEAP} @self
+  - leap{velocity=200} @target
+  - delay 15
+  - effect:particles{particle=reddust;color=#80ff00;amount=20;hS=0.5;vS=1.2;speed=0} @EIR{r=2}
+  - damage{amount=3} @EIR{r=2}
+  - potion{type=POISON;duration=100;lvl=2} @EIR{r=2}
+  - setstance{stance=POISON_FROG_NORMAL} @self
+#
+POISON_FROG_SPIT:
+  Conditions:
+  - playerwithin 10
+  - stance POISON_FROG_LEAP false
+  Skills:
+  - projectile{onTick=POISON_FROG_SPIT-Tick;onHit=POISON_FROG_SPIT-Hit;v=8;i=1;hR=1.2;vR=1.2;hS=false;g=0.45;tyo=2;syo=0.2;sfo=0.2} @target
+POISON_FROG_SPIT-Tick:
+  Skills:
+  - effect:particles{particle=reddust;color=#80ff00;amount=10;hS=0;vS=0;speed=1} @origin
+POISON_FROG_SPIT-Hit:
+  Skills:
+  - damage{a=5}
+  - potion{type=POISON;duration=100;lvl=4}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### RANCIE_PIG ###
+RANCIE_CHANGE:
+  Skills:
+  - delay 1
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @self
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @self
+  - summon{type=RANCIE_PIG_ZOMBIE;amount=1;radius=0} @self
+  - delay 1
+  - remove @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### DROWNED_SHIFTER ###
+DROWNED_SHIFTER_TELEPORT:
+  Cooldown: 10
+  Conditions:
+  - inblock{b=WATER} orElseCast DROWNED_SHIFTER_IF_RAINING
+  - inside true
+  - playerwithin{d=10} true
+  Skills:
+  - delay 1
+  - teleport{spreadh=0;spreadv=0} @target
+  - delay 5
+  - Aura{auraName=DROWNED_TELEPORT;onTick=DROWNED_SHIFTER_TICK;onEnd=DROWNED_SHIFTER_END;interval=10;duration=60;cotd=false} @self
+DROWNED_SHIFTER_TICK:
+  Skills:
+  - delay 1
+  - forcepull{spread=2} @PIR{r=5}
+  - jump{velocity=-0.5} @self
+DROWNED_SHIFTER_END:
+  Skills:
+  - delay 1
+  - effect:particles{particle=WATER_BUBBLE;amount=50;hS=2;vS=2;speed=0;y=1.5} @self
+  - effect:sound{s=item.shield.break;v=0.5;p=1.5} @target
+  - damage{amount=10;ignoreArmor=true} @PIR{r=5}
+
+DROWNED_SHIFTER_IF_RAINING:
+  Conditions:
+  - raining true
+  Skills:
+  - delay 1
+  - effect:particles{particle=WATER_BUBBLE;amount=10;hS=1;vS=1;speed=0;y=1.5} @self
+  - teleport{spreadh=2;spreadv=0} @target
+  - lightning{d=3} @target
+  - effect:sound{s=item.shield.break;v=0.5;p=1.5} @target
+  - damage{amount=3;ignoreArmor=true} @target
+
+DROWNED_SHIFTER_DAMAGE:
+  Conditions:
+  - playerwithin{d=2} true
+  Skills:
+  - delay 1
+  - effect:sound{s=item.shield.break;v=0.5;p=1.5} @target
+  - damage{amount=8;ignoreArmor=true} @target
+  - effect:particles{particle=block;m=DRIP_WATER;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{particle=block;m=FALLING_WATER;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{particle=block;m=WATER_SPLASH;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ALIEN ###
+ALIEN_METEOR:
+  Conditions:
+  - onblock{m=TINTED_GLASS} false
+  Skills:
+  - projectile{onTick=ALIEN_METEOR-Tick;onEnd=ALIEN_METEOR-End;v=18;i=1;hR=1;vR=1;sfo=1;sE=false;syo=60;tyo=0;mr=200;g=0.2;sfo=30} @self
+ALIEN_METEOR-Tick:
+  Skills:
+  - effect:particles{p=lava;amount=1;speed=0.01;hS=0.8;vS=0.8} @origin
+  - effect:particles{p=reddust;color=#a1009b;amount=5;speed=0;hS=0.8;vS=0.8} @origin
+  - effect:particles{p=reddust;color=#068000;amount=5;speed=0;hS=0.8;vS=0.8} @origin
+  - effect:particles{p=CLOUD;amount=2;speed=0;hS=0.5;vS=0.5} @origin
+ALIEN_METEOR-End:
+  Skills:
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 1
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 0.4
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - delay 10
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 1
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 0.4
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - delay 10
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 1
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 0.4
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - delay 10
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 1
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 0.4
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - delay 10
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 1
+  - summon{type=ALIEN_MINION;s=true;amount=1;radius=5} @origin 0.4
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - delay 10
+  - sound{s=entity.generic.explode;p=1;v=1} @origin
+  - throw{velocity=25;velocityY=3} @ENO{r=6;target=players}
+  - effect:particles{p=reddust;color=#a1009b;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=reddust;color=#068000;amount=25;speed=0.01;hS=3;vS=3} @origin
+  - effect:particles{p=CLOUD;amount=3;speed=0.01;hS=3;vS=3} @origin
+  - summon{type=ALIEN;s=true;amount=1;radius=1} @origin 0.5
+  - remove @self
+
+ALIEN_DMG_TIP:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=>0} false
+  Skills:
+  - message{m="&7&oCarrying an &d&oAmethyst Shard &7&ocan significantly boost your damage against &a&o<caster.name>&7&o."} @trigger 0.1
+
+ALIEN_DMG_1:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=1to31} true
+  Skills:
+  - damage{a=4to6;i=true} @self
+ 
+ALIEN_DMG_2:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=32to63} true
+  Skills:
+  - damage{a=10to12;i=true} @self
+ 
+ALIEN_DMG_3:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=64} true
+  Skills:
+  - damage{a=20to25;i=true} @self
+ 
+ALIEN_ATTACK_DMG:
+  Conditions:
+  - playerwithin{d=2} true
+  Skills:
+  - damage{a=8to10;i=false} @target
+  - potion{type=POISON;duration=240;level=2} @target 0.5
+ 
+ALIEN_BURNING:
+  Conditions:
+  - isburning true
+  Skills:
+  - extinguish{delay=2} @self
+#
+#
+#
+### ALIEN MINION ###
+ALIEN_MINION_ATTACK_DMG:
+  Conditions:
+  - playerwithin{d=2} true
+  Skills:
+  - damage{a=3to5;i=false} @target
+  - potion{type=POISON;duration=100;level=1} @target 0.5
+
+ALIEN_MINION_DMG_1:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=1to31} true
+  Skills:
+  - damage{a=5to10} @self
+ 
+ALIEN_MINION_DMG_2:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=32to63} true
+  Skills:
+  - damage{a=15to20} @self
+ 
+ALIEN_MINION_DMG_3:
+  TargetConditions:
+  - hasitem{m=AMETHYST_SHARD;amount=64} true
+  Skills:
+  - damage{a=20to30} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### AGGRESSIVE STRIDER ###
+STRIDER_PROJECTILE:
+  Cooldown: 10
+  Conditions:
+  - inblock{b=LAVA} true
+  Skills:
+  - delay 1
+  - projectile{onTick=STRIDER_PROJECTILE-Tick;onHit=STRIDER_PROJECTILE-Hit;v=6;i=1;hR=1.0;vR=1.0;tyo=2;syo=1.2;sfo=0;sE=false;mr=25;g=0.08} @target
+STRIDER_PROJECTILE-Tick:
+  Skills:
+  - particles{particle=FLAME;amount=5;hS=0.2;vS=0.2;speed=0} @origin
+  - particles{particle=LAVA;amount=2;hS=0;vS=0;speed=0.05} @origin
+STRIDER_PROJECTILE-Hit:
+  Skills:
+  - damage{amount=10;ignoreArmor=true}
+  - potion{type=WEAKNESS;duration=120;level=2}
+  - ignite{ticks=120}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### SHADOW CASTER ###
+SHADOW_CLOAKER:
+  Skills:
+  - delay 1
+  - setstance{stance=SHADOW_CLOAKER} @self
+  - potion{type=INVISIBILITY;duration=99999;level=10;force=true;p=false} @self
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=1;points=6;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=1}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=1}
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=2;points=12;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=2}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=2}
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=3;points=18;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=3}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=3}
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=4;points=24;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=4}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=4}
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=5;points=30;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=5}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=5}
+  - delay 5
+  - effect:particlering{particle=SCULK_SOUL;radius=6;points=32;amount=1;hS=1;vS=1;y=0.1} @self
+  - potion{type=SLOW;duration=200;level=1;force=true;p=false} @PIR{r=6}
+  - potion{type=BLINDNESS;duration=200;level=1;force=true;p=false} @PIR{r=6}
+  - potion{type=INVISIBILITY;duration=1;level=1;force=true;p=false} @self
+  - equip{item=SHADOWCASTER_HEAD_INCOMBAT HEAD} @self
+  - equip{item=NETHERITE_AXE HAND} @self
+  - equip{item=NETHERITE_AXE OFFHAND} @self
+  - equip{item=SHADOWCASTER_HEAD_INCOMBAT HEAD} @self
+  - skill{s=SHADOW_ECLIPSE} @self
+
+SHADOW_CLOAKER_EFFECT:
+  Conditions:
+  - stance{s=SHADOW_CLOAKER} true
+  Skills:
+  - delay 1
+  - effect:particles{particle=SCULK_SOUL;amount=20;hS=0.2;vS=1;speed=0.03;y=0.5} @self
+
+SHADOW_ECLIPSE:
+  Conditions:
+  - stance{s=SHADOW_CLOAKER} true
+  Skills:
+  - Aura{auraName=SHADOW_ECLIPSE;onTick=SHADOW_ECLIPSE_PROJECTILE;interval=10;duration=99999;ma=true}
+
+SHADOW_ECLIPSE_SHOOT:
+  Skills:
+  - projectile{onTick=SHADOW_ECLIPSE-Tick;onHit=SHADOW_ECLIPSE-Hit;v=8;i=1;hR=1;vR=1;g=0.05;sE=false;sfo=0;tyo=0.5;syo=1.8;mr=20;so=1;eso=0} @PIR{r=20} 0.6
+  - delay 5
+  - projectile{onTick=SHADOW_ECLIPSE-Tick;onHit=SHADOW_ECLIPSE-Hit;v=8;i=1;hR=1;vR=1;g=0.05;sE=false;sfo=0;tyo=0.5;syo=1.8;mr=20;so=-1;eso=0} @PIR{r=20} 0.6
+  - delay 5
+  - projectile{onTick=SHADOW_ECLIPSE-Tick;onHit=SHADOW_ECLIPSE-Hit;v=8;i=1;hR=1;vR=1;g=0.05;sE=false;sfo=0;tyo=0.5;syo=1.8;mr=20;so=1;eso=0} @PIR{r=20} 0.6
+  - delay 5
+  - projectile{onTick=SHADOW_ECLIPSE-Tick;onHit=SHADOW_ECLIPSE-Hit;v=8;i=1;hR=1;vR=1;g=0.05;sE=false;sfo=0;tyo=0.5;syo=1.8;mr=20;so=-1;eso=0} @PIR{r=20} 1
+
+SHADOW_ECLIPSE_PROJECTILE:
+  Skills:
+  - projectile{onTick=SHADOW_ECLIPSE-Tick;onHit=SHADOW_ECLIPSE-Hit;v=8;i=1;hR=1;vR=1;g=0.6;sE=false;sfo=0;tyo=0.5;syo=1.5;mr=3} @Ring{r=3;p=5to10}
+SHADOW_ECLIPSE-Tick:
+  Skills:
+  - effect:particles{p=SCULK_SOUL;amount=1;speed=0.01;hS=0.1;vS=0.1} @origin
+SHADOW_ECLIPSE-Hit:
+  Skills:
+  - damage{a=8to14}
+  - potion{type=WEAKNESS;duration=200;level=2;force=true;p=false}
+  - potion{type=DARKNESS;duration=200;level=2;force=true;p=false}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### LIFEWISP SNIFFER ###
+LIFEBLOOM:
+  Conditions:
+  - hasaura{n=LIFEBLOOM_LINE_COOLDOWN} false
+  Skills:
+  - Aura{auraName=LIFEBLOOM;onTick=LIFEBLOOM_Tick;interval=2;duration=240} @self
+
+LIFEBLOOM_Tick:
+  Skills:
+  - skill{s=AETHER_BLOSSOM} @EIR{r=10;target=players,animals}
+
+AETHER_BLOSSOM:
+  TargetConditions:
+  - fieldofview{angle=90} true
+  Skills:
+  - projectile{onTick=AETHER_BLOSSOM-Tick;onHit=AETHER_BLOSSOM-Hit;v=14;i=1;hR=1;vR=1;hnp=true;mr=10;sfo=2;tyo=0.3}
+AETHER_BLOSSOM-Tick:
+  Skills:
+  - effect:particles{p=CHERRY_LEAVES;amount=2;speed=0;hS=0.1;vS=0.1;s=0.05} @origin
+  - effect:particles{p=CHERRY_LEAVES;amount=1;hS=1.3;vS=1.3;speed=0.05;y=0.5} @self
+AETHER_BLOSSOM-Hit:
+  Skills:
+  - healpercent{m=0.01}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### ARID MARAUDER ###
+DUST_DEVIL:
+  Conditions:
+  - playerwithin{d=20} true
+  Skills:
+  - Aura{auraName=DUST_DEVIL;onTick=DUST_DEVIL_AURA;interval=20;duration=60} @self
+DUST_DEVIL_AURA:
+  Skills:
+  - projectile{onTick=DUST_DEVIL-Tick;v=4;i=1;hR=0.4;vR=1.4;hnp=true;sE=false;sB=false;hs=true;hfs=0.2;mr=25} @ENO{r=25;target=players;limit=1;sort=NEAREST}
+  - effect:particles{p=SWEEP_ATTACK;amount=4;speed=0.1;hS=0.1;vS=0.1;y=1.2} @self
+DUST_DEVIL-Tick:
+  Skills:
+  - effect:particles{p=CRIT;amount=5;speed=0.1;hS=0.4;vS=1.4} @origin
+  - effect:particles{p=block;m=sand;amount=5;speed=0.1;hS=0.4;vS=1.4} @origin
+  - damage{a=2to4} @ENO{r=2;target=players,monsters}
+  - throw{velocity=5;velocityY=2} @ENO{r=2;target=players,monsters}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+### FOREST GUARDIAN ###
+ROOT_SNARE:
+  Conditions:
+  - playerwithin{d=10} true
+  Skills:
+  - projectile{onTick=ROOT_SNARE-Tick;onHit=ROOT_SNARE-Hit;v=8;i=1;hR=1;vR=1.5;hnp=true;hp=true;hs=true;mr=10;syo=0.5;sso=0;endoffset=-5to5;repeat=5;repeatI=5} @Forward{f=10;uel=false}
+ROOT_SNARE-Tick:
+  Skills:
+  - effect:blockmask{m=DIRT_PATH;r=1;d=100;n=5} @origin
+  - damage{a=10;cd=1} @EIR{r=1}
+ROOT_SNARE-Hit:
+  Skills:
+  - damage{a=10} @EIR{r=10;target=players,monsters}
+  - potion{type=POISON;duration=200;lvl=2}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

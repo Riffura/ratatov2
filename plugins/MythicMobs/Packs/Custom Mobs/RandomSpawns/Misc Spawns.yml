@@ -1,0 +1,302 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███╗░░░███╗██╗░██████╗░█████╗░
+#████╗░████║██║██╔════╝██╔══██╗
+#██╔████╔██║██║╚█████╗░██║░░╚═╝
+#██║╚██╔╝██║██║░╚═══██╗██║░░██╗
+#██║░╚═╝░██║██║██████╔╝╚█████╔╝
+#╚═╝░░░░░╚═╝╚═╝╚═════╝░░╚════╝░
+#
+WATER_CREATURE:
+  Type: WATER_CREATURE
+  Worlds: world
+  Chance: 0.01
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - mobsInRadius{types=WATER_CREATURE;amount=>1;radius=100} false # 2 will spawn in a range of 100
+  - inblock{b=WATER} true
+#
+#
+#
+SAM_THE_SNOWMAN:
+  Type: SAM_THE_SNOWMAN
+  Worlds: world
+  Chance: 0.07
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - biome{b=SNOWY_PLAINS,SNOWY_TAIGA,FROZEN_RIVER} true
+  - inblock{b=WATER,LAVA} false
+#
+#
+#
+#
+ALPHA_WOLF:
+  Type: ALPHA_WOLF
+  Worlds: world
+  Chance: 0.1
+  Priority: 1
+  Action: ADD
+  Cooldown: 10
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:OLD_GROWTH_PINE_TAIGA,OLD_GROWTH_SPRUCE_TAIGA,TAIGA,DARK_FOREST} true
+  - outside true
+  - inblock{b=WATER,LAVA} false
+  - onblock{m=GRASS_BLOCK,PODZOL,COARSE_DIRT} true
+  - mobsInRadius{types=ALPHA_WOLF;amount=>0;radius=50} false # 1 will spawn in a range of 50
+#
+#
+#
+#
+END_WITCH:
+  Type: END_WITCH
+  Worlds: world,world_the_end
+  Chance: 0.01
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ENDERMAN} true
+#
+#
+#
+#
+STINGER_BEE:
+  Type: STINGER_BEE
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - outside true
+  - biome{b=minecraft:PLAINS,SUNFLOWER_PLAINS,FLOWER_FOREST,BIRCH_FOREST,DARK_FOREST} true
+#
+#
+#
+#
+TANK:
+  Type: TANK
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ZOMBIE} true
+#
+#
+#
+#
+LAVA_CUBE:
+  Type: LAVA_CUBE_1
+  Worlds: world_nether
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  Cooldown: 10
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - onblock{m=BASALT,BLACKSTONE,MAGMA_BLOCK} true
+#
+#
+#
+#
+END_BLAZE:
+  Type: END_BLAZE
+  Worlds: world_the_end
+  Chance: 0.01
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ENDERMAN} true
+  - mobsInRadius{types=END_BLAZE;amount=>0;radius=100} false
+#
+#
+#
+#
+TORNADO:
+  Type: TORNADO
+  Worlds: world
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  Cooldown: 30
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:DESERT} true
+  - mobsInRadius{types=TORNADO;amount=>1;radius=100} false
+  - outside true
+  - onblock{m=SAND,RED_SAND} true
+#
+#
+#
+#
+POISON_FROG:
+  Type: POISON_FROG
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: ADD
+  Cooldown: 10
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:SWAMP,MANGROVE_SWAMP} true
+  - outside true
+  - inblock{b=WATER,LAVA} false
+  - onblock{m=GRASS_BLOCK,MUD} true
+#
+#
+#
+#
+RANCIE_PIG:
+  Type: RANCIE_PIG
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 30
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:PLAINS,SUNFLOWER_PLAINS,FOREST} true
+  - day true
+  - outside true
+  - inblock{b=WATER,LAVA} false
+  - onblock{m=GRASS_BLOCK} true
+#
+#
+#
+#
+DROWNED_SHIFTER:
+  Type: DROWNED_SHIFTER
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=DROWNED} true
+#
+#
+#
+#
+ALIEN_SUMMON:
+  Type: ALIEN_SUMMON
+  Worlds: world
+  Chance: 0.00001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  Conditions:
+  - outside true
+  - raining true
+#
+#
+#
+#
+AGGRESSIVE_STRIDER:
+  Type: AGGRESSIVE_STRIDER
+  Worlds: world_nether
+  Chance: 0.5
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=STRIDER} true
+#
+#
+#
+#
+SHADOW_CASTER:
+  Type: SHADOW_CASTER
+  Worlds: world_nether
+  Chance: 0.001
+  Priority: 1
+  Action: REPLACE
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - entitytype{type=WITHER_SKELETON} true
+#
+#
+#
+#
+LIFEWISP_GUARDIAN:
+  Type: LIFEWISP_GUARDIAN
+  Worlds: world
+  Chance: 0.5
+  Priority: 1
+  Action: ADD
+  Cooldown: 10
+  Conditions:
+  - biome{b=minecraft:CHERRY_GROVE} true
+  - day true
+  - outside true
+  - mobsInRadius{types=LIFEWISP_GUARDIAN;amount=>1;radius=100} false
+#
+#
+#
+#
+ARID_MARAUDER:
+  Type: ARID_MARAUDER
+  Worlds: world
+  Chance: 0.3
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=HUSK} true
+#
+#
+#
+#
+FOREST_GUARDIAN:
+  Type: FOREST_GUARDIAN
+  Worlds: world
+  Chance: 0.1
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - biome{b=minecraft:DARK_FOREST} true
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,612 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+CUSTOM_GOLDEN_HELMET:
+  Id: GOLDEN_HELMET
+  Display: '&bGolden Guardian'
+  Attributes:
+    Head:
+      Armor: '-3to3 ADD'
+      ArmorToughness: '-0.5to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_GOLDEN_CHESTPLATE:
+  Id: GOLDEN_CHESTPLATE
+  Display: '&bGolden Embrace'
+  Attributes:
+    Chest:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_GOLDEN_LEGGINGS:
+  Id: GOLDEN_LEGGINGS
+  Display: '&bGolden Fortitude'
+  Attributes:
+    Legs:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_GOLDEN_BOOTS:
+  Id: GOLDEN_BOOTS
+  Display: '&bGolden Stride'
+  Attributes:
+    Feet:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - FROST_WALKER:0to1
+#
+CUSTOM_GOLDEN_SWORD:
+  Id: GOLDEN_SWORD
+  Display: '&bBlade of Valor'
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to0.5 ADD'
+      Damage: '-5to50 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - DURABILITY:0to5
+  - FIRE_ASPECT:0to1
+  - DAMAGE_ALL:0to5
+  - MENDING:0to1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+CUSTOM_IRON_HELMET:
+  Id: IRON_HELMET
+  Display: '&bIron Guardian'
+  Attributes:
+    Head:
+      Armor: '-3to3 ADD'
+      ArmorToughness: '-0.5to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_IRON_CHESTPLATE:
+  Id: IRON_CHESTPLATE
+  Display: '&bSentinel''s Embrace'
+  Attributes:
+    Chest:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_IRON_LEGGINGS:
+  Id: IRON_LEGGINGS
+  Display: '&bIronclad Fortitude'
+  Attributes:
+    Legs:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_IRON_BOOTS:
+  Id: IRON_BOOTS
+  Display: '&bSturdy Stride'
+  Attributes:
+    Feet:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - FROST_WALKER:0to1
+#
+CUSTOM_IRON_SWORD:
+  Id: IRON_SWORD
+  Display: '&bBlade of Valor'
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to0.5 ADD'
+      Damage: '-5to50 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - DURABILITY:0to5
+  - FIRE_ASPECT:0to1
+  - DAMAGE_ALL:0to5
+  - MENDING:0to1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+CUSTOM_DIAMOND_HELMET:
+  Id: DIAMOND_HELMET
+  Display: '<gradient:#00e5ff:#ffffff><bold>Radiant Crown'
+  Attributes:
+    Head:
+      Armor: '-2.0to6.0 ADD'
+      ArmorToughness: '-0.1to1.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_DIAMOND_CHESTPLATE:
+  Id: DIAMOND_CHESTPLATE
+  Display: '&bGuardian''s Embrace'
+  Attributes:
+    Chest:
+      Armor: '-2.0to6.0 ADD'
+      ArmorToughness: '-0.1to1.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_DIAMOND_LEGGINGS:
+  Id: DIAMOND_LEGGINGS
+  Display: '&bAquastride Legplates'
+  Attributes:
+    Legs:
+      Armor: '-2.0to6.0 ADD'
+      ArmorToughness: '-0.1to1.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_DIAMOND_BOOTS:
+  Id: DIAMOND_BOOTS
+  Display: '&bAzurewalker Boots'
+  Attributes:
+    Feet:
+      Armor: '-2.0to6.0 ADD'
+      ArmorToughness: '-0.1to1.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - FROST_WALKER:0to1
+#
+CUSTOM_DIAMOND_SWORD:
+  Id: DIAMOND_SWORD
+  Display: '&bSolstice Blade'
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to1.0 ADD'
+      Damage: '-5to50 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - DURABILITY:0to5
+  - FIRE_ASPECT:0to1
+  - DAMAGE_ALL:0to5
+  - MENDING:0to1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+CUSTOM_NETHERITE_HELMET:
+  Id: NETHERITE_HELMET
+  Display: '&bGleaming Crown'
+  Attributes:
+    Head:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_NETHERITE_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Display: '&bGuardian''s Embrace'
+  Attributes:
+    Chest:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_NETHERITE_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Display: '&bAshen Protector'
+  Attributes:
+    Legs:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+#
+CUSTOM_NETHERITE_BOOTS:
+  Id: NETHERITE_BOOTS
+  Display: '&bSoulshroud Treads'
+  Attributes:
+    Feet:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - FROST_WALKER:0to1
+#
+CUSTOM_NETHERITE_SWORD:
+  Id: NETHERITE_SWORD
+  Display: '&bShadowstrike Blade'
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to1.5 ADD'
+      Damage: '-5to50 ADD'
+      Health: '-25to50 ADD'
+  Enchantments:
+  - DURABILITY:0to5
+  - FIRE_ASPECT:0to1
+  - DAMAGE_ALL:0to5
+  - MENDING:0to1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+KNOCKBACK_STICK:
+  Id: STICK
+  Display: '&bWhirlwind Basher'
+  Enchantments:
+  - KNOCKBACK:1to10
+  Attributes:
+    MainHand:
+      KnockbackResistance: 2 MULTIPLY_BASE
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+UNBREAKABLE_NETHERITE_HELMET:
+  Id: NETHERITE_HELMET
+  Options:
+    Unbreakable: true
+  Display: '&bVoidwalker''s Visage'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  Attributes:
+    Head:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+#
+UNBREAKABLE_NETHERITE_CHESTPLATE:
+  Id: NETHERITE_CHESTPLATE
+  Options:
+    Unbreakable: true
+  Display: '&bInfernal Valor'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  Attributes:
+    Chest:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+#
+UNBREAKABLE_NETHERITE_LEGGINGS:
+  Id: NETHERITE_LEGGINGS
+  Options:
+    Unbreakable: true
+  Display: '&bTwilight Stride'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  Attributes:
+    Legs:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+#
+UNBREAKABLE_NETHERITE_BOOTS:
+  Id: NETHERITE_BOOTS
+  Options:
+    Unbreakable: true
+  Display: '&bEmberstep Boots'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:0to5
+  - PROTECTION_EXPLOSIONS:0to5
+  - PROTECTION_FIRE:0to5
+  - PROTECTION_PROJECTILE:0to5
+  - DURABILITY:0to5
+  - MENDING:0to1
+  - FROST_WALKER:0to1
+  Attributes:
+    Feet:
+      Armor: '-2.0to9.0 ADD'
+      ArmorToughness: '-0.1to2.5 ADD'
+      Health: '-25to50 ADD'
+#
+UNBREAKABLE_NETHERITE_SWORD:
+  Id: NETHERITE_SWORD
+  Options:
+    Unbreakable: true
+  Display: '&bRadiant Edge'
+  Enchantments:
+  - KNOCKBACK:0to2
+  - FIRE_ASPECT:0to3
+  - DAMAGE_ALL:0to8
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to1.5 ADD'
+      Damage: '-5to50 ADD'
+      Health: '-25to50 ADD'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+SUPREME_HEALING_1:
+  Id: potion
+  Display: '&4Supreme Healing Potion I'
+  Options:
+    Color: 255,0,4
+    HideFlags: false
+  PotionEffects:
+  - REGENERATION 200 0
+SUPREME_HEALING_2:
+  Id: potion
+  Display: '&4Supreme Healing Potion II'
+  Options:
+    Color: 255,0,4
+    HideFlags: false
+  PotionEffects:
+  - REGENERATION 300 1
+SUPREME_HEALING_3:
+  Id: potion
+  Display: '&4Supreme Healing Potion III'
+  Options:
+    Color: 255,0,4
+    HideFlags: false
+  PotionEffects:
+  - REGENERATION 500 2
+#
+SUPREME_DAMAGE_1:
+  Id: splash_potion
+  Display: '&cSupreme Damage Potion I'
+  Options:
+    Color: 255,5,230
+    HideFlags: false
+  PotionEffects:
+  - POISON 120 1
+SUPREME_DAMAGE_2:
+  Id: splash_potion
+  Display: '&cSupreme Damage Potion II'
+  Options:
+    Color: 255,5,230
+    HideFlags: false
+  PotionEffects:
+  - POISON 240 2
+SUPREME_DAMAGE_3:
+  Id: splash_potion
+  Display: '&cSupreme Damage Potion III'
+  Options:
+    Color: 255,5,230
+    HideFlags: false
+  PotionEffects:
+  - POISON 360 2
+#
+LEGENDARY_DAMAGE_1:
+  Id: lingering_potion
+  Display: '&cLegendary Damage Potion I'
+  Options:
+    Color: 179,255,0
+    HideFlags: false
+  PotionEffects:
+  - WITHER 120 0
+LEGENDARY_DAMAGE_2:
+  Id: lingering_potion
+  Display: '&cLegendary Damage Potion II'
+  Options:
+    Color: 179,255,0
+    HideFlags: false
+  PotionEffects:
+  - WITHER 240 1
+LEGENDARY_DAMAGE_3:
+  Id: lingering_potion
+  Display: '&cLegendary Damage Potion III'
+  Options:
+    Color: 179,255,0
+    HideFlags: false
+  PotionEffects:
+  - WITHER 360 2
+LEGENDARY_DAMAGE_4:
+  Id: lingering_potion
+  Display: '&cLegendary Damage Potion IV'
+  Options:
+    Color: 179,255,0
+    HideFlags: false
+  PotionEffects:
+  - WITHER 360 3
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,107 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███████╗███╗░░██╗██████╗░███████╗██████╗░███╗░░░███╗░█████╗░███╗░░██╗
+#██╔════╝████╗░██║██╔══██╗██╔════╝██╔══██╗████╗░████║██╔══██╗████╗░██║
+#█████╗░░██╔██╗██║██║░░██║█████╗░░██████╔╝██╔████╔██║███████║██╔██╗██║
+#██╔══╝░░██║╚████║██║░░██║██╔══╝░░██╔══██╗██║╚██╔╝██║██╔══██║██║╚████║
+#███████╗██║░╚███║██████╔╝███████╗██║░░██║██║░╚═╝░██║██║░░██║██║░╚███║
+#╚══════╝╚═╝░░╚══╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
+#
+ENDERMAN_TELEPORTER:
+  MobType: ENDERMAN
+  Display: '&fPhasma'
+  Health: 20
+  Damage: 8
+  Faction: ENDMOB
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=ENDERMAN_TELEPORTER_SUMMON} ~onTeleport 1
+  - skill{s=ENDERMAN_TELEPORTER_POTION} ~onDeath 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - EndermanTeleporterHead 1 0.01
+  - exp 14 1.0
+ENDERMITE_MINIOM:
+  MobType: ENDERMITE
+  Health: 5
+  Damage: 3
+  Faction: ENDMOB
+  Options:
+    MovementSpeed: 0.3
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.endermite.hurt;p=0.7;v=0.8} @self ~onSpawn 1
+  Drops:
+  - TierIDrops 1 0.01
+  - EndermiteMinionHead 1 0.01
+  - exp 4 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+INVISIBLE_ENDERMAN:
+  MobType: ENDERMAN
+  Faction: ENDMOBS
+  Options:
+    Silent: true
+    Invisible: true
+  AITargetSelectors:
+  - clear
+  - players
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - InvisibleEndermanHead 1 0.01
+  - exp 25 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

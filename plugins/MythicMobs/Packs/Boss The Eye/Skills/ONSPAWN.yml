@@ -1,0 +1,87 @@
+#
+#████████╗██╗░░██╗███████╗  ███████╗██╗░░░██╗███████╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔════╝  ██╔════╝╚██╗░██╔╝██╔════╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║█████╗░░  █████╗░░░╚████╔╝░█████╗░░  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══╝░░  ██╔══╝░░░░╚██╔╝░░██╔══╝░░  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║███████╗  ███████╗░░░██║░░░███████╗  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚══════╝░░░╚═╝░░░╚══════╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THE_EYE_ONSPAWN:
+  Skills:
+  - setstance{stance=THE_EYE_ONSPAWN} @self
+  - skill{s=THE_EYE_SPAWNING_TITLE} @self
+  - healpercent{m=1.0} @self
+  - potion{t=DAMAGE_RESISTANCE;d=999999;l=10;force=true;p=false} @self
+  - potion{t=LEVITATION;d=9999;l=1;force=true;p=false} @self
+  - sound{s=entity.elder_guardian.ambient;v=1;sc=hostile;p=1.4} @self
+  - sound{s=entity.elder_guardian.curse;v=1;sc=hostile;p=0.6} @self
+  - effect:spin{duration=60;velocity=20} @self
+  - delay 60
+  - Aura{auraName=THE_EYE_ABYSSIGHT;onTick=THE_EYE_ABYSSIGHT-Tick;interval=20;duration=200} @self
+  - stun{d=200;f=true;g=true;kb=true} @self
+  - delay 200
+  - potion{t=DAMAGE_RESISTANCE;d=1;l=1;force=true} @self
+  - potion{t=LEVITATION;d=1;l=1;force=true} @self
+  - skill{s=THE_EYE_ONSPAWN_AI} @self
+  - setstance{stance=THE_EYE_NORMAL} @self
+#
+#
+#
+THE_EYE_ABYSSIGHT-Tick:
+  Skills:
+  - sound{s=entity.evoker.cast_spell;v=1;sc=hostile;p=1.3} @self
+  - projectile{bulletType=DISPLAY;material=NETHER_WART_BLOCK;rs=10;onStart=THE_EYE_ABYSSIGHT_PROJECTILE-Start;onTick=THE_EYE_ABYSSIGHT_PROJECTILE-Tick;onHit=THE_EYE_ABYSSIGHT-Hit;onEnd=THE_EYE_ABYSSIGHT-End;v=14;i=1;hR=1;vR=1;tyo=1.1;sfo=0;syo=1.1;g=0.3;sB=true} @RandomLocationsNearCaster{a=3to5;r=4to16;s=2}
+  - projectile{bulletType=DISPLAY;material=NETHER_WART_BLOCK;rs=10;onStart=THE_EYE_ABYSSIGHT_PROJECTILE-Start;onTick=THE_EYE_ABYSSIGHT_PROJECTILE-Tick;onHit=THE_EYE_ABYSSIGHT-Hit;onEnd=THE_EYE_ABYSSIGHT-End;v=18;i=1;hR=1;vR=1;tyo=3.0;sfo=0;syo=1.1;g=0.1;sB=true} @EIR{r=50;target=players} 0.6
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1;sc=hostile;p=0.4} @self
+  - projectile{bulletType=DISPLAY;material=MAGMA_BLOCK;rs=10;onStart=THE_EYE_ABYSSIGHT_PROJECTILE-Start;onTick=THE_EYE_ABYSSIGHT_PROJECTILE-Tick;onHit=THE_EYE_ABYSSIGHT-Hit;onEnd=THE_EYE_ABYSSIGHT-End;v=6;i=1;hR=1;vR=1;tyo=1.1;sfo=0;syo=1.1;g=0.15;sB=true} @RandomLocationsNearCaster{a=2to5;r=6to10;s=1}
+  - projectile{bulletType=DISPLAY;material=MAGMA_BLOCK;rs=10;onStart=THE_EYE_ABYSSIGHT_PROJECTILE-Start;onTick=THE_EYE_ABYSSIGHT_PROJECTILE-Tick;onHit=THE_EYE_ABYSSIGHT-Hit;onEnd=THE_EYE_ABYSSIGHT-End;v=6;i=1;hR=1;vR=1;tyo=1.1;sfo=0;syo=1.1;g=0.15;sB=true} @RandomLocationsNearCaster{a=2to5;r=2to5;s=1}
+
+THE_EYE_ABYSSIGHT_PROJECTILE-Start:
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1.0;sc=hostile;p=1.0} @self
+
+THE_EYE_ABYSSIGHT_PROJECTILE-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#db0f00;amount=1;speed=0.02;hS=0;vS=0} @origin
+  - effect:particles{p=reddust;color=#d200d9;amount=1;speed=0.02;hS=0;vS=0} @origin
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=10;radius=1.2;cooldown=0.05} @Sphere{r=20;points=5to10}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=10;radius=1.2;cooldown=0.05} @Sphere{r=20;points=5to10}
+#
+#
+#
+THE_EYE_ABYSSIGHT-End:
+  Skills:
+  - damage{a=2to10;i=true} @ENO{r=3;target=players}
+  - throw{velocity=10;velocityY=3} @ENO{r=3;target=players}
+THE_EYE_ABYSSIGHT-Hit:
+  Skills:
+  - damage{a=5to10;i=true}
+  - throw{velocity=10;velocityY=1}
+#
+#
+#
+THE_EYE_ONSPAWN_AI:
+  Skills:
+  - delay 2
+  - runaitargetselector{target=players} @self
+  - runaigoalselector{goal=float} @self
+  - runaigoalselector{goal=meleeattack} @self
+#
+#
+#
+THE_EYE_SPAWNING_TITLE:
+  Skills:
+  - sendtitle{title="<gradient:#f200ff:#ff0000>&lThe Eye</gradient>";subtitle="<gradient:#d491ff:#bf8e94>Unblinking Dominator, Sentinel of Fear's Conquest.</gradient>";d=100} @PIR{r=50}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

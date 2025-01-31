@@ -1,0 +1,102 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# Mobs using this skill will have a different AI mechanic.
+#
+# To explain this, the mob should have no meleeattack AI in the mob config, looking like this:
+#
+#  AIGoalSelectors:
+#  - clear
+#  - randomstroll
+#  AITargetSelectors:
+#  - clear
+# 
+# So adding this skill line to the mob:
+# - skill{s=AI_NEARBY} ~onTimer:200 1
+#
+# This will instruct the mob to target the nearest player every 200 ticks (10 seconds), engaging in melee attacks and moving toward the closest player.
+#
+# You can try it out with /mm m spawn AI_EXAMPLE_1
+#
+# ! Keep in mind, you need to be in survival to test it proberly !
+#
+AI_NEARBY:
+  Cooldown: 15
+  Skills:
+  - Aura{auraName=AI_NEARBY;onStart=AI_NEARBY_Start;onTick=AI_NEARBY_Tick;onEnd=AI_NEARBY_End;interval=5;duration=100} @self
+AI_NEARBY_Start:
+  Skills:
+  - runaigoalselector{goal=meleeattack}
+  - runaitargetselector{target=players}
+  - potion{type=SPEED;duration=99999;lvl=2;force=true;p=false} @self
+  - holo{text="&aAI Activated";time=60;cooldown=0.4} @selflocation{y=2.6}
+AI_NEARBY_Tick:
+  Skills:
+  - settarget @NearestPlayer{r=10}
+  - goto{speedModifier=1;sh=0;sv=0} @NearestPlayer{r=10}
+  - effect:particles{p=reddust;color=#eeff00;amount=5;hS=0;vS=0;speed=0.01;y=2.4} @self
+AI_NEARBY_End:
+  Skills:
+  - holo{text="&cAI Deactivated";time=60;cooldown=0.4} @selflocation{y=2.6}
+  - potion{type=SPEED;duration=1;lvl=2;force=true;p=false} @self
+  - runaigoalselector{goal=clear}
+  - runaitargetselector{target=clear}
+  - delay 5
+  - runaigoalselector{goal=randomstroll}
+#
+# Mobs using this skill will have a different AI mechanic.
+#
+# To explain this, the mob should have a normal AI in the mob config, looking like this:
+#
+#  AIGoalSelectors:
+#  - clear
+#  - meleeattack
+#  - randomstroll
+#  AITargetSelectors:
+#  - clear
+#  - players
+# 
+# So adding this skill line to the mob:
+# - skill{s=AI_CANCEL} ~onTimer:200 1
+#
+# This will instruct the mob to stop targeting players every 200 ticks (10 seconds), so it does not engage in melee attacks and does not move toward players.
+#
+# You can try it out with /mm m spawn AI_EXAMPLE_2
+#
+# ! Keep in mind, you need to be in survival to test it proberly !
+#
+AI_CANCEL:
+  Cooldown: 15
+  Skills:
+  - Aura{auraName=AI_CANCEL;onStart=AI_CANCEL_Start;onTick=AI_CANCEL_Tick;onEnd=AI_CANCEL_End;interval=5;duration=100} @self
+AI_CANCEL_Start:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaitargetselector{target=clear}
+  - holo{text="&cAI Deactivated";time=60;cooldown=0.4} @selflocation{y=2.6}
+AI_CANCEL_Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#eeff00;amount=5;hS=0;vS=0;speed=0.01;y=2.4} @self
+AI_CANCEL_End:
+  Skills:
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+  - runaitargetselector{target=players}
+  - holo{text="&aAI Activated";time=60;cooldown=0.4} @selflocation{y=2.6}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,162 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#██╗░░░░░██╗░░░██╗░█████╗░██╗░░██╗██╗░░░██╗  ██╗░░░██╗██╗██╗░░░░░██╗░░░░░░█████╗░░██████╗░███████╗██████╗░
+#██║░░░░░██║░░░██║██╔══██╗██║░██╔╝╚██╗░██╔╝  ██║░░░██║██║██║░░░░░██║░░░░░██╔══██╗██╔════╝░██╔════╝██╔══██╗
+#██║░░░░░██║░░░██║██║░░╚═╝█████═╝░░╚████╔╝░  ╚██╗░██╔╝██║██║░░░░░██║░░░░░███████║██║░░██╗░█████╗░░██████╔╝
+#██║░░░░░██║░░░██║██║░░██╗██╔═██╗░░░╚██╔╝░░  ░╚████╔╝░██║██║░░░░░██║░░░░░██╔══██║██║░░╚██╗██╔══╝░░██╔══██╗
+#███████╗╚██████╔╝╚█████╔╝██║░╚██╗░░░██║░░░  ░░╚██╔╝░░██║███████╗███████╗██║░░██║╚██████╔╝███████╗██║░░██║
+#╚══════╝░╚═════╝░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝╚══════╝╚══════╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝
+LUCKY_VILLAGER_PLAINS:
+  Type: LUCKY_VILLAGER_PLAINS
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:PLAINS,SUNFLOWER_PLAINS,FLOWER_FOREST,BIRCH_FOREST,DARK_FOREST} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_PLAINS;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_DESERT:
+  Type: LUCKY_VILLAGER_DESERT
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:DESERT} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_DESERT;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_JUNGLE:
+  Type: LUCKY_VILLAGER_JUNGLE
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:JUNGLE,SPARSE_JUNGLE,BAMBOO_JUNGLE} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_JUNGLE;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_SAVANNA:
+  Type: LUCKY_VILLAGER_SAVANNA
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:SAVANNA,SAVANNA_PLATEAU,WINDSWEPT_SAVANNA} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_SAVANNA;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_SNOW:
+  Type: LUCKY_VILLAGER_SNOW
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:SNOWY_PLAINS,ICE_SPIKES,SNOWY_TAIGA,GROVE,SNOWY_SLOPES,FROZEN_PEAKS,JAGGED_PEAKS,FROZEN_RIVER,SNOWY_BEACH} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_SNOW;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_SWAMP:
+  Type: LUCKY_VILLAGER_SWAMP
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:SWAMP,MANGROVE_SWAMP} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_SWAMP;amount=>0;radius=200} false
+#
+LUCKY_VILLAGER_TAIGA:
+  Type: LUCKY_VILLAGER_TAIGA
+  Worlds: world
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  PositionType: LAND
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - biome{b=minecraft:TAIGA,OLD_GROWTH_PINE_TAIGA,OLD_GROWTH_SPRUCE_TAIGA} true
+  - inblock{b=WATER,LAVA} false
+  - day true
+  - outside true
+  - mobsInRadius{types=LUCKY_VILLAGER_TAIGA;amount=>0;radius=200} false
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

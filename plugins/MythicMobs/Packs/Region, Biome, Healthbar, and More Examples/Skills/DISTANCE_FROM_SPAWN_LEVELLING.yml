@@ -1,0 +1,43 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# Mobs using this skill and is under 100 blocks from spawn, will have level 10 set on them.
+#
+DISTANCE_FROM_SPAWN_LEVELLING_UNDER_100_BLOCKS:
+  Conditions:
+  - distancefromspawn{d=<100} true
+  Skills:
+  - setlevel{a=set;l=10} @self
+#
+# Mobs using this skill and is above 100 blocks from spawn, will have level 25 set on them.
+#
+DISTANCE_FROM_SPAWN_LEVELLING_OVER_100_BLOCKS:
+  Conditions:
+  - distancefromspawn{d=>100} true
+  Skills:
+  - setlevel{a=set;l=25} @self
+#
+# Mobs using this skill and is above 500 blocks from spawn, will have level 100 set on them.
+#
+DISTANCE_FROM_SPAWN_LEVELLING_OVER_500_BLOCKS:
+  Conditions:
+  - distancefromspawn{d=>500} true
+  Skills:
+  - setlevel{a=set;l=100} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,95 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+# ██╗██████╗░░█████╗░███╗░░██╗░██████╗██████╗░██╗██████╗░███████╗  ░█████╗░██╗░░░░░░█████╗░███╗░░██╗
+# ██║██╔══██╗██╔══██╗████╗░██║██╔════╝██╔══██╗██║██╔══██╗██╔════╝  ██╔══██╗██║░░░░░██╔══██╗████╗░██║
+# ██║██████╔╝██║░░██║██╔██╗██║╚█████╗░██████╔╝██║██████╔╝█████╗░░  ██║░░╚═╝██║░░░░░███████║██╔██╗██║
+# ██║██╔══██╗██║░░██║██║╚████║░╚═══██╗██╔═══╝░██║██╔══██╗██╔══╝░░  ██║░░██╗██║░░░░░██╔══██║██║╚████║
+# ██║██║░░██║╚█████╔╝██║░╚███║██████╔╝██║░░░░░██║██║░░██║███████╗  ╚█████╔╝███████╗██║░░██║██║░╚███║
+# ╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝  ░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝
+#
+#
+# IRONSPIRE_CLAN_OVERLORD Skills
+IRONSPIRE_CLAN_OVERLORD_ATTACK:
+  Skills:
+  - projectile{onTick=IRONSPIRE_CLAN_OVERLORD_ATTACK-Tick;onHit=IRONSPIRE_CLAN_OVERLORD_ATTACK-Hit;v=4;i=1;hR=1;vR=1;hnp=true;sE=false;mr=5} @target
+IRONSPIRE_CLAN_OVERLORD_ATTACK-Tick:
+  Skills:
+  - effect:particles{p=sweep_attack;amount=3;speed=0.01;hS=0.5;vS=1.5} @origin
+IRONSPIRE_CLAN_OVERLORD_ATTACK-Hit:
+  TargetConditions:
+  - mythicmobtype{t=IRONSPIRE_CLAN_MOUNT,IRONSPIRE_CLAN_WEAPON,IRONSPIRE_CLAN_ARCHER,IRONSPIRE_CLAN_BANNER_HOLDER} false
+  Skills:
+  - throw{v=5;vy=2} @target
+  - damage{amount=8to12;i=true} @target
+
+IRONSPIRE_MOUNT_DESPAWNING:
+  Skills:
+  - delay 2
+  - fakelightning{repeat=5;repeatInterval=3} @Mount
+  - delay 15
+  - fakeexplode @Mount
+  - remove @Mount
+#
+#
+# IRONSPIRE_CLAN_MOUNT Skills
+IRONSPIRE_CLAN_MOUNT_DMG:
+  Conditions:
+  - playerwithin{d=3} true
+  Skills:
+  - damage{amount=10to12;i=true} @target
+#
+#
+# IRONSPIRE_CLAN_MINION Skills
+IRONSPIRE_CLAN_MINION_ATTACK:
+  Skills:
+  - projectile{onTick=IRONSPIRE_CLAN_MINION_ATTACK-Tick;onHit=IRONSPIRE_CLAN_MINION_ATTACK-Hit;v=4;i=1;hR=1;vR=1;hnp=true;sE=false;mr=5} @target
+IRONSPIRE_CLAN_MINION_ATTACK-Tick:
+  Skills:
+  - effect:particles{p=sweep_attack;amount=3;speed=0.01;hS=0.5;vS=1.5} @origin
+IRONSPIRE_CLAN_MINION_ATTACK-Hit:
+  TargetConditions:
+  - mythicmobtype{t=IRONSPIRE_CLAN_MOUNT,IRONSPIRE_CLAN_WEAPON,IRONSPIRE_CLAN_ARCHER,IRONSPIRE_CLAN_BANNER_HOLDER} false
+  Skills:
+  - throw{v=5;vy=2} @target
+  - damage{amount=4to6;i=true} @target
+#
+#
+# IRONSPIRE_CLAN_BANNER_HOLDER Skills
+IRONSPIRE_MINION_DESPAWNING:
+  Skills:
+  - delay 2
+  - fakelightning{repeat=5;repeatInterval=3} @summons
+  - delay 15
+  - fakeexplode @summons
+  - remove @summons
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

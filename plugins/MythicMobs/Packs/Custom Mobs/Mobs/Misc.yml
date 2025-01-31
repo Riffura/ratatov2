@@ -1,0 +1,1009 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███╗░░░███╗██╗░██████╗░█████╗░
+#████╗░████║██║██╔════╝██╔══██╗
+#██╔████╔██║██║╚█████╗░██║░░╚═╝
+#██║╚██╔╝██║██║░╚═══██╗██║░░██╗
+#██║░╚═╝░██║██║██████╔╝╚█████╔╝
+#╚═╝░░░░░╚═╝╚═╝╚═════╝░░╚════╝░
+#
+WATER_CREATURE:
+  MobType: COD
+  Health: 25
+  Display: '&fWater Sphere'
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 15
+    PreventLeashing: true
+    PreventRenaming: true
+    PreventOtherDrops: true
+    Silent: true
+    MaxCombatDistance: 20
+    Invisible: true
+    DigOutOfGround: true
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+#Skills
+  - effect:particleorbital{r=2;points=16;t=50;i=1;vy=35;p=reddust;color=#0fdbd1} @self ~onTimer:20
+  - effect:particlesphere{p=reddust;color=#0fdbd1;amount=100;radius=0.5;speed=0.01} @self ~onTimer:5
+  - skill{s=WATER_BOLT} @target ~onTimer:60 1
+  - skill{s=WATER_CREATURE_MOVE} ~onTimer:120 1
+#Sounds
+  - sound{s=item.trident.riptide_1;v=0.5;p=0.5} @self ~onDeath 1
+  - sound{s=entity.axolotl.attack;v=0.5;p=0.5} @self ~onDeath 1
+  - sound{s=entity.turtle.hurt_baby;v=0.4;p=0.2} @self ~onDamaged 1
+  - sound{s=ambient.underwater.loop.additions.ultra_rare;v=0.5;p=0.8} @self ~onTimer:60
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - WaterCreatureHead 1 0.01
+  - exp 18 1.0
+  - heart_of_the_sea 1 0.01
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+SAM_THE_SNOWMAN:
+  MobType: SNOWMAN
+  Health: 50
+  Display: '&fSam the Snowman'
+  Options:
+    PreventSnowFormation: true
+    PreventSunburn: true
+    MaxCombatDistance: 25
+    FollowRange: 16
+    Despawn: true
+    PreventLeashing: true
+    PreventRenaming: true
+    DigOutOfGround: true
+  DamageModifiers:
+  - FIRE 10.0
+  - ICE -10.0
+  - DROWNING 10.0
+  - LAVA 10.0
+  - MELTING 10.0
+  - FIRE_TICK 10.0
+  - HOT_FLOOR 10.0
+  AITargetSelectors:
+  - clear
+  - players
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=SNOW_SINGLESHOT} ~onTimer:120 1
+  - skill{s=SNOW_EFFECT} @self ~onTimer:5 1
+  - cancelevent{sync=true} ~onShoot
+  - freeze{ticks=100} @trigger ~onAttack 0.50
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - SamTheSnowmanHead 1 0.01
+  - exp 15 1.0
+  - snowball 1-6 0.7
+  - SAM_THE_SNOWMAN_POWDER 1-2 0.01
+  - SAM_THE_SNOWMAN_COMPRESSED_SNOW 1-2 0.01
+  - SAM_THE_SNOWMAN_NOSE 1 0.01
+  - SAM_THE_SNOWMAN_BUTTON 1-3 0.01
+  - golden_carrot 1 0.01
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ALPHA_WOLF:
+  MobType: WOLF
+  Display: '&fAlpha Wolf'
+  Health: 20
+  Damage: 6
+  Faction: WOLVES
+  Options:
+    DigOutOfGround: true
+    FollowRange: 14
+    Despawn: true
+    MaxCombatDistance: 30
+    Angry: true
+    PreventLeashing: true
+    MovementSpeed: 0.35
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=WOLF_HOWL} ~onEnterCombat 1
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - AngryWolfHead 1 0.01
+  - exp 6 1.0
+WOLF_BABY:
+  MobType: WOLF
+  Health: 6
+  Damage: 2
+  Faction: WOLVES
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    Angry: true
+    Baby: true
+    PreventLeashing: true
+    MovementSpeed: 0.35
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - effect:particles{particle=VILLAGER_ANGRY;amount=1;hS=0;vS=0;speed=0;y=0.5} @self ~onSpawn 1
+  - sound{s=entity.wolf.howl;p=1.2;v=0.3} @self ~onSpawn 1
+  Drops:
+  - TierIDrops 1 0.01
+  - AngryWolfMinionHead 1 0.01
+  - exp 2 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+END_WITCH:
+  MobType: WITCH
+  Display: '&dEnd Witch'
+  Health: 20
+  Damage: 0
+  Faction: ENDMOB
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 50
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.1
+  DamageModifiers:
+  - LIGHTNING 0.1
+  - ICE 0.5
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=WITCH_PROJECTILE_SLOW} @Target ~onTimer:240
+  - skill{s=WITCH_PROJECTILE_FAST} @Target ~onTimer:60
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - EndWitchHead 1 0.01
+  - exp 15 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+HARDCORE_PILLAGER:
+  MobType: PILLAGER
+  Display: '&fHardcore Pillager'
+  Health: 50
+  Damage: 1
+  Equipment:
+  - IRON_AXE:HAND
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  DamageModifiers:
+  - FIRE 0.0
+  - POISON 0.0
+  AITargetSelectors:
+  - clear
+  - players
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  Skills:
+  - skill{s=PILLAGER_DAMAGE_1} >75% ~onAttack 1
+  - skill{s=PILLAGER_DAMAGE_2} =51%-74% ~onAttack 1
+  - skill{s=PILLAGER_DAMAGE_3} =26%-50% ~onAttack 1
+  - skill{s=PILLAGER_DAMAGE_4} <25% ~onAttack 1
+  - skill{s=PILLAGER_GRIP} ~onTimer:80 0.4
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - HardcorePillagerHead 1 0.01
+  - exp 15 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+LAVA_CUBE_1:
+  MobType: MAGMA_CUBE
+  Display: '&fLava Cube'
+  Health: 50
+  Damage: 5
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    PreventSlimeSplit: true
+    Size: 6
+  DamageModifiers:
+  - FIRE 0.0
+  - ICE 2.0
+  - DROWNING 2.0
+  - LAVA 0.0
+  - FIRE_TICK 0.0
+  - HOT_FLOOR 0.0
+  - FALL 0.0
+  Skills:
+  - skill{s=MAGMA_SUMMONER_1} ~onDeath 1
+  - skill{s=MAGMA_FIRE} ~onAttack 0.5
+  - skill{s=MAGMA_BLOCKMASK_1} ~onTimer:240 0.8
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - LavaCubeHead 1 0.01
+  - exp 15 1.0
+LAVA_CUBE_2:
+  MobType: MAGMA_CUBE
+  Display: '&fLava Cube'
+  Health: 15
+  Damage: 2
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    PreventSlimeSplit: true
+    Size: 3
+  DamageModifiers:
+  - FIRE 0.0
+  - ICE 2.0
+  - DROWNING 2.0
+  - LAVA 0.0
+  - FIRE_TICK 0.0
+  - HOT_FLOOR 0.0
+  - FALL 0.0
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - LavaCubeHead 1 0.01
+  - exp 7 1.0
+  Skills:
+  - skill{s=MAGMA_SUMMONER_2} ~onDeath 1
+  - skill{s=MAGMA_FIRE} ~onAttack 0.5
+  - skill{s=MAGMA_BLOCKMASK_2} ~onTimer:240 0.8
+LAVA_CUBE_3:
+  MobType: MAGMA_CUBE
+  Display: '&fLava Cube'
+  Health: 5
+  Damage: 1
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    PreventSlimeSplit: true
+    Size: 1
+  DamageModifiers:
+  - FIRE 0.0
+  - ICE 2.0
+  - DROWNING 2.0
+  - LAVA 0.0
+  - FIRE_TICK 0.0
+  - HOT_FLOOR 0.0
+  - FALL 0.0
+  Drops:
+  - LavaCubeHead 1 0.01
+  - exp 4 1.0
+  Skills:
+  - skill{s=MAGMA_FIRE} ~onAttack 0.5
+  - skill{s=MAGMA_BLOCKMASK_3} ~onTimer:240 0.8
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+STINGER_BEE:
+  MobType: BEE
+  Display: '&fStinger Bee'
+  Health: 5
+  Damage: 1
+  Options:
+    DigOutOfGround: true
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventLeashing: true
+    Anger: 12000
+  AITargetSelectors:
+  - clear
+  - players
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - AngryBeeHead 1 0.01
+  - exp 14 1.0
+  Skills:
+  - skill{s=BEE_DAMAGE} ~onAttack 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+TANK:
+  MobType: WITHER_SKELETON
+  Display: '&fTank'
+  Health: 100
+  Damage: 1
+  Armor: 10
+  Options:
+    MovementSpeed: 0.15
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 1.0
+    DigOutOfGround: true
+    PreventSunburn: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  DamageModifiers:
+  - LIGHTNING 0.0
+  - FIRE 0.0
+  - AIR 0.0
+  - ICE 0.0
+  - DROWNING 0.0
+  - ENTITY_EXPLOSION 0.0
+  - BLOCK_EXPLOSION 0.0
+  - STARVATION 0.0
+  - POISON 0.0
+  - MAGIC 0.0
+  - DRAGON_BREATH 0.0
+  - WITHER 0.0
+  - THORNS 0.0
+  - MELTING 0.0
+  - FIRE_TICK 0.0
+  - HOT_FLOOR 0.0
+  - FALL 0.0
+  - CONTACT 0.0
+  Equipment:
+  - TankHead HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  - skill{s=TANK_SHIELD_BREAK} ~onAttack 1
+  - skill{s=TANK_DAMAGE} ~onAttack 1
+  - skill{s=TANK_CHARGE} ~onTimer:240 0.5
+  Drops:
+  - TierIVDrops 1 0.1
+  - TierVDrops 1 0.01
+  - TankHead 1 0.01
+  - exp 45 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+END_BLAZE:
+  MobType: BAT
+  Display: '&fEnd Blaze'
+  Health: 50
+  Faction: ENDMOBS
+  Options:
+    FollowRange: 20
+    PreventLeashing: true
+    PreventRenaming: true
+    PreventOtherDrops: true
+    Silent: true
+    AlwaysShowName: false
+    Invisible: true
+  Skills:
+#Sounds
+  - sound{s=ambient.cave;p=1.0;v=1.8} @self ~onTimer:100 0.7
+  - sound{s=entity.wither.hurt;p=1.0;v=1.8} @self ~onDamaged 1.0
+#Skills
+  - skill{s=END_BLAZE_PROJECTILE} ~onTimer:40 1.0
+  - skill{s=END_BLAZE_PROJECTILE_BURST} ~onTimer:120 1.0
+  - skill{s=END_BLAZE_EFFECTS} ~onTimer:10 1.0
+  - setstance{stance=END_BLAZE_NORMAL} @self ~onSpawn 1.0
+  Drops:
+  - TierIVDrops 1 0.1
+  - TierVDrops 1 0.01
+  - EndBlazeHead 1 0.01
+  - exp 45 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+TORNADO:
+  MobType: SILVERFISH
+  Health: 1
+  Damage: 0
+  Options:
+    MovementSpeed: 0.2
+    DigOutOfGround: true
+    Despawn: true
+    Silent: true
+    PreventOtherDrops: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Invisible: true
+    KnockbackResistance: 1
+    PreventRenaming: true
+    Collidable: false
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - ENTITY_ATTACK 0
+  - CUSTOM 0
+  - ENTITY_EXPLOSION 0.0
+  - BLOCK_EXPLOSION 0.0
+  - CONTACT 0.0
+  - HOT_FLOOR 0.0
+  - MAGIC 0.0
+  - WITHER 0.0
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  Skills:
+  - skill{s=TORNADO-PULL} ~onTimer:20 1.0
+  - skill{s=TORNADO} ~onTimer:20 1.0
+  - skill{s=TORNADO-ATTACK} ~onTimer:5 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+POISON_FROG:
+  MobType: FROG
+  Display: '&fPoison Frog'
+  Health: 15
+  Damage: 0
+  Options:
+    DigOutOfGround: true
+    Despawn: true
+    PreventRenaming: true
+    Type: TEMPERATE #COLD/TEMPERATE/WARM
+  DamageModifiers:
+  - FALL 0
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=POISON_FROG_LEAP} ~onTimer:90 0.8
+  - skill{s=POISON_FROG_SPIT} ~onTimer:60 0.8
+  - setstance{stance=POISON_FROG_NORMAL} @self ~onSpawn 1.0
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - PoisonFrogHead 1 0.01
+  - POISON_FROG_TONGUE 1 0.4
+  - POISON_FROG_EYE 1-2 0.3
+  - exp 8 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+RANCIE_PIG:
+  MobType: PIG
+  Health: 10
+  Options:
+    Despawn: true
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=RANCIE_CHANGE} ~onDeath 1
+RANCIE_PIG_ZOMBIE:
+  MobType: PIGLIN
+  Display: '&fRancie'
+  Health: 25
+  Damage: 4
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - RanciePigZombieHead HEAD
+  - IRON_AXE HAND
+  - IRON_AXE OFFHAND
+  AITargetSelectors:
+  - clear
+  - players
+  Options:
+    Despawn: true
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - RanciePigZombieHead 1 0.01
+  - exp 18 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+DROWNED_SHIFTER:
+  MobType: DROWNED
+  Display: '&fShifter'
+  Health: 20
+  Damage: 4
+  Equipment:
+  - DrownedShifterHead HEAD
+  Options:
+    FollowRange: 12
+    Despawn: true
+    MaxCombatDistance: 30
+    DigOutOfGround: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=DROWNED_SHIFTER_TELEPORT} ~onTimer:120 1
+  - skill{s=DROWNED_SHIFTER_DAMAGE} ~onAttack 1
+  - skill{s=ZOMBIE_BLEEDING} ~onAttack 0.05
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - DrownedShifterHead 1 0.01
+  - exp 24 1.0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ALIEN_SUMMON:
+  MobType: ARMOR_STAND
+  Options:
+    Silent: true
+    Invisible: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - skill{s=ALIEN_METEOR} ~onSpawn 1
+
+ALIEN:
+  MobType: ZOMBIE
+  Display: '<gradient:#19d44b:#00cc41>Alien</gradient>'
+  Health: 250
+  Damage: 0
+  BossBar:
+    Enabled: true
+    Title: '<gradient:#19d44b:#00cc41>Alien</gradient> &b<caster.hp>&7/&3<caster.mhp>&4♥'
+    Range: 30
+    Color: BLUE
+    Style: SOLID
+  Faction: ALIEN
+  Equipment:
+  - AlienHead HEAD
+  - ALIEN_CHESTPLATE CHEST
+  - ALIEN_LEGGINGS LEGS
+  - ALIEN_BOOTS FEET
+  Options:
+    FollowRange: 20
+    Despawn: true
+    MaxCombatDistance: 50
+    DigOutOfGround: true
+    PreventSunburn: true
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventOtherDrops: true
+    Silent: true
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.blaze.ambient;p=1.8;v=1.0} @self ~onTimer:120 0.6
+  - sound{s=entity.camel.hurt;p=1.3;v=1.0} @self ~onDamaged 1.0
+  - sound{s=entity.allay.death;p=0.3;v=1.0} @self ~onDeath 1.0
+#
+  - skill{s=ALIEN_DMG_TIP} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_1} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_2} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_3} @trigger ~onDamaged 1
+  - skill{s=ALIEN_ATTACK_DMG} @trigger ~onAttack 1
+#
+  - skill{s=ALIEN_BURNING} ~onDamaged 1
+  Drops:
+  - TierVDrops 1 1
+  - AlienHead 1 0.01
+  - exp 250 1
+
+ALIEN_MINION:
+  MobType: BABY_ZOMBIE
+  Display: '<gradient:#19d44b:#00cc41>Alien Minion</gradient>'
+  Health: 10
+  Damage: 0
+  Faction: ALIEN
+  Equipment:
+  - AlienHead HEAD
+  - ALIEN_CHESTPLATE CHEST
+  - ALIEN_LEGGINGS LEGS
+  - ALIEN_BOOTS FEET
+  Options:
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    PreventRenaming: true
+    PreventLeashing: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    DigOutOfGround: true
+    PreventSunburn: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    Silent: true
+    PreventOtherDrops: true
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.blaze.ambient;p=1.8;v=1.0} @self ~onTimer:120 0.6
+  - sound{s=entity.camel.hurt;p=1.3;v=1.0} @self ~onDamaged 1.0
+  - sound{s=entity.allay.death;p=0.3;v=1.0} @self ~onDeath 1.0
+#
+  - skill{s=ALIEN_DMG_TIP} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_1} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_2} @trigger ~onDamaged 1
+  - skill{s=ALIEN_DMG_3} @trigger ~onDamaged 1
+  - skill{s=ALIEN_MINION_ATTACK_DMG} @trigger ~onAttack 1
+#
+  - skill{s=ALIEN_BURNING} ~onDamaged 1
+  Drops:
+  - TierIDrops 1 0.1
+  - TierIIDrops 1 0.01
+  - AlienHead 1 0.01
+  - exp 5-10 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+AGGRESSIVE_STRIDER:
+  MobType: STRIDER
+  Health: 25
+  Damage: 6
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 16
+    Despawn: true
+    MaxCombatDistance: 30
+    Silent: true
+    PreventOtherDrops: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  DamageModifiers:
+  - FALL 0
+  - FIRE -10
+  - FIRE_TICK -10
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  - HOT_FLOOR -10
+  - LAVA -10
+  Skills:
+  - skill{s=STRIDER_PROJECTILE} ~onTimer:120 1.0
+  - ignite{ticks=120} @trigger ~onAttack
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - AggressiveStriderHead 1 0.01
+  - exp 20-50 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+SHADOW_CASTER:
+  MobType: WITHER_SKELETON
+  Display: '<gradient:#bb00d4:#9e9e9e>Shadowcaster</gradient>'
+  Health: 200
+  Damage: 10
+  Armor: 8
+  Options:
+    FollowRange: 20
+    Despawn: true
+    MaxCombatDistance: 40
+    Silent: true
+    PreventOtherDrops: false
+  BossBar:
+    Enabled: true
+    Title: '<gradient:#bb00d4:#9e9e9e>Shadowcaster</gradient> &b<caster.hp>&7/&3<caster.mhp>&4♥'
+    Range: 30
+    Color: PURPLE
+    Style: SOLID
+  Faction: ENDMOB
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HAND
+  - SHADOWCASTER_HEAD HEAD
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - lookatplayer
+  AITargetSelectors:
+  - clear
+  - players
+  DamageModifiers:
+  - FALL 0.5
+  - PROJECTILE -10
+  - ENTITY_EXPLOSION -5
+  - BLOCK_EXPLOSION -5
+  - THORNS -20
+  Skills:
+  - skill{s=SHADOW_CLOAKER} ~onEntercombat 1
+  - equip{item=AIR HEAD} ~onEntercombat 1
+  - skill{s=SHADOW_CLOAKER_EFFECT} ~onTimer:10 1
+  - skill{s=SHADOW_ECLIPSE_SHOOT} ~onTimer:80 1
+  Drops:
+  - TierIVDrops 1 0.5
+  - TierVDrops 1 0.1
+  - SHADOWCASTER_HEAD 1 0.01
+  - exp 50-100 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+LIFEWISP_GUARDIAN:
+  MobType: SNIFFER
+  Display: '&aLifewisp Guardian'
+  Health: 100
+  Options:
+    Despawn: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  - lookatplayer
+  DamageModifiers:
+  - FALL 0
+  Skills:
+  - skill{s=LIFEBLOOM} ~onTimer:240 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - exp 50-100 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ARID_MARAUDER:
+  MobType: HUSK
+  Display: '<gradient:#cacf48:#828703>Arid Marauder</gradient>'
+  Health: 45
+  Damage: 12
+  Options:
+    Despawn: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  DamageModifiers:
+  - FIRE -1
+  - FIRE_TICK -1
+  - HOT_FLOOR -2
+  Skills:
+  - skill{s=DUST_DEVIL} ~onTimer:120 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - exp 12-50 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+FOREST_GUARDIAN:
+  MobType: IRON_GOLEM
+  Display: '&2Forest Guardian'
+  Health: 100
+  Damage: 10
+  Options:
+    Despawn: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  DamageModifiers:
+  - POISON -5
+  Skills:
+  - skill{s=ROOT_SNARE} ~onTimer:200 1
+  Drops:
+  - TierIIIDrops 1 0.1
+  - TierIVDrops 1 0.01
+  - exp 12-25 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

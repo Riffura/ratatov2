@@ -1,0 +1,67 @@
+#
+#████████╗██╗░░██╗███████╗  ███████╗██╗░░░██╗███████╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔════╝  ██╔════╝╚██╗░██╔╝██╔════╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║█████╗░░  █████╗░░░╚████╔╝░█████╗░░  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══╝░░  ██╔══╝░░░░╚██╔╝░░██╔══╝░░  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║███████╗  ███████╗░░░██║░░░███████╗  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚══════╝░░░╚═╝░░░╚══════╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THE_EYE_HEAD_MAIN:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODk3NWU1MWJmZTQ4Zjg3NmU3NzQ4OTM1ZDY5MjIzNGRiZmY1ZGY3Mzk4ZDc2OThhZGNlMzQ2Nzg4ZjNjZTdkOCJ9fX0=
+  Display: '<gradient:#f200ff:#ff0000><bold>Eye of Malevolence</gradient>'
+  Lore:
+  - '&7'
+  - '&7Harvested from the vanquished "Eye" boss,'
+  - '&7this malevolent eye drop is'
+  - '&7possessing unique properties,'
+  - '&7it grants heightened perception,'
+  - '&7a haunting reminder of the formidable'
+  - '&7power once wielded by "The Eye."'
+  - '&7'
+  - '&3Acquired from defeating The Eye Boss.'
+THE_EYE_HEAD_SEMIOPEN:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTcwMTAwNTYyMTA4NywKICAicHJvZmlsZUlkIiA6ICJkZTE0MGFmM2NmMjM0ZmM0OTJiZTE3M2Y2NjA3MzViYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJTUlRlYW0iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNiOWFmYzg2MTMyNzEyNDg4MTkyYTdkZWQwMGQxOGQyMDBmNGM3ZjJkNGIzNWQ1M2RhMTBjMTBhMmM3NDIzNSIKICAgIH0KICB9Cn0=
+THE_EYE_HEAD_CLOSED:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTcwMTAyOTM5MDM5MiwKICAicHJvZmlsZUlkIiA6ICI2ZDgwYjVkMjQyMGY0MWZkOTQxMjM4YzA3YzVlYzAxNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJQb05pWW8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTcwOTcyMTg0ZTIxZTJkMWM5ZjJmOTM5NzBlODM0MzFiNzkyZjMxNGY1ZGY4NjcyNjIxYTllYjViMDRiNGJkIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+#
+#
+#
+#
+#
+#
+THE_EYE_HEAD_EXPLODER:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2RmZDBjY2IwNDlhYzFiYjYyY2E0ODc2MzA0ZDJlYzQ4OTYyOGZiY2EyMTE1MWVkZDI3OWIxYjc5MzNhMmMwNiJ9fX0=
+THE_EYE_HEAD_TURRET:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRmMDIxYzdmZTVjM2VkNTNjZjEzNzhkMGRjOGRhYTlhZjQ1YzdlNjU5N2JlZDI0ZjI4YzlhMzRhZDJlYWZjNyJ9fX0=
+THE_EYE_HEAD_FIGHTER:
+  Id: PLAYER_HEAD
+  Data: 0
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmMwZDM5NjEzZGQ3ZTVlNTY5ZmVmOTFjZTE2NzE0MDI5OWE1YmNlZmY0OTEzNWFmYjU0YjI4MWE3ZjEyYzI5MSJ9fX0=
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

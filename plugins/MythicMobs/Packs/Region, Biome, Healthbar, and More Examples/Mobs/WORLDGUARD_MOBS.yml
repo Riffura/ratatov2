@@ -1,0 +1,71 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# These mob is being used to show you how WorldGuard mechanics and conditions works.
+#
+WORLDGUARD_EXAMPLE_1:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fWG Example 1 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=DESPAWN_OUT_OF_REGION} ~onTimer:20 1 # This skill will despawn "REGION_EXAMPLE_1" if it goes out of region (see the skill in "skills" folder and open "DespawnOutOfRegion.yml" file)
+
+WORLDGUARD_EXAMPLE_2:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fWG Example 2 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=SETLEVEL_IN_WORLDGUARD_REGION} ~onSpawn 1 # This skill will set a specific level in a specific WorldGuard region on spawn.
+
+WORLDGUARD_EXAMPLE_3:
+  MobType: HUSK
+  Health: 20
+  Damage: 3
+  Display: '&fWG Example 3 &8| &6<mob.level>'
+  LevelModifiers:
+    Health: 0.3
+    Armor: 0.01
+    Damage: 0.02
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true
+  Skills:
+# * When adding both skills it will make it so a mob spawns in a 
+# * specific region
+# * having a specific level
+# * and when it's trying to leave the region, it'll despawn within' 20 ticks(1 second) - This won't activate every 20 ticks when inside a region so it won't lag your server/game.
+  - skill{s=DESPAWN_OUT_OF_REGION} ~onTimer:20 1
+  - skill{s=SETLEVEL_IN_WORLDGUARD_REGION} ~onSpawn 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

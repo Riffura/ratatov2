@@ -1,0 +1,83 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#███████╗░█████╗░███╗░░░███╗██████╗░██╗███████╗░██████╗
+#╚════██║██╔══██╗████╗░████║██╔══██╗██║██╔════╝██╔════╝
+#░░███╔═╝██║░░██║██╔████╔██║██████╦╝██║█████╗░░╚█████╗░
+#██╔══╝░░██║░░██║██║╚██╔╝██║██╔══██╗██║██╔══╝░░░╚═══██╗
+#███████╗╚█████╔╝██║░╚═╝░██║██████╦╝██║███████╗██████╔╝
+#╚══════╝░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝╚══════╝╚═════╝░
+#
+ZOMBIE_HORDE_SUMMONER:
+  Type: ZOMBIE_HORDE_SUMMONER
+  Worlds: world
+  Chance: 0.01
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ZOMBIE} true
+
+ALL_ZOMBIES:
+  Type: # Added weights in dev #Build 5256
+  - ZOMBIE_SPRINTER 3
+  - ZOMBIE_JUMPER 3
+  - ZOMBIE_THROWER 3
+  - ZOMBIE_STUNNER 3
+  - ZOMBIE_EXPLOSIVE 2
+  - ZOMBIE_SCRAMBLER 2
+  - ZOMBIE_BOMBER 1
+  - ZOMBIE_NINJA 1
+  - ZOMBIE_STEALTH 1
+  - ZOMBIE_SKILLED 1
+  Worlds: world
+  Chance: 0.1
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ZOMBIE} true
+
+ZOMBIE_END:
+  Type: ZOMBIE_END
+  Worlds: world_the_end
+  Chance: 0.1
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - entitytype{type=ENDERMAN} true
+
+ZOMBIE_CAVE_MINER:
+  Type: ZOMBIE_CAVE_MINER
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - height{h=<30} true
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

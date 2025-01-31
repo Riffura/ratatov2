@@ -1,0 +1,31 @@
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ░██████╗██╗░░██╗██╗██╗░░░░░██╗░░░░░░██████╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██╔════╝██║░██╔╝██║██║░░░░░██║░░░░░██╔════╝
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ╚█████╗░█████═╝░██║██║░░░░░██║░░░░░╚█████╗░
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ░╚═══██╗██╔═██╗░██║██║░░░░░██║░░░░░░╚═══██╗
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ██████╔╝██║░╚██╗██║███████╗███████╗██████╔╝
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ╚═════╝░╚═╝░░╚═╝╚═╝╚══════╝╚══════╝╚═════╝░
+#
+THE_GREATEST_KNIGHT_RANDOMSKILL_SELECTOR_1:
+  Conditions:
+  - stance{stance=THE_GREATEST_KNIGHT_SPAWN_1} true
+  Skills:
+  - randomskill{skills=THE_GREATEST_KNIGHT_MINIONS,THE_GREATEST_KNIGHT_BOLT_1,THE_GREATEST_KNIGHT_FORCEPULL,THE_GREATEST_KNIGHT_SUMMON_TURRET} @self
+
+THE_GREATEST_KNIGHT_RANDOMSKILL_SELECTOR_2:
+  Conditions:
+  - stance{stance=THE_GREATEST_KNIGHT_SPAWN_2} true
+  Skills:
+  - randomskill{skills=THE_GREATEST_KNIGHT_MINIONS,THE_GREATEST_KNIGHT_BOLT_2,THE_GREATEST_KNIGHT_FORCEPULL,THE_GREATEST_KNIGHT_SUMMON_TURRET} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

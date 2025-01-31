@@ -1,0 +1,90 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THARKON_RAGE:
+  Cooldown: 20
+  Skills:
+  - delay 1
+  - setstance{stance=THARKON_RAGE} @self
+  - skill{s=RAGE_RANDOMMESSAGE} @self 1
+  - delay 40
+  - skill{s=SKILL_STORM} @self 0.8
+  - skill{s=SKILL_BLAZEBOLT_TARGET_SINGLE} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_ALL} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_RANDOM} @self 0.5
+  - delay 100
+  - skill{s=SKILL_BLAZER} @self 0.8
+  - skill{s=SKILL_BLAZEBOLT_TARGET_SINGLE} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_ALL} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_RANDOM} @self 0.5
+  - delay 100
+  - skill{s=SKILL_BLASTER} @self 0.8
+  - skill{s=SKILL_BLAZEBOLT_TARGET_SINGLE} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_ALL} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_RANDOM} @self 0.5
+  - delay 100
+  - skill{s=SKILL_IGNIS} @self 0.8
+  - skill{s=SKILL_BLAZEBOLT_TARGET_SINGLE} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_ALL} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_RANDOM} @self 0.5
+  - delay 100
+  - skill{s=SKILL_LEVITATOR} @self 0.8
+  - skill{s=SKILL_BLAZEBOLT_TARGET_SINGLE} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_ALL} @self 0.5
+  - skill{s=SKILL_BLAZEBOLT_TARGET_RANDOM} @self 0.5
+  - setstance{stance=THARKON_NORMAL} @self
+
+
+RAGE_RANDOMMESSAGE:
+  Conditions:
+  - stance{stance=THARKON_RAGE} true
+  Skills:
+  - randomskill{
+      skills=
+      THARKON_MESSAGE_1,
+      THARKON_MESSAGE_2,
+      THARKON_MESSAGE_3,
+      THARKON_MESSAGE_4,
+      THARKON_MESSAGE_5,
+      THARKON_MESSAGE_6,
+      THARKON_MESSAGE_7
+      }
+
+THARKON_MESSAGE_1:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4You can''t defeat me!"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_2:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4AssszhAAAH!"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_3:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4ssszh RAGE ssszh"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_4:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4Zzzzzsssscch!"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_5:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4You will die!"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_6:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4zzzch, no!"} @PlayersInRadius{r=50}
+THARKON_MESSAGE_7:
+  Skills:
+  - message{m="<mob.name>&f<&co>&r &4I'll feast ssszh on you when ssszh you die!"} @PlayersInRadius{r=50}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

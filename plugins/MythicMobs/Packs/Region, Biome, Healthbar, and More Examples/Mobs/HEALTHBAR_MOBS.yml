@@ -1,0 +1,189 @@
+#
+#██████╗░███████╗░██████╗░██╗░█████╗░███╗░░██╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██╔════╝██╔════╝░██║██╔══██╗████╗░██║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██████╔╝█████╗░░██║░░██╗░██║██║░░██║██╔██╗██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██╔══██╗██╔══╝░░██║░░╚██╗██║██║░░██║██║╚████║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#██║░░██║███████╗╚██████╔╝██║╚█████╔╝██║░╚███║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+# These mob is being used to show you how different healthbar works.
+#
+#
+#
+#
+#
+# This mob show the healthbar in chat as a message
+#
+HP_Message:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - message{m="&b<caster.name>&f was slain by &a<trigger.name>&f."} @trigger ~onDeath 1
+  - message{m="&b<caster.name> &F- &a<caster.hp{round=2}>&8/&f<caster.mhp> &7HP &f- &6Lvl <caster.level>"} @trigger ~onDamaged 1
+#
+# This mob show the healthbar in nametag
+#
+HP_Setname1:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀▀▀▀▀▀&7;delay=2} @self =100%-90% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀▀▀▀▀&7▀;delay=2} @self =90%-80% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀▀▀▀&7▀▀;delay=2} @self =80%-70% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀▀▀&7▀▀▀;delay=2} @self =70%-60% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀▀&7▀▀▀▀;delay=2} @self =60%-50% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀▀&7▀▀▀▀▀;delay=2} @self =50%-40% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀▀&7▀▀▀▀▀▀;delay=2} @self =40%-30% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀▀&7▀▀▀▀▀▀▀;delay=2} @self =30%-20% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀▀&7▀▀▀▀▀▀▀▀;delay=2} @self =20%-10% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &4▀&7▀▀▀▀▀▀▀▀▀;delay=2} @self =10%-0% ~onDamaged 1.0
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &7▀▀▀▀▀▀▀▀▀▀;delay=2} @self =0% ~onDamaged 1.0
+#
+# This mob show the healthbar in nametag
+#
+HP_Setname2:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - setname{name=<gradient:#00f7ff:#ff00d4>Dummy</gradient> &8| &a<caster.hp{round=2}>&7/&f<caster.mhp>;delay=2} @self ~onDamaged
+#
+# This mob show the healthbar in an actionbar
+#
+HP_Actionbar:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀▀▀▀▀▀&7"} @Trigger =100%-90% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀▀▀▀▀&7▀"} @Trigger =90%-80% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀▀▀▀&7▀▀"} @Trigger =80%-70% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀▀▀&7▀▀▀"} @Trigger =70%-60% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀▀&7▀▀▀▀"} @Trigger =60%-50% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀▀&7▀▀▀▀▀"} @Trigger =50%-40% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀▀&7▀▀▀▀▀▀"} @Trigger =40%-30% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀▀&7▀▀▀▀▀▀▀"} @Trigger =30%-20% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀▀&7▀▀▀▀▀▀▀▀"} @Trigger =20%-10% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &4▀&7▀▀▀▀▀▀▀▀▀"} @Trigger =10%-1% ~onDamaged 1.0
+  - actionmessage{msg="<gradient:#00f7ff:#ff00d4>Dummy</gradient> &7- &7▀▀▀▀▀▀▀▀▀▀"} @Trigger =0% ~onDamaged 1.0
+#
+# This mob show the healthbar in a hologram
+#
+HP_Hologram:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - holo{text="&4❤❤❤❤❤❤❤❤❤❤&7";time=10} @selflocation{y=2.4} =90%-100% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤❤❤❤❤❤&7❤";time=10} @selflocation{y=2.4} =80%-90% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤❤❤❤❤&7❤❤";time=10} @selflocation{y=2.4} =70%-80% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤❤❤❤&7❤❤❤";time=10} @selflocation{y=2.4} =60%-70% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤❤❤&7❤❤❤❤";time=10} @selflocation{y=2.4} =50%-60% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤❤&7❤❤❤❤❤";time=10} @selflocation{y=2.4} =40%-50% ~onDamaged 1.0
+  - holo{text="&4❤❤❤❤&7❤❤❤❤❤❤";time=10} @selflocation{y=2.4} =30%-40% ~onDamaged 1.0
+  - holo{text="&4❤❤❤&7❤❤❤❤❤❤❤";time=10} @selflocation{y=2.4} =20%-30% ~onDamaged 1.0
+  - holo{text="&4❤❤&7❤❤❤❤❤❤❤❤";time=10} @selflocation{y=2.4} =10%-20% ~onDamaged 1.0
+  - holo{text="&4❤&7❤❤❤❤❤❤❤❤❤";time=10} @selflocation{y=2.4} =1%-10% ~onDamaged 1.0
+  - holo{text="&7❤❤❤❤❤❤❤❤❤❤";time=10} @selflocation{y=2.4} =0% ~onDamaged 1.0
+#
+# This mob show the healthbar in a bossbar
+# Bossbar settings https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Mobs/BossBar
+#
+HP_Bossbar:
+  MobType: HUSK
+  Health: 999
+  Damage: 0
+  Display: '<gradient:#00f7ff:#ff00d4>Dummy</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 1
+    #NoDamageTicks: 0
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - barCreate{name="HealthbarBossbar";display="<caster.name> - <caster.hp{round=2}>";value=1.0;color=WHITE;style=SOLID} @self ~onSpawn
+  - barSet{name="HealthbarBossbar";display="<caster.name> - <caster.hp{round=2}>";value=1.0;color=RED;style=SOLID} @self ~onDamaged
+# Requires modules "ThreatTable: true" to be enabled for this to work - This just change color of the bossbar if in combat or not
+  - barSet{name="HealthbarBossbar";display="<caster.name> - <caster.hp{round=2}>";value=1.0;color=WHITE;style=SOLID} @self ~onEnterCombat
+  - barSet{name="HealthbarBossbar";display="<caster.name> - <caster.hp{round=2}>";value=1.0;color=WHITE;style=SOLID} @self ~onDropCombat
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

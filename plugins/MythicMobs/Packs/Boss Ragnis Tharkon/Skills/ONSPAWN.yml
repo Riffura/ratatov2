@@ -1,0 +1,223 @@
+#
+#████████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║███████║██████╔╝█████═╝░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══██║██╔══██╗██╔═██╗░██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║██║░░██║██║░░██║██║░╚██╗╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THARKON_ONSPAWN:
+  Skills:
+  - setstance{stance=THARKON_SPAWN} @self
+  - skill{s=THARKON_SPAWNING_TITLE} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=99;force=true;p=false} @self
+  - potion{type=LEVITATION;duration=60;level=3;force=true;p=false} @self
+  - potion{type=SLOW;duration=60;level=10;force=true;p=false} @self
+  - delay 60
+  - stun{d=130;f=true;nokb=true} @self
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.3;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.4;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.6;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=15} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=30} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=45} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=60} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=75} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=90} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=105} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=120} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=135} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=150} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=165} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=180} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=195} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=210} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=225} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=240} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=255} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=270} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=285} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=300} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=315} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.5;hO=330} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.7;hO=345} @SelfLocation{y=0.0;foffset=5} 1
+  - projectile{onTick=ON_SPAWN_PROJECTILE-Tick;onHit=ON_SPAWN_PROJECTILE-Hit;onEnd=ON_SPAWN_PROJECTILE-End;v=8;i=1;hR=1;vR=1;tyo=1;sfo=0;g=0.2} @Ring{r=15;p=15to25} 1
+  - delay 20
+  - healpercent{m=1.0} @self
+  - lunge{velocity=1;velocityY=-3} @target
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;force=true;p=false} @self
+  - skill{s=THARKON_ONSPAWN_AI} @self
+  - delay 100
+  - setstance{stance=THARKON_NORMAL} @self
+
+ON_SPAWN_PROJECTILE-Tick:
+  Skills:
+  - effect:particles{particle=FLAME;amount=1;hS=0.1;vS=0.1;speed=0} @origin
+  - effect:particles{particle=FALLING_LAVA;amount=1;hS=0.1;vS=0.1;speed=0} @origin
+
+ON_SPAWN_PROJECTILE-Hit:
+  Skills:
+  - damage{a=5to10;i=false}
+  - ignite{ticks=100} 0.5
+
+ON_SPAWN_PROJECTILE-End:
+  Skills:
+  - sound{s=block.lava.extinguish;v=0.3;p=1} @origin
+  - effect:blockmask{m=LAVA;r=1;d=60} @origin
+  - damage{a=10;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=10;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=10;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=10;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=10;i=false} @ENO{r=2}
+  - delay 10
+  - damage{a=10;i=false} @ENO{r=2}
+#
+THARKON_ONSPAWN_AI:
+  Skills:
+  - delay 2
+  - runaitargetselector{target=players} @self
+  - runaigoalselector{goal=float} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - runaigoalselector{goal=randomFly} @self
+#
+THARKON_SPAWNING_TITLE:
+  Skills:
+  - sendtitle{title="<gradient:#ff0022:#e600ff>&lRagnis Tharkon</gradient>";subtitle="<gradient:#ffffff:#385250>You see embers, but I wield the inferno.</gradient>";d=100} @PlayersInRadius{r=50}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,314 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+ZombieHordeHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Horde Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFlNTA0YTc4NzczMGIyOTdkMTAwNGJiODc5NmUyOWVkYzI4NDk2ZTQyOTdjNGIzZjI3MzQzMTI2Y2ZkOWFjZCJ9fX0=
+
+ZombieExplosiveHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Explosive Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWM5NmI1ZWFlYzU3ZDQ3YTUwYWZiZjY4NDQyOTNmODgxNTEwZjhkYWI0NmQ1ZmYzMjY4N2U5ZWNiMDhlMTFiNSJ9fX0=
+
+ZombieSprinterHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Sprinter Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNmYjRlNWRiOTdmNDc5YzY2YTQyYmJkOGE3ZDc4MWRhZjIwMWE4ZGRhZjc3YWZjZjRhZWY4Nzc3OWFhOGI0In19fQ==
+
+ZombieJumperHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Jumper Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JhNzU3YWEzYmMxOTIxMmVlZTQ0YzU2YmQwNzdlY2NmOTlmZWJlMGZmNmY2Y2M4NWFlMTJkOWQyMTVkYTA2NCJ9fX0=
+
+ZombieThrowerHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Thrower Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ4ODkwNTViOWE5MjQwZjUyZmQ3NjkxYTVjOTMyOWNiN2MyNTg1MGFjZDA0NDYwNjU1ODgzODIwMzQxNWY0MSJ9fX0=
+
+ZombieStealthHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Stealth Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ1MjhiMzIyOTY2MGYzZGZhYjQyNDE0ZjU5ZWU4ZmQwMWU4MDA4MWRkM2RmMzA4Njk1MzZiYTliNDE0ZTA4OSJ9fX0=
+
+ZombieSkilledHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fZombie Skilled Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjk2NDMxZDRkNzEyYTQ4NDcxMmUzNWM3YWJhOGE3MzY1NWY0MTAxMjExODc5ZTI4YThiM2U4ZjJkMzIyMmQxMyJ9fX0=
+
+CreeperChargedHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fCreeper Charged Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTdkNzI3NWNiZWJlZDg1NDgyMDEyOTQxYzVjYzZjMzAwMjA3NjU0MDYzNzZlODFmZmI0YjIxM2YxYmZmNDQxNyJ9fX0=
+
+CreeperUndeadHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fCreeper Undead Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VjMzM3MzVmNzFlMmI3NzU2ZDdjZmFmY2Y1Y2IwYTljZDM1N2Q0MTc0YTQ3YzVmMDczYzExMzQ5MDJjZjRkIn19fQ==
+
+CreeperBluff:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fCreeper Bluff Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNkYTNhNGYwNDNkMDUyMTA3ZDdiZjA5YTA1YTBhZWIyZTUxODVlYmQwZTk2MTA5MjAyOTQzMGJhOTkxNzllZSJ9fX0=
+
+SniperHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fSniper Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2IwMjg5ZDBiMmMzNTUwMzllMTI5MTcxNTQzYTM3NjkxY2NmNTQ5ZDZiNjE4ZjQzZTEyNjExNzBjZTllOWE1YyJ9fX0=
+
+WaterCreatureHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fWater Creature Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWU2OWRkYzY2MDlhNmE5YWI0ZWMzZjM5ZjZkZjM4OThiNDNjZjI1NzgzYjkzNjFlYWJiZjNmOThjZTllZjQwIn19fQ==
+
+MotherPhantomHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fMother Phantom Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBiOTE4OWMzNzEzZjBkYWNhYzliMmJiNjA2NTA5MGM1MmIwYzkwZjEwODIwOGUwYTg2YmU1ODg1ZTk5NTc5YSJ9fX0=
+
+PhantomMinionsHead:
+  Id: PLAYER_HEAD
+  Data: 3
+  Display: '&fPhantom Minion Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzQ2ODMwZGE1ZjgzYTNhYWVkODM4YTk5MTU2YWQ3ODFhNzg5Y2ZjZjEzZTI1YmVlZjdmNTRhODZlNGZhNCJ9fX0=
+
+SamTheSnowmanHead:
+  Id: CARVED_PUMPKIN
+  Display: '&fSam The Snowman Head'
+
+EndermanTeleporterHead:
+  Id: PLAYER_HEAD
+  Display: '&fEnderman Teleporter Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA5ZjFkZTYxMzVmNGJlYTc4MWM1YThlMGQ2MTA5NWY4MzNlZTI2ODVkODE1NGVjZWE4MTRlZTZkMzI4YTVjNiJ9fX0=
+
+EndermiteMinionHead:
+  Id: PLAYER_HEAD
+  Display: '&fEndermite Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWExYTA4MzFhYTAzYWZiNDIxMmFkY2JiMjRlNWRmYWE3ZjQ3NmExMTczZmNlMjU5ZWY3NWE4NTg1NSJ9fX0=
+
+ZombieNinjaHead:
+  Id: PLAYER_HEAD
+  Display: '&fNinja Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjcyZmRlYjEyNzRjYmE2NzMxNmIyMDZjOWY3NzQzODk2NGM5MDk3MWFmOTk2YzM1YmUyMzk1ZjY0Nzc0NjliIn19fQ==
+
+AngryWolfHead:
+  Id: PLAYER_HEAD
+  Display: '&fWolf Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y2NWQ5MWU3ZjBhYmU0NmMyNmYyN2VmYmM3NTRhYjI3Yjc5MTdlZTVjODg4YzE3NDdkODgyZDgxYzFhMTNlOSJ9fX0=
+
+AngryWolfMinionHead:
+  Id: PLAYER_HEAD
+  Display: '&fWolf Minion Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y2NWQ5MWU3ZjBhYmU0NmMyNmYyN2VmYmM3NTRhYjI3Yjc5MTdlZTVjODg4YzE3NDdkODgyZDgxYzFhMTNlOSJ9fX0=
+
+EndWitchHead:
+  Id: PLAYER_HEAD
+  Display: '&fEnd Witch Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg0MTJlZWRlMjhiNDY0ZGVhNTY4M2I0OTdmNzAwODUzNWNjNjIzM2RhZDg3NDEyNmFlNDg2MWQ1NjE2MmE5NiJ9fX0=
+
+BomberHead:
+  Id: PLAYER_HEAD
+  Display: '&fBomber Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWM5NmI1ZWFlYzU3ZDQ3YTUwYWZiZjY4NDQyOTNmODgxNTEwZjhkYWI0NmQ1ZmYzMjY4N2U5ZWNiMDhlMTFiNSJ9fX0=
+
+HardcorePillagerHead:
+  Id: PLAYER_HEAD
+  Display: '&fHardcore Pillager Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ1NDNlM2RmYjUwNDhiNDNjYTNjM2FiY2YwZGY0YjNmY2ZiMTdhOTk4NTRkNzZjZmFhNjdhNjYxZjU2NGZkOSJ9fX0=
+
+LavaCubeHead:
+  Id: PLAYER_HEAD
+  Display: '&fLava Cube Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM5NTg5ZmEwMWZlZWEzZjFhZTkxNDdjYTVlMjVmNWZhYmNlNGVmMDhmYjczNTczMTZiZjY3ODc5YjU4OWRhZCJ9fX0=
+
+EndZombieHead:
+  Id: PLAYER_HEAD
+  Display: '&fEnd Zombie Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNjMGU0YzE0MmI3NGIxMTY2ZmYwZjllNWMxMTVhOWZhYTE0Y2ExYzUyZDY0M2ZiNjhjYmMzMmI4MzUxY2MyOSJ9fX0=
+
+EndSkeletonHead:
+  Id: PLAYER_HEAD
+  Display: '&fEnd Skeleton Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjExNzc3OTE2ZTc1NjQ0M2UzMGEwNDNmMmJjOWNjZTBkMGZlNjI0YmQ2MTkyZDdiYTIzZjk2YTFkNzFiOWYzZiJ9fX0=
+
+AngryBeeHead:
+  Id: PLAYER_HEAD
+  Display: '&fAngry Bee Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQ1NzlmMWVhMzg2NDI2OWMyMTQ4ZDgyN2MwODg3YjBjNWVkNDNhOTc1YjEwMmEwMWFmYjY0NGVmYjg1Y2NmZCJ9fX0=
+
+TankHead:
+  Id: PLAYER_HEAD
+  Display: '&fTank Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJkNjExNTk5MzIxOTIzYTRjZGZkZDA4MWUzNjIzMTRiMGZkN2Y2NjNiZTM0ZTRmMGYyODAxNjM1OGUyMGQyOCJ9fX0=
+
+ArcherHead:
+  Id: PLAYER_HEAD
+  Display: '&fArcher Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRlNWEyMzIxZTYzOWZkYzlkNDI0MzRhZmYzZDdjNjc0YjRhODhiMmU0NWVkOWYwMzcyM2JlZmVjYzlhM2U3YyJ9fX0=
+
+OreCreeperHead:
+  Id: PLAYER_HEAD
+  Display: '&fOre Creeper Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGRjMzY3YWNlZjhiOTZiYzNiOGU1Y2FlNmNmNDM4ZmI1ZDViYjI4N2ZlZjAxOGIxNDk1MDYxNDhhNjY2OWFkYiJ9fX0=
+
+LuckyVillagerHead:
+  Id: PLAYER_HEAD
+  Display: '&fLucky Villager Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2RlMjE4MWU1ZWNkOWUzYzAzODMwMzkzODVlMmQyYjlkNTFkZTIxMmNiZTc4YWYyM2UwYTVhYjU0NjYyOWYxNiJ9fX0=
+
+EndBlazeHead:
+  Id: PLAYER_HEAD
+  Display: '&fEnd Blaze Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTU4ZDRkOTk1OGUwNGRkYTI2ZGEzMjAyZTQyYjY3NTYxY2Y2NjA3MmQ5YTE3NDk4MTdiMjNiYmNkZjg3ODU2ZiJ9fX0=
+
+InvisibleSpiderHead:
+  Id: PLAYER_HEAD
+  Display: '&fInvisible Spider Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzU3MWFmMGM5MjEyMzM3OTdkODU1YzUyMDBhOTBlOTVhMWQ3YzdhNDAxY2FhMThiYjdmZWEwMjFmY2E0OTE1MyJ9fX0=
+
+InvisibleCaveSpiderHead:
+  Id: PLAYER_HEAD
+  Display: '&fInvisible Cave Spider Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2E2MTljOTdlMGI5NDVlMjMzNzNjZGM2YTA4YzA1OGJhYmNiODFlZjJmZDNhYTUxMzg1N2ZhZWM2NGZiMzQ2YyJ9fX0=
+
+PoisonFrogHead:
+  Id: PLAYER_HEAD
+  Display: '&fPoison Frog Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNjZTZmOTk5OGVkMmRhNzU3ZDFlNjM3MmYwNGVmYTIwZTU3ZGZjMTdjM2EwNjQ3ODY1N2JiZGY1MWMyZjJhMiJ9fX0=
+
+InvisibleEndermanHead:
+  Id: PLAYER_HEAD
+  Display: '&fInvisible Enderman Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA5ZjFkZTYxMzVmNGJlYTc4MWM1YThlMGQ2MTA5NWY4MzNlZTI2ODVkODE1NGVjZWE4MTRlZTZkMzI4YTVjNiJ9fX0=
+
+ZombieStunnerHead:
+  Id: PLAYER_HEAD
+  Display: '&fZombie Stunner Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQzNjU0ZDc2YTZmMmNkYmFlODk4YWNkN2RkY2QwMWE3YWY5ZWUyNTlkOTZlZGZiMGFlMmI5ZThmZTNlNmMifX19
+
+ZombieScramblerHead:
+  Id: PLAYER_HEAD
+  Display: '&fZombie Scrambler Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQwNDY1ZGJmZjBiNjI5NDc5NThjZmMyNzM2MjQ0NmZkYzY5YjFkZjQ0NjM4OTM2NWJmN2VkZmJjYzg5MzBiZSJ9fX0=
+
+RanciePigZombieHead:
+  Id: PLAYER_HEAD
+  Display: '&fRancie Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWY5MWFiZmFlMjE1N2M0OTk5NTJkNTcyYzQyNzI1MDIxNGE5ZTU5MDdhZjUyNzkzZjMwZGMwZTg5MDgxODJkYSJ9fX0=
+
+DrownedShifterHead:
+  Id: PLAYER_HEAD
+  Display: '&fDrowned Shifter Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzFhNzMyNTI0MDFhNmU5NDZmNjFkYmFjMGUwMjdkMTgzZTBhY2U1ODc1MmZhMTVhNjRkMjQ0OWZjZjUwODdiNyJ9fX0=
+
+WebberSpiderHead:
+  Id: PLAYER_HEAD
+  Display: '&fWebber Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VmMDk1NDk1MjgwMDlhZTUzNWE1ODYwNjRmMDYzMTJmZGY0MTVkYTI2ZmMzOGNhMmNkNDc3Mzg4Nzk0N2VkZCJ9fX0=
+
+AlienHead:
+  Id: PLAYER_HEAD
+  Display: '&fAlien Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDg1NTJhZTkzMzI0NTdkZGU5YmQxZGRhOTI5NjZlYmUxMjdiY2IyZjk2YTIwYjRhZDFhZjcwNjlkYTVlZTI1NyJ9fX0=
+
+AggressiveStriderHead:
+  Id: PLAYER_HEAD
+  Display: '&fAggressive Strider Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzczODYxMGUyZjczYjY3ZTViYzEyZWJjYmI2ZGRjNDU2MWMyNjViOWQ1YTE3ZDIwZGFlNDkzYTgyNTBkNzAwYiJ9fX0=
+
+SHADOWCASTER_HEAD:
+  Id: PLAYER_HEAD
+  Display: '&fShadow Caster Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTEwMmJlMDQ2ZGJkODhkMWVkMjQyNjM4MDk3MjFkODMwM2FiZDBhMGU2NTY0Nzc3NjI3NzQzN2VkNDcxMjNkMCJ9fX0=
+SHADOWCASTER_HEAD_INCOMBAT:
+  Id: PLAYER_HEAD
+  Display: '&fShadow Caster Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDY5Y2I4Y2VlMjU0NDU0MmNmMzUwYTc4MjcxMTE2MWY4MGQ2MTVlZDQ5OGI1YTYxNGY4ODA0ZGI2OTVmYzU0YyJ9fX0=
+
+ZOMBIE_CAVE_MINER_HEAD:
+  Id: PLAYER_HEAD
+  Display: '&fZombie Cave Miner Head'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjY0NGM4ZjM2ZTIxZDVlYTk1NjI0OTI4ZTNmMzVhMmI0OTQ5Y2U3NWIyZmE2OGNjZDJiYzg0ZDlhZGEwY2I3In19fQ==
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

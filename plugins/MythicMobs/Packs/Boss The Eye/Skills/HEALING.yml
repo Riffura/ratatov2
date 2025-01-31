@@ -1,0 +1,113 @@
+#
+#████████╗██╗░░██╗███████╗  ███████╗██╗░░░██╗███████╗  ██████╗░░█████╗░░██████╗░██████╗
+#╚══██╔══╝██║░░██║██╔════╝  ██╔════╝╚██╗░██╔╝██╔════╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#░░░██║░░░███████║█████╗░░  █████╗░░░╚████╔╝░█████╗░░  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#░░░██║░░░██╔══██║██╔══╝░░  ██╔══╝░░░░╚██╔╝░░██╔══╝░░  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#░░░██║░░░██║░░██║███████╗  ███████╗░░░██║░░░███████╗  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚══════╝░░░╚═╝░░░╚══════╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THE_EYE_HEALING:
+  Cooldown: 9999
+  Conditions:
+  - stance{s=THE_EYE_ONSPAWN} false
+  Skills:
+  - setstance{stance=THE_EYE_HEALING} @self
+  - potion{t=DAMAGE_RESISTANCE;d=99999;l=10;force=true;p=false} @self
+  - potion{t=SLOW;d=99999;l=10;force=true;p=false} @self
+  - delay 10
+  - potionclear{type=DARKNESS} @EIR{r=2;target=players}
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=2;points=5}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=2;points=5}
+  - delay 10
+  - potionclear{type=DARKNESS} @EIR{r=8;target=players}
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=8;points=10}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=8;points=10}
+  - delay 10
+  - potionclear{type=DARKNESS} @EIR{r=16;target=players}
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=16;points=15}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=16;points=15}
+  - delay 10
+  - potionclear{type=DARKNESS} @EIR{r=20;target=players}
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=20;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=20;points=20}
+  - delay 10
+  - potionclear{type=DARKNESS} @EIR{r=50;target=players}
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=50;points=100}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=50;points=100}
+  - delay 10
+  - teleport{spreadh=0;spreadv=0} @CasterSpawnLocation
+  - potion{t=LEVITATION;d=30;l=2;force=true;p=false} @self
+  - delay 30
+  - stun{d=100;f=false;g=false;kb=false} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=0.1} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=0.1} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=0.1} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=0.1} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=0.1} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=1.0} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=1.0} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=1.0} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=5;radius=1.2} @Sphere{r=10;points=20}
+  - effect:particlesphere{p=heart;amount=3;radius=0.5} @Sphere{r=5;points=10}
+  - healpercent{m=1.0} @self
+  - sound{s=entity.witch.drink;v=1;sc=hostile;p=0.5} @self
+  - delay 10
+  - potion{t=DAMAGE_RESISTANCE;d=0;l=0;force=true} @self
+  - potion{t=SLOW;d=1;l=1;force=true;p=false} @self
+  - addtag{t=ALLOW_ONDEATH_SKILL} @self
+  - setstance{stance=THE_EYE_NORMAL} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

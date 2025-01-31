@@ -1,0 +1,74 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#░█████╗░██████╗░██╗░░░██╗░██████╗████████╗░█████╗░██╗░░░░░░██████╗
+#██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██╔════╝
+#██║░░╚═╝██████╔╝░╚████╔╝░╚█████╗░░░░██║░░░███████║██║░░░░░╚█████╗░
+#██║░░██╗██╔══██╗░░╚██╔╝░░░╚═══██╗░░░██║░░░██╔══██║██║░░░░░░╚═══██╗
+#╚█████╔╝██║░░██║░░░██║░░░██████╔╝░░░██║░░░██║░░██║███████╗██████╔╝
+#░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═════╝░
+#
+CRYSTAL_WORLD:
+  Type: CRYSTAL_WORLD
+  Worlds: world
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - mobsInRadius{types=CRYSTAL_WORLD;amount=>0;radius=50} false
+CRYSTAL_NETHER:
+  Type: CRYSTAL_NETHER
+  Worlds: world_nether
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - mobsInRadius{types=CRYSTAL_NETHER;amount=>0;radius=50} false
+CRYSTAL_END:
+  Type: CRYSTAL_END
+  Worlds: world_the_end
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  Cooldown: 100
+  TargetConditions:
+  - (inclaim || nearclaim{r=6}) false
+  Conditions:
+  - (inclaim || nearclaim{r=6}) false
+  - mobsInRadius{types=CRYSTAL_END;amount=>0;radius=50} false
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

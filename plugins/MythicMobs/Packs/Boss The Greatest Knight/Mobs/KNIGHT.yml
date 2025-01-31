@@ -1,0 +1,122 @@
+#
+#██╗░░██╗███╗░░██╗██╗░██████╗░██╗░░██╗████████╗  ██████╗░░█████╗░░██████╗░██████╗
+#██║░██╔╝████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#█████═╝░██╔██╗██║██║██║░░██╗░███████║░░░██║░░░  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██╔═██╗░██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#██║░╚██╗██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+THE_GREATEST_KNIGHT:
+  MobType: WITHER_SKELETON
+  Health: 500 
+  Damage: 1
+  Armor: 15
+  Faction: THE_GREATEST_KNIGHT_BOSS
+  Display: '<gradient:#00e5ff:#ffffff><bold>The Greatest Knight</gradient>'
+  BossBar:
+    Enabled: true
+    Title: '<gradient:#00e5ff:#ffffff><bold>The Greatest Knight</gradient>'
+    Range: 50
+    Color: WHITE
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    AlwaysShowName: true
+    FollowRange: 80
+    MaxCombatDistance: 60
+    Despawn: false
+    MovementSpeed: 0.23
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Silent: true
+  DamageModifiers:
+  - BLOCK_EXPLOSION 0.1
+  - ENTITY_EXPLOSION 0.1
+  - PROJECTILE 0.8
+  - DROWNING 0
+  - POISON -10
+  - MAGIC -5
+  - WITHER -10
+  - THORNS 0
+  - LAVA 0
+  - MELTING 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - HOT_FLOOR 0
+  - FALL 0
+  - SUFFOCATION 0
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  Drops:
+  - THE_GREATEST_KNIGHT_DROPS 1
+  - THE_GREATEST_KNIGHT_TOOLS 1
+  DropOptions:
+    DropMethod: FANCY
+    PerPlayerDrops: true
+    RequiredDamagePercent: 75
+    HologramItemNames: true
+    ItemGlowByDefault: true
+    ShowDeathHologram: true
+    ClientSideDrops: true
+    Lootsplosion: true
+    HologramTimeout: 300
+    HologramMessage:
+    - '<#00e5ff>========================'
+    - '<mob.name> - <mob.hp>HP'
+    - ''
+    - '<#00e5ff>1st Place | <1.name> | <1.damage>'
+    - '<#00e5ff>2nd Place | <2.name> | <2.damage>'
+    - '<#00e5ff>3rd Place | <3.name> | <3.damage>'
+    - '<#00e5ff>4th Place | <4.name> | <4.damage>'
+    - '<#00e5ff>5th Place | <5.name> | <5.damage>'
+    - ''
+    - 'Your rank: #<player.rank> | <player.damage>'
+    - '<#00e5ff>========================'
+  Skills:
+# Sounds
+  - sound{s=entity.armor_stand.hit;v=1.0;p=0.7} @self ~onDamaged 1
+  - sound{s=entity.armor_stand.fall;v=1.0;p=1.0} @self ~onDamaged 1
+  - sound{s=entity.pillager.death;v=1.0;p=0.3} @self ~onDeath 1
+  - sound{s=entity.wither.break_block;v=0.5;p=0.4} @self ~onDeath 1
+  - sound{s=entity.wither_skeleton.ambient;v=0.5;p=0.6} @self ~onTimer:60
+#
+#
+# Skills
+  - skill{s=THE_GREATEST_KNIGHT_ONSPAWN} ~onSpawn 1
+  - skill{s=THE_GREATEST_KNIGHT_ONSPAWN_AI} ~onEnterCombat 1
+#
+  - effect:itemspray{item=BLACK_DYE;amount=4;velocity=1;yvelocity=1;d=50} @self ~onDamaged 0.6
+  - skill{s=THE_GREATEST_KNIGHT_HEAL} <15% ~onTimer:10 1
+
+  - skill{s=THE_GREATEST_KNIGHT_COMBAT_1} ~onAttack 1
+  - skill{s=THE_GREATEST_KNIGHT_COMBAT_2} ~onAttack 1
+
+  - skill{s=THE_GREATEST_KNIGHT_RANDOMSKILL_SELECTOR_1} ~onTimer:240
+  - skill{s=THE_GREATEST_KNIGHT_RANDOMSKILL_SELECTOR_2} ~onTimer:120
+
+  - skill{s=THE_GREATEST_KNIGHT_WIN} ~onDeath 1
+#
+#
+#
+  - giveexperiencelevels{a=50to100} @PIR{r=50} ~onDeath 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,77 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+RAPID_ONSLAUGHT:
+  Cooldown: 20
+  Skills:
+  - setstance{stance=GORGON_RAPID_ONSLAUGHT} @self
+  - potion{type=SPEED;duration=9999;level=1;force=true;p=false} @self
+  - onAttack{auraname=RAPID_ONSLAUGHT;oH=RAPID_ONSLAUGHT-Hit;onTick=RAPID_ONSLAUGHT-Tick;onEnd=RAPID_ONSLAUGHT-End;cE=true;interval=10;duration=240} @self
+
+RAPID_ONSLAUGHT-Tick:
+  Skills:
+  - effect:particles{particle=SOUL_FIRE_FLAME;amount=5;hS=0.5;vS=0.5;speed=0} @self
+
+RAPID_ONSLAUGHT-End:
+  Skills:
+  - potion{type=SPEED;duration=1;level=1;force=true;p=false} @self
+  - setstance{stance=GORGON_NORMAL} @self
+
+RAPID_ONSLAUGHT-Hit:
+  Skills:
+  - damage{a=5to8;i=true} @target
+  - randomskill{skills=RAPID_ONSLAUGHT_EFFECT-SLOW,RAPID_ONSLAUGHT_EFFECT-POISON,RAPID_ONSLAUGHT_EFFECT-DARKNESS,RAPID_ONSLAUGHT_EFFECT-LEVITATION,RAPID_ONSLAUGHT_EFFECT-BLINDNESS,RAPID_ONSLAUGHT_EFFECT-WITHER,RAPID_ONSLAUGHT_EFFECT-WEAKNESS,RAPID_ONSLAUGHT_EFFECT-CONFUSION,RAPID_ONSLAUGHT_EFFECT-GLOWING}
+
+RAPID_ONSLAUGHT_EFFECT-SLOW:
+  Skills:
+  - potion{type=SLOW;duration=240;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-POISON:
+  Skills:
+  - potion{type=POISON;duration=240;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-DARKNESS:
+  Skills:
+  - potion{type=DARKNESS;duration=240;level=1;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-LEVITATION:
+  Skills:
+  - potion{type=LEVITATION;duration=180;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-BLINDNESS:
+  Skills:
+  - potion{type=BLINDNESS;duration=240;level=1;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-WITHER:
+  Skills:
+  - potion{type=WITHER;duration=240;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-WEAKNESS:
+  Skills:
+  - potion{type=WEAKNESS;duration=240;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-CONFUSION:
+  Skills:
+  - potion{type=CONFUSION;duration=240;level=2;force=true;p=false} @target
+
+RAPID_ONSLAUGHT_EFFECT-GLOWING:
+  Skills:
+  - potion{type=GLOWING;duration=600;level=2;force=true;p=false} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

@@ -1,0 +1,32 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+AXECISION_BARRAGE:
+  Cooldown: 5
+  Conditions:
+  - playerwithin{d=3} true
+  Skills:
+  - setstance{stance=AXECISION_BARRAGE} @self
+  - throw{velocity=15;velocityY=4} @NearestPlayer{r=3}
+  - potion{type=SLOW;duration=20;level=2;force=true;p=false} @self
+  - delay 30
+  - projectile{bulletType=ITEM;material=GOLDEN_AXE;onHit=AXE_THROW-Hit;onEnd=AXE_THROW-End;v=18;i=1;hR=1;vR=1;g=0.35;tyo=2.5;syo=1.5} @target
+  - setstance{stance=GORGON_NORMAL} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

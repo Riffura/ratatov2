@@ -1,0 +1,115 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 
+# ██████╗░██╗███╗░░██╗░█████╗░████████╗░█████╗░
+# ██╔══██╗██║████╗░██║██╔══██╗╚══██╔══╝██╔══██╗
+# ██████╔╝██║██╔██╗██║███████║░░░██║░░░███████║
+# ██╔═══╝░██║██║╚████║██╔══██║░░░██║░░░██╔══██║
+# ██║░░░░░██║██║░╚███║██║░░██║░░░██║░░░██║░░██║
+# ╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
+
+PINATA_RAINBOW:
+  Skills:
+  - delay 5
+  - setcolor{color=black} @self
+  - setname{name=<gradient:#000000:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=blue} @self
+  - setname{name=<gradient:#0800ff:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=brown} @self
+  - setname{name=<gradient:#b85c00:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=cyan} @self
+  - setname{name=<gradient:#00ffee:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=gray} @self
+  - setname{name=<gradient:#858585:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=green} @self
+  - setname{name=<gradient:#00ff2f:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=light_blue} @self
+  - setname{name=<gradient:#00eeff:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=light_gray} @self
+  - setname{name=<gradient:#c9c9c9:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=lime} @self
+  - setname{name=<gradient:#38ff49:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=magenta} @self
+  - setname{name=<gradient:#a80095:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=orange} @self
+  - setname{name=<gradient:#ff7b00:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=pink} @self
+  - setname{name=<gradient:#ff61ed:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=purple} @self
+  - setname{name=<gradient:#c200db:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=red} @self
+  - setname{name=<gradient:#ff0000:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=yellow} @self
+  - setname{name=<gradient:#fbff00:#ffffff>Pinata</gradient>}
+  - delay 5
+  - setcolor{color=white} @self
+  - setname{name=<gradient:#ffffff:#ffffff>Pinata</gradient>}
+
+PINATA_CANCEL_DMG:
+  Skills:
+  - cancelevent
+
+PINATA_DROP:
+  Skills:
+  - damage{a=1} @self
+  - dropitem{i=PinataDrops 1;n=true} @self
+  - sound{s=entity.llama.chest;p=1.0;v=1.0;r=25} @self
+  - sound{s=entity.llama.swag;p=1.0;v=1.0;r=25} @self
+
+PINATA_DEATH:
+  Skills:
+  - throw{v=10;vy=2} @eir{r=15}
+  - fakelightning @self
+  - fakeexplode @self
+  - sound{s=entity.llama.death;p=2.0;v=1.0;r=25} @self
+
+PINATA_TELEPORT:
+  Skills:
+  - teleport{spreadh=10;spreadv=10} @self
+  - sound{s=entity.enderman.teleport;p=1.5;v=1.0;r=25} @self
+  - particle{p=Reverse_Portal;a=30;hs=1.0;vs=1.0;s=0.02} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

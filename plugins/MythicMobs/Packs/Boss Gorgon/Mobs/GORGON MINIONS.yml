@@ -1,0 +1,181 @@
+#
+#
+#░██████╗░░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗  ██████╗░░█████╗░░██████╗░██████╗
+#██╔════╝░██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+#██║░░██╗░██║░░██║██████╔╝██║░░██╗░██║░░██║██╔██╗██║  ██████╦╝██║░░██║╚█████╗░╚█████╗░
+#██║░░╚██╗██║░░██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║  ██╔══██╗██║░░██║░╚═══██╗░╚═══██╗
+#╚██████╔╝╚█████╔╝██║░░██║╚██████╔╝╚█████╔╝██║░╚███║  ██████╦╝╚█████╔╝██████╔╝██████╔╝
+#░╚═════╝░░╚════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝  ╚═════╝░░╚════╝░╚═════╝░╚═════╝░
+#
+GRIMFANG:
+  MobType: PIGLIN
+  Health: 30
+  Damage: 6
+  Display: '<gradient:#0062ff:#001a45>Grimfang</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: false
+    FollowRange: 80
+    Despawn: false
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+  Equipment:
+  - GOLDEN_SWORD HAND
+  - ###
+  - ###
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  Drops:
+  - exp 10-12 1
+  Skills:
+  - remove{delay=300} @self ~onSpawn
+  - effect:itemspray{item=echo_shard;amount=5;velocity=0.5;d=60} @self ~onDespawn 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDespawn 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDespawn 1
+
+  - effect:itemspray{item=echo_shard;amount=5;velocity=0.5;d=60} @self ~onDeath 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDeath 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDeath 1
+
+GROTSHAK:
+  MobType: VEX
+  Health: 18
+  Damage: 3
+  Display: '<gradient:#b50009:#cf005a>Grotshak</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: false
+    FollowRange: 80
+    Despawn: false
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+  DamageModifiers:
+  - FIRE 0
+  - FIRE_TICK 0
+  - HOT_FLOOR 0
+  - LAVA 0
+  Equipment:
+  - GOLDEN_HOE HAND
+  - GOLDEN_HOE OFFHAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  Drops:
+  - exp 6-10 1
+  Skills:
+  - remove{delay=300} @self ~onSpawn
+  - effect:itemspray{item=fermented_spider_eye;amount=5;velocity=0.5;d=60} @self ~onDespawn 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDespawn 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDespawn 1
+
+  - effect:itemspray{item=fermented_spider_eye;amount=5;velocity=0.5;d=60} @self ~onDeath 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDeath 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDeath 1
+
+MATUK:
+  MobType: PIGLIN
+  Health: 20
+  Damage: 4
+  Display: '<gradient:#a8a8a8:#333333>Matuk</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: false
+    FollowRange: 80
+    Despawn: false
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+  DamageModifiers:
+  - FIRE 0
+  - FIRE_TICK 0
+  - HOT_FLOOR 0
+  - LAVA 0
+  Equipment:
+  - CROSSBOW HAND
+  - ###
+  - ###
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  Drops:
+  - exp 6-12 1
+  Skills:
+  - remove{delay=300} @self ~onSpawn
+  - effect:itemspray{item=flint;amount=5;velocity=0.5;d=60} @self ~onDespawn 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDespawn 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDespawn 1
+
+  - effect:itemspray{item=flint;amount=5;velocity=0.5;d=60} @self ~onDeath 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDeath 1
+  - sound{s=item.trident.throw;v=0.5;p=0.1} @self ~onDeath 1
+
+MITES:
+  MobType: ENDERMITE
+  Health: 10
+  Damage: 2
+  Display: '<gradient:#ff00dd:#000f94>Mites</gradient>'
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: false
+    FollowRange: 80
+    Despawn: false
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+  DamageModifiers:
+  - FIRE 0
+  - FIRE_TICK 0
+  - HOT_FLOOR 0
+  - LAVA 0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  KillMessages:
+  - '&f<target.name> &7was slain by <gradient:#08bf8b:#00d9ca>Matuk</gradient>'
+  Drops:
+  - exp 3-8 1
+  Skills:
+  - remove{delay=300} @self ~onSpawn
+  - effect:itemspray{item=CHORUS_FRUIT;amount=3;velocity=0.5;d=60} @self ~onDespawn 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDespawn 1
+  - sound{s=entity.endermite.death;v=0.5;p=1.8} @self ~onDespawn 1
+
+  - effect:itemspray{item=CHORUS_FRUIT;amount=3;velocity=0.5;d=60} @self ~onDeath 1
+  - effect:smokeswirl{duration=10;interval=10} @self ~onDeath 1
+  - sound{s=entity.endermite.death;v=0.5;p=1.8} @self ~onDeath 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua

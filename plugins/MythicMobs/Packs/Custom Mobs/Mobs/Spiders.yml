@@ -1,0 +1,108 @@
+#
+#░█████╗░██╗░░░██╗░██████╗████████╗░█████╗░███╗░░░███╗  ███╗░░░███╗░█████╗░██████╗░░██████╗
+#██╔══██╗██║░░░██║██╔════╝╚══██╔══╝██╔══██╗████╗░████║  ████╗░████║██╔══██╗██╔══██╗██╔════╝
+#██║░░╚═╝██║░░░██║╚█████╗░░░░██║░░░██║░░██║██╔████╔██║  ██╔████╔██║██║░░██║██████╦╝╚█████╗░
+#██║░░██╗██║░░░██║░╚═══██╗░░░██║░░░██║░░██║██║╚██╔╝██║  ██║╚██╔╝██║██║░░██║██╔══██╗░╚═══██╗
+#╚█████╔╝╚██████╔╝██████╔╝░░░██║░░░╚█████╔╝██║░╚═╝░██║  ██║░╚═╝░██║╚█████╔╝██████╦╝██████╔╝
+#░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝  ╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#░██████╗██████╗░██╗██████╗░███████╗██████╗░░██████╗
+#██╔════╝██╔══██╗██║██╔══██╗██╔════╝██╔══██╗██╔════╝
+#╚█████╗░██████╔╝██║██║░░██║█████╗░░██████╔╝╚█████╗░
+#░╚═══██╗██╔═══╝░██║██║░░██║██╔══╝░░██╔══██╗░╚═══██╗
+#██████╔╝██║░░░░░██║██████╔╝███████╗██║░░██║██████╔╝
+#╚═════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═════╝░
+#
+INVISIBLE_SPIDER:
+  MobType: SPIDER
+  Faction: SPIDERS
+  Options:
+    Silent: true
+    Invisible: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=INV_SPIDER_PROJECTILE} ~onTimer:120 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - InvisibleSpiderHead 1 0.01
+  - exp 15 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+INVISIBLE_CAVE_SPIDER:
+  MobType: CAVE_SPIDER
+  Faction: SPIDERS
+  Options:
+    Silent: true
+    Invisible: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=INV_SPIDER_PROJECTILE} ~onTimer:120 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - InvisibleCaveSpiderHead 1 0.01
+  - exp 15 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+WEBBER_SPIDER:
+  MobType: SPIDER
+  Display: '&fWebber'
+  Faction: SPIDERS
+  Options:
+    Invisible: false
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=WEBBER} ~onTimer:120 1
+  - skill{s=WEBBER_IN_WEB} @target ~onTimer:10 1
+  Drops:
+  - TierIIDrops 1 0.1
+  - TierIIIDrops 1 0.01
+  - WebberSpiderHead 1 0.01
+  - exp 15 1
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 𝑴𝑨𝑫𝑬 𝑩𝒀 𝑨𝑳𝑻𝑬𝑹𝑵𝑨𝑻𝑰𝑽𝑬𝑺𝑶𝑨𝑷
+# 𝑫𝑰𝑺𝑪𝑶𝑹𝑫: https://discord.gg/eUFRvyzJua
