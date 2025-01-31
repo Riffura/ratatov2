@@ -565,6 +565,7 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:pillager": "2025-01-31 16:33:17 +0000",
       "minecraft:skeleton": "2025-01-30 12:59:05 +0000",
       "minecraft:spider": "2025-01-30 22:06:48 +0000",
       "minecraft:zombie": "2025-01-30 13:36:51 +0000"
@@ -873,15 +874,21 @@
   },
   "incendium:technical/sentrys_wrath": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
   "incendium:technical/inventory/sentrys_wrath": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
+  },
+  "minecraft:end/dragon_egg": {
+    "criteria": {
+      "dragon_egg": "2025-01-31 16:31:29 +0000"
+    },
+    "done": true
   },
   "kattersstructures:root": {
     "criteria": {
@@ -891,25 +898,31 @@
   },
   "incendium:technical/feed_ghastling": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
   "incendium:technical/on_player_hurt": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
   "incendium:technical/firestorm": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
+  "minecraft:recipes/misc/beacon": {
+    "criteria": {
+      "has_nether_star": "2025-01-31 16:31:21 +0000"
+    },
+    "done": true
+  },
   "incendium:technical/inventory/firestorm": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
@@ -921,13 +934,13 @@
   },
   "incendium:technical/give_ghastling": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
   "incendium:technical/on_kill": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
@@ -939,7 +952,7 @@
   },
   "incendium:technical/multiplex_crossbow": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
@@ -949,9 +962,15 @@
     },
     "done": false
   },
+  "minecraft:recipes/building_blocks/nether_bricks": {
+    "criteria": {
+      "has_nether_brick": "2025-01-31 16:33:17 +0000"
+    },
+    "done": true
+  },
   "incendium:technical/on_inventory_change": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
@@ -963,13 +982,13 @@
   },
   "incendium:technical/holy_wrath": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
   "incendium:technical/on_block": {
     "criteria": {
-      "log_spam_fixer": "2025-01-31 16:30:45 +0000"
+      "log_spam_fixer": "2025-01-31 16:35:45 +0000"
     },
     "done": false
   },
