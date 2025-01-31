@@ -12,5 +12,5 @@ jobs:
 
       - name: Reset commit history
         run: |
-          git reset --hard HEAD~2
+          git reset --hard ee3aba6
           git push origin HEAD --force
