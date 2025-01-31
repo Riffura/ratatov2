@@ -1,16 +1,16 @@
-name: Reset Commit
+name: Revert Commit
 
 on:
   workflow_dispatch:
 
 jobs:
-  reset:
+  revert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Reset commit history
+      - name: Revert merge commit
         run: |
-          git reset --hard ee3aba6
-          git push origin HEAD --force
+          git revert -m 1 ee3aba655561cb1e9d8984a1019b7aa8402bcd38
+          git push origin HEAD
