@@ -16,11 +16,12 @@ jobs:
       - name: Clone repository to target directory
         env:
           REPO_URL: "https://github.com/Riffura/pl.git" # Ganti dengan URL repo yang ingin dikloning
-          TARGET_DIR: "./plugins" # Ganti dengan direktori target
+          REPO_NAME: "pl"
+          TARGET_DIR: "./plugins/" # Ganti dengan direktori target
         run: |
-          git clone "$REPO_URL" "$TARGET_DIR"
-          mv "$TARGET_DIR"/* "$TARGET_DIR"/.* ../ || true
-          rm -rf "$TARGET_DIR"
+          git clone "$REPO_URL" "$REPO_NAME"
+          mv "$REPO_NAME"/* "$TARGET_DIR"/
+          rm -rf "$REPO_NAME"
 
       - name: Commit and push changes
         env:
