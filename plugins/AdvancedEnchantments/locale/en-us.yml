@@ -184,7 +184,6 @@ items:
     cannot-remove: "&cEnchantment %enchant% cannot be removed!"
   soul-tracker:
     disabled: "&cSouls are not enabled on this server!"
-    non-stacked-only: "&cYou can only use this on non-stacked items!"
     apply-successful: "&7You successfully applied &f&lSoul Tracker &7to your item!"
   magic-dust:
     full-inventory: "&cYour inventory is full!"
@@ -219,6 +218,3 @@ chances:
 
 destroy:
   book-failed: "&cEnchantment was unsuccessful!"
-
-#gVTsdmQwVHe5hGTGhFSkp3TjtmY5FkeONTQ61kMJRlT4d2RkRjQQR1R2dHT4JVU0hGWSl0M
-#EER0BVOCdzatl1b3hGeFxGbnZUZxcGVOp3ZE9keRRlT5hzRalWQwNVcJF1bCNjdqJEc5kXN

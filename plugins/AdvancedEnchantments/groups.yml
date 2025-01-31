@@ -14,13 +14,13 @@ settings:
   fallback-group: SIMPLE
 groups:
   SIMPLE:
-    global-color: "&7"
-    group-name: "Simple"
+    global-color: "{#e0e0e0}"
+    group-name: "᪗"
     # Use this to change the type of item per group
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40021
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 200;200;200
@@ -35,12 +35,12 @@ groups:
       # Chance to give Magic dust instead of Mystery dust
       chance: 22
   UNIQUE:
-    global-color: "&a"
-    group-name: "Unique"
+    global-color: "{#6cbc64}"
+    group-name: "᪘"
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40022
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 122;255;80
@@ -55,12 +55,12 @@ groups:
       # Chance to give Magic dust instead of Mystery dust
       chance: 22
   ELITE:
-    global-color: "&b"
-    group-name: "Elite"
+    global-color: "{#bcdcee}"
+    group-name: "᪙"
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40023
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 20;250;255
@@ -75,12 +75,12 @@ groups:
       # Chance to give Magic dust instead of Mystery dust
       chance: 22
   ULTIMATE:
-    global-color: "&e"
-    group-name: "Ultimate"
+    global-color: "{#d7ace0}"
+    group-name: "᪚"
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40024
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 250;255;0
@@ -95,12 +95,12 @@ groups:
       # Chance to give Magic dust instead of Mystery dust
       chance: 22
   LEGENDARY:
-    global-color: "&6"
-    group-name: "Legendary"
+    global-color: "{#fccc5c}"
+    group-name: "᪛"
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40025
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 133;50;168
@@ -115,12 +115,12 @@ groups:
       # Chance to give Magic dust instead of Mystery dust
       chance: 22
   FABLED:
-    global-color: "&d"
-    group-name: "Fabled"
+    global-color: "{#fc8484}"
+    group-name: "᪜"
     item:
-      type: FIREWORK_CHARGE
+      type: PAPER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 40026
       # Use this to set firework charge's color only! Uses RGB
       # Find colors here: https://htmlcolorcodes.com/color-picker/
       rgb-color: 133;50;168

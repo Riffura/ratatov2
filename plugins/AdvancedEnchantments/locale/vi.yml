@@ -1,6 +1,6 @@
 # Sử dụng %p% để thay cho prefix của plugin.
-# Tất cả thông báo đều có thể dùng màu HEX. Định dạng: {#FFFFFF}
-# Gần như mọi thông báo đều hỗ trợ PlaceholderAPI.
+# Tất cả thông báo đ�?u có thể dùng màu HEX. �?ịnh dạng: {#FFFFFF}
+# Gần như m�?i thông báo đ�?u hỗ trợ PlaceholderAPI.
 prefix: "&7[&9AdvancedEnchantments&7]&r "
 
 effects:
@@ -8,8 +8,8 @@ effects:
   used: "&r%enchant-color% %level%"
 
 commands:
-  no-permission: "&cBạn không có quyền sử dụng lệnh này!"
-  offline-player: "&cNgười chơi đó không trực tuyến!"
+  no-permission: "&cBạn không có quy�?n sử dụng lệnh này!"
+  offline-player: "&cNgư�?i chơi đó không trực tuyến!"
   enchantment-not-found: "&cKhông tìm thấy phù phép &c&n%enchant%."
   invalid-amount: "&cSố lượng không xác định. Phải từ 1 đến 64."
   invalid-enchant: "&c%enchant% không phải là phù phép hợp lệ!"
@@ -21,94 +21,94 @@ commands:
     invalid-usage: "&cSai cách dùng! Hãy dùng: %command% <phù phép>"
     open-menu-message: "&7Thông tin của phù phép &e%enchant%."
   enchants:
-    open-menu-message: "&7Đang hiển thị toàn bộ phù phép..."
+    open-menu-message: "&7�?ang hiển thị toàn bộ phù phép..."
   apply:
     cooldown: "&cBạn sẽ được dùng lệnh này trong %seconds% giây nữa."
-    no-args: "&cHãy chỉ định người chơi để thực hiện lệnh."
+    no-args: "&cHãy chỉ định ngư�?i chơi để thực hiện lệnh."
     reapplied: "&aGiáp của bạn đã được lấy ra và đặt lại."
-    reapplied-other: "&aĐã lấy ra và đặt lại giáp cho %player%."
-    reapplied-for-all: "&aĐã lấy ra và đặt lại giáp cho mọi người!"
+    reapplied-other: "&a�?ã lấy ra và đặt lại giáp cho %player%."
+    reapplied-for-all: "&a�?ã lấy ra và đặt lại giáp cho m�?i ngư�?i!"
   withdrawsouls:
     invalid-usage: "&cSử dụng: /withdrawsouls <số lượng>"
     less-than-one: "&cSố lượng phải là số dương."
     invalid-item: "&cSai vật phẩm."
   aegive:
     invalid-material: "&cSai vật phẩm. Hãy tham khảo 'materials.yml' để xem danh sách các vật phẩm phù hợp."
-    invalid-item-flag: "&cSai ItemFlag! Hãy chọn trong danh sách này: %itemflags%"
+    invalid-item-flag: "&cSai ItemFlag! Hãy ch�?n trong danh sách này: %itemflags%"
     invalid-enchantment: "&cSai Phù Phép!"
-    success: "&aĐã gửi &2%amount%x %material% &acho %player%&a!"
+    success: "&a�?ã gửi &2%amount%x %material% &acho %player%&a!"
   gedit:
     unknown-gkit: "&c%gkit% không phải là một Gkit phù hợp!"
     edit:
       invalid-usage: "&cSử dụng: /gedit edit <gkit>"
     set-permission:
-      invalid-usage: "&cSử dụng: /gedit setpermission <gkit> <quyền>"
-      success: "&eĐã thay đổi quyền của &6%gkit%'s&e thành &6%permission%"
+      invalid-usage: "&cSử dụng: /gedit setpermission <gkit> <quy�?n>"
+      success: "&e�?ã thay đổi quy�?n của &6%gkit%'s&e thành &6%permission%"
     reset:
-      invalid-usage: "&cSử dụng: /gedit reset <gkit> <người chơi>"
+      invalid-usage: "&cSử dụng: /gedit reset <gkit> <ngư�?i chơi>"
       success: "&6Gkit %gkit% đã được làm mới cho &e%player%"
     list: "&eGKits: &6%gkits%"
     setdelay:
       invalid-usage: "&cSử dụng: /gedit setdelay <gkit> <delay (giây)>"
       invalid-delay: "&c%delay% không phải là số nguyên!"
-      success: "&eĐã thay đổi thời gian chờ của &6%gkit%&e thành &6%delay%"
+      success: "&e�?ã thay đổi th�?i gian ch�? của &6%gkit%&e thành &6%delay%"
   main:
     unknown-command: "&cLệnh không phù hợp! Hãy dùng \"/ae\" cho chính xác."
     setsouls:
       invalid-usage: "&cHãy dùng: /ae setsouls <số lượng>"
       invalid-item: "&cSai vật phẩm."
-      success: "&cĐã đặt số lượng item's soul thành: %amount%"
+      success: "&c�?ã đặt số lượng item's soul thành: %amount%"
     unenchant:
       invalid-usage: "&cHãy dùng: /ae unenchant <phù phép>"
       invalid-enchant: "&c%enchant% không phải là một phù phép!"
       not-holding-item: "&cBạn phải cầm trên tay vật phẩm!"
       does-not-have-enchant: "&cVật phẩm đó không chứa phù phép &4%enchant%&c!"
-      success: "&aĐã gỡ phù phép %enchant%!"
+      success: "&a�?ã gỡ phù phép %enchant%!"
     zip:
       zip-exists: "&cHãy thử lại."
       success: "&eMột file nén chứa tất cả dữ liệu của plugin này đã được lưu tại %path%."
       error: "&cGặp lỗi trong quá trình nén file, hãy xem console để biết thêm chi tiết."
     greset:
-      reset: "&aĐã làm mới Gkit %gkit% cho %player%!"
-      reset-all: "&aĐã làm mới tất cả Gkit cho %player%!"
+      reset: "&a�?ã làm mới Gkit %gkit% cho %player%!"
+      reset-all: "&a�?ã làm mới tất cả Gkit cho %player%!"
     claim:
       invalid-usage: "&cHãy nhập enchant token."
     givegkit:
       success: "&cKit %gkit% đã được gửi cho %player%"
     giverandombook:
-      success: "&aĐã gửi cho &2%player% %amount%x &asách loại &2%group%!"
+      success: "&a�?ã gửi cho &2%player% %amount%x &asách loại &2%group%!"
     givebook:
-      success: "&aĐã gửi cho &2%player% %amount%x &asách loại &2%enchant% %level%!"
+      success: "&a�?ã gửi cho &2%player% %amount%x &asách loại &2%enchant% %level%!"
     enchant:
-      added: "&aĐã thêm phù phép %enchant%!"
-      upgraded: "&2Đã nâng cấp phù phép %enchant% từ cấp %previous-level% lên cấp %level%."
-      downgraded: "&2Đã giảm cấp phù phép %enchant% từ cấp %previous-level% xuống cấp %level%."
-      removed: "&cĐã xóa phù phép %enchant% ra khỏi vật phẩm."
+      added: "&a�?ã thêm phù phép %enchant%!"
+      upgraded: "&2�?ã nâng cấp phù phép %enchant% từ cấp %previous-level% lên cấp %level%."
+      downgraded: "&2�?ã giảm cấp phù phép %enchant% từ cấp %previous-level% xuống cấp %level%."
+      removed: "&c�?ã xóa phù phép %enchant% ra kh�?i vật phẩm."
     giveitem:
-      success: "&7Đã gửi %amount%x %item%&7 cho &b%player%"
+      success: "&7�?ã gửi %amount%x %item%&7 cho &b%player%"
     givercbook:
-      success: "&aĐã gửi cho &2%player% %amount%x %group% &asách loại nhấp chuột phải để dùng!"
+      success: "&a�?ã gửi cho &2%player% %amount%x %group% &asách loại nhấp chuột phải để dùng!"
     give:
       success: "&aThành công gửi cho %player% một cuốn sách %enchant% %level%!"
     tinkereritem:
-      success: "&cĐã gửi x%amount% tinkerer item's cho %player%"
+      success: "&c�?ã gửi x%amount% tinkerer item's cho %player%"
     admin:
       invalid-page: "&cKhông có trang đó"
     info:
-      - "&eThông tin về phù phép &6%enchant%&7:"
+      - "&eThông tin v�? phù phép &6%enchant%&7:"
       - "&6Thông tin&7: &e%description%"
-      - "&6Áp dụng cho&7: &e%applies%"
+      - "&6�?p dụng cho&7: &e%applies%"
       - "&6Cấp cao nhất&7: &e%max-level%"
 
     pastetypes: "&aDanh sách các loại phù phép: %url%"
     pasteenchants: "&aDanh sách các phù phép: %url%"
-    open: "&aĐã mở %menu% cho %player%!"
+    open: "&a�?ã mở %menu% cho %player%!"
 
 token:
-  success: "&2&lx &aThành công tải về enchantment token &l%token%&a, đang tải lại plugin..."
+  success: "&2&lx &aThành công tải v�? enchantment token &l%token%&a, đang tải lại plugin..."
 
 interact:
-  main-hand-only: "&cBạn chỉ có thể làm điều đó ở tay chính!"
+  main-hand-only: "&cBạn chỉ có thể làm đi�?u đó ở tay chính!"
 
 enchanter:
   re-buy: "&cHãy mua lại phù phép đó ở enchanter."
@@ -134,10 +134,10 @@ alchemist:
   exceeds-max-level: "&cVật phẩm hợp nhất của bạn đã vượt quá cấp độ cho phép!"
 
 gkits:
-  no-permission: "&eBạn không có quyền để dùng Gkit &e%gkit%&6."
+  no-permission: "&eBạn không có quy�?n để dùng Gkit &e%gkit%&6."
   cooldown: "&eBạn chưa thể dùng Gkit này, Gkit &6%gkit%&e đang được hồi lại &7(%cooldown%)"
   used-kit: "&eBạn đã sử dụng Gkit &6%gkit%."
-  missing-permission: "&cQuyền của Gkit %gkit% không hợp lệ hoặc không có"
+  missing-permission: "&cQuy�?n của Gkit %gkit% không hợp lệ hoặc không có"
   unknown-gkit: "&cGKit %gkit% không hợp lệ!"
   unknown-enchant: "&7Không tìm thấy phù phép %enchant%."
 
@@ -157,7 +157,7 @@ sets:
     invalid-set: "&cSet không hợp lệ."
     invalid-set-piece: "&cMảnh không hợp lệ, Hãy dùng trong danh sách: \n%set pieces%"
     invalid-weapon: "&cVũ khí không hợp lệ."
-    offline-player: "&cNgười chơi không trực tuyến."
+    offline-player: "&cNgư�?i chơi không trực tuyến."
     invalid-chances: "&cSai tỉ lệ."
     list:
       header: "&eDanh sách các Sets &7[%size%]"
@@ -166,11 +166,11 @@ sets:
       header: "&eDanh sách các vũ khí &7[%size%]"
       weapon: " &8>> &f%weapon%"
     give:
-      success: "&eĐã gửi Set &f %set% &echo &f %player%"
+      success: "&e�?ã gửi Set &f %set% &echo &f %player%"
     givepiece:
-      success: "&eĐã gửi vật phẩm &f%piece% &etừ Set &f%set% &echo &f %player%"
+      success: "&e�?ã gửi vật phẩm &f%piece% &etừ Set &f%set% &echo &f %player%"
     weapon:
-      success: "&eĐã gửi Set &f %weapon% &echo &f %player%"
+      success: "&e�?ã gửi Set &f %weapon% &echo &f %player%"
 
 items:
   randomization-scroll:
@@ -190,7 +190,7 @@ items:
   white-scroll:
     full-inventory: "&cTúi đồ của bạn đã đầy!"
     apply-successful: "&aCuộn trắng đã thành công thêm vào vật phẩm!"
-    item-saved: "&aCuộn trắng đã cứu vật phẩm của bạn khỏi vỡ!"
+    item-saved: "&aCuộn trắng đã cứu vật phẩm của bạn kh�?i vỡ!"
 
 combining:
   already-max-level: "Phù phép đã đạt cấp cao nhất!"

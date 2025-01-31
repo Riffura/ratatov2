@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by AdvancedPlugins.net
-# Config Version: 9.14.5
-# Version Release date: 20/12/2024
+# Config Version: 9.10.1
+# Version Release date: 05/08/2024
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -48,28 +48,28 @@ commands:
     command: /enchanter
     # List of commands that will act as the command
     aliases:
-    - e
-    - ce
+      - e
+      - ce
   tinkerer:
     enabled: true
     command: /tinkerer
     aliases:
-    - tinker
+      - tinker
   alchemist:
     enabled: true
     command: /alchemist
     aliases:
-    - alchem
+      - alchem
   withdrawsouls:
     enabled: true
     command: /withdrawsouls
     aliases:
-    - wsouls
+      - wsouls
   apply: # Reapplies current worn armor's effects, repeating effects as well
     enabled: true
     command: /apply
     aliases:
-    - reapply
+      - reapply
 
 permissions:
   enchanter:
@@ -98,22 +98,28 @@ disable-armorsets:
 
 souls:
   enabled: true
-  lore: '&cSouls Collected: %souls%'
+  lore: "&fSouls Collected: {#b4f8eb}%souls%"
   item:
     type: PAPER
     id: 0
-    custom-model-data: 0
-    name: '&f&lSoul Tracker'
+    custom-model-data: 40010
+    name: "&f᪟ Rune of Soul"
     lore:
-    - '&7Apply to weapons to start tracking'
-    - '&7souls collected from kills.'
+      - ""
+      - "&7Apply to the weapon to"
+      - "&7start tracking souls"
+      - "&7collected from kills"
+      - ""
+      - "&8Drag and drop the rune"
+      - "&8onto the item to apply it."
+    force-glow: false
 
 # Enchantments limitation
 # If an item contains the specified lore, or the specified NBT tag, custom enchants
 # will not be able to be applied.
 enchantLimitation:
   enabled: true
-  lore: '&c&lUnmodifiable'
+  lore: "&cUnmodifiable"
   NBT-tag: unmodifiable
 
 # Enchantment combining (leveling up) on items.
@@ -138,7 +144,7 @@ slots:
   max-increase-of-slots: 13
   # Should it be displayed in lore?
   display-in-lore: false
-  display: '&eItem Slots&7: %left%'
+  display: "&eItem Slots&7: %left%"
 
 # Applying enchantment book section
 # Miscellaneous settings for applying
@@ -167,10 +173,17 @@ enchanter-books:
   id: 0
   custom-model-data: 0
   force-glow: false
-  name: '%group-color%&l%group-name%&l Enchantment Book &7(Right Click)'
+  name: "&f%group-name%&f Random Enchantment"
   lore:
-  - '&7Right Click while holding to receive a random'
-  - '%group-color%%group-name% &7enchantment book.'
+    - ""
+    - "{#dff9fb}A book with mysterious spirit,"
+    - "{#dff9fb}concealed occult magic inside"
+    - "{#dff9fb}it, emitting an eerie light."
+    - ""
+    - "&8You'll receive a random book"
+    - "&8based on rarity when cleaned."
+    - ""
+    - "&f→ &7Click to clean this book"
 
 # Custom Items section
 # Configure the items of AdvancedEnchantments
@@ -180,57 +193,63 @@ items:
     # Admin Items listed below this list will only be
     # applicable to materials in this list
     can-apply-to:
-    - ALL_SWORD
-    - ALL_ARMOR
-    - ALL_PICKAXE
-    - ALL_AXE
-    - ALL_SPADE
-    - ALL_HOE
-    - ALL_EDIBLE
-    - BOOK
-    - BOW
-    - CROSSBOW
-    - SKULL_ITEM
-    - PLAYER_HEAD
-    - ELYTRA
-    - TRIDENT
-  transmogscroll:
+      - ALL_SWORD
+      - ALL_ARMOR
+      - ALL_PICKAXE
+      - ALL_AXE
+      - ALL_SPADE
+      - ALL_HOE
+      - ALL_EDIBLE
+      - BOOK
+      - BOW
+      - CROSSBOW
+      - SKULL_ITEM
+      - PLAYER_HEAD
+      - ELYTRA
+      - TRIDENT
+  transmogscroll: # Revelation Rune
     type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40009
     force-glow: false
-    name: '&c&lTransmog Scroll'
+    name: "&f᪟ Rune of Revelation"
     lore:
-    - '&7Organizes enchants by &e&nrarity&7 on item'
-    - '&7and adds the &dlore &bcount&7 to name.'
-    - ''
-    - '&e&oPlace scroll on item to apply.'
-    enchants-count-formatting: '&d[&b&n%count%&d]'
+      - ""
+      - "&7Organizes enchants by"
+      - "{#50d0d0}Rarity&7 on the item and"
+      - "&7adds the {#50d0d0}Enchantment"
+      - "{#50d0d0}Counter&7 after the name"
+      - ""
+      - "&8Drag and drop the rune"
+      - "&8onto the item to apply it."
+    enchants-count-formatting: "&8[&f%count%&8]"
   soulgem:
-    type: EMERALD
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40017
     force-glow: false
-    name: '&c&lSoul Gem &7[&a%count%&7]'
+    name: "&f᪟ Soul Gem &8[{#b4f8eb}%count%&8]"
     lore:
-    - '&7Apply to an item to add souls.'
+      - "&7Apply to an item to"
+      - "&7add souls to it."
   itemnametag:
-    type: NAME_TAG
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40018
     force-glow: false
-    name: '&6&lItem NameTag &7(Right Click)'
+    name: "&f᪟ Rename Quill &8(Usable)"
     lore:
-    - '&7Rename and customize your equipment'
+      - "&7A magical quill can rename"
+      - "&7your enchanted equipment."
     messages:
       success:
-      - '&a&l(!) &aYou have successfully renamed your item to &e%name%'
+        - "&a→ You have successfully renamed your item to &e%name%"
       activated:
-      - '&a&l(!) &aYour next message will rename your item in hand'
+        - "&a→ Your next message will rename your item in hand"
       air:
-      - '&c&l(!) &cYou need to be holding an item to do this'
+        - "&c→ You need to be holding an item to do this"
       renaming-not-enchanted-item:
-      - '&c&l(!) &cYou can only rename enchanted items'
+        - "&c→ You can only rename enchanted items"
     settings:
       # Should colors be allowed
       colors: true
@@ -239,198 +258,239 @@ items:
       # Words the name can't be. This uses regex, not an exact match.
       # You can learn the basics of regex here: https://www.rexegg.com/regex-quickstart.html
       word-blacklist:
-      - fuck
-      - dick
-      - bitch
+        - fuck
+        - dick
+        - bitch
   randomization-scroll:
     type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40019
     force-glow: false
-    name: '%group-color%%group-name%&l%group-color% Randomization Scroll'
+    name: "&f᪟ &fTotem of Renewal"
     lore:
-    - ''
-    - '&7Apply to any %group-color%%group-name% &7Enchantment Book'
-    - '&7to reroll the success and destroy rates.'
-    - ''
-    - '&7Drag n'' drop onto &nenchantment book&7 to apply.'
+      - ""
+      - "&fTotem Rarity: %group-name%"
+      - "&7Apply to &7Enchantment Book"
+      - "&7to reroll the Destruction"
+      - "&7Rate of it."
+      - ""
+      - "&8Drag and drop the totem"
+      - "&8onto the item to apply it."
   black-scroll:
-    type: INK_SACK
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40006
     force-glow: false
-    name: '&f&lBlack Scroll'
+    name: "&f᪟ Rune of Extraction"
     lore:
-    - '&7Removes a random enchantment'
-    - '&7from an item and converts'
-    - '&7it into a &f%success%% &7success book.'
-    - '&fPlace scroll onto item to extract.'
+      - ""
+      - "&7Apply to removes a random"
+      - "&7enchantment from the item "
+      - "&7and converts it into a &f%destroy%%"
+      - "&7Destruction Rate book."
+      - ""
+      - "&8Drag and drop the rune"
+      - "&8onto the item to apply it."
     success: 95
     destroy: 5
     random: true
   secret-dust:
-    type: FIREBALL
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40020
     force-glow: false
-    name: '%group-color%%group-name%%group-color% Secret Dust &7(Right Click)'
+    name: "&f᪟ Arcane Bundle &8(Usable)"
     lore:
-    - '&7Contains: &bMagic, &fMystery &7dust.'
-    - '&7An unidentified satchel of dust.'
+      - "&7A mysterious bundle that"
+      - "&7might contain a &fLucky Gem"
+      - "&7if you're lucky enough."
+      - ""
+      - "&fBundle Rarity: %group-name%"
   mystery-dust:
-    type: SULPHUR
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40015
     force-glow: false
-    name: '&fMystery Dust'
+    name: "&fAbandon Stone"
     lore:
-    - '&7A failed bi-product'
-    - '&7of Magic dust.'
+      - "&7A useless stone"
+    settings:
+      shift-click: false
   magic-dust:
-    type: SUGAR
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40016
     force-glow: false
-    name: '%group-color%%group-name%%group-color% Magic Dust'
+    name: "&f᪟ Lucky Gem"
     lore:
-    - '&a+%percent%% Success'
-    - '&7Apply to a &7any %group-color%%group-name% &7Enchantment Book'
-    - '&7to increase its success by %group-color%%percent%%'
+      - ""
+      - "&fGem Rarity: %group-name%"
+      - "&7Apply to an Enchantment"
+      - "&7Book to reduce the rate"
+      - "&7of destruction by &f%percent%%"
+      - ""
+      - "&8Drag and drop the gem"
+      - "&8onto the item to apply it."
+
     messages:
-      cannotApplyToStacked: '&c&l(!) &cCannot be applied to stacked books'
+      cannotApplyToStacked: "&c→ Cannot be applied to stacked books"
   slot-increaser:
-    type: EYE_OF_ENDER
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40005
     force-glow: false
-    name: '%group-color%&l%group-name% Slot Increaser'
+    name: "&f%group-name% Universal Book"
     lore:
-    - '&7Increase slots limit on an item by &a+%count%'
+      - "&7Increase slots limit on"
+      - "&7an item by &a+%count%"
     messages:
       success:
-      - '&a&l(!) &aYou have successfully increased maximum slots on item by %count%!'
+        - "&a→ You have successfully increased maximum slots on item by %count%!"
   blocktrak:
-    type: SLIME_BALL
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40012
     force-glow: false
-    name: '&aBlockTrak Creator'
+    name: "&f᪟ Miner Scroll"
     lore:
-    - '&7Track how many blocks you break with a tool'
-    - '&7Drag ontop of another item to apply it'
+      - ""
+      - "&7Track how many blocks"
+      - "&7you break with a tool"
+      - ""
+      - "&8Drag and drop the scroll"
+      - "&8onto the item to apply it."
     messages:
       success:
-      - '&7You successfully applied &aBlockTrak Creator'
+        - "&7You successfully applied &aBlockTrak Creator"
     settings:
-      lore-display: '&eBlockTrak Blocks Broken: &6%stats%'
+      lore-display: "&eBlockTrak Blocks Broken: &6%stats%"
   fishtrak:
-    type: FIREWORK_STAR
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40011
     force-glow: false
-    name: '&bFishTrak Creator'
+    name: "&f᪟ Fisherman Scroll"
     lore:
-    - '&7Track how many fish you catch with a fishing rod'
-    - '&7Drag ontop of a fishing rod to apply it'
+      - ""
+      - "&7Track how many fish you"
+      - "&7catch with a fishing rod."
+      - ""
+      - "&8Drag and drop the scroll"
+      - "&8onto the item to apply it."
     messages:
       success:
-      - '&7You successfully applied &bFishTrak Creator'
+        - "&7You successfully applied &bFishTrak Creator"
     settings:
-      lore-display: '&eFishTrak Fish Caught: &6%stats%'
+      lore-display: "&eFishTrak Fish Caught: &6%stats%"
   stattrak:
-    type: MAGMA_CREAM
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40014
     force-glow: false
-    name: '&eStatTrak Creator'
+    name: "&f᪟ Warrior Scroll"
     lore:
-    - '&7Track how many kills you have with a weapon'
-    - '&7Drag ontop of another item to apply it'
+      - ""
+      - "&7Track how many kills you"
+      - "&7have with a weapon."
+      - ""
+      - "&8Drag and drop the scroll"
+      - "&8onto the item to apply it."
     messages:
       success:
-      - '&7You successfully applied &eStatTrak Creator'
+        - "&7You successfully applied &eStatTrak Creator"
     settings:
-      lore-display: '&eStatTrak Kills: &6%stats%'
+      lore-display: "&eStatTrak Kills: &6%stats%"
   mobtrak:
-    type: SLIME_BALL
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40013
     force-glow: false
-    name: '&3MobTrak Creator'
+    name: "&f᪟ Slayer Scroll"
     lore:
-    - '&7track how many mob kills you have with a weapon'
-    - '&7Drag ontop of another item to apply it'
+      - ""
+      - "&7track how many mob kills"
+      - "&7you have with a weapon."
+      - ""
+      - "&8Drag and drop the scroll"
+      - "&8onto the item to apply it."
     messages:
       success:
-      - '&7You successfully applied &3MobTrak Creator'
+        - "&7You successfully applied &3MobTrak Creator"
     settings:
-      lore-display: '&3MobTrak Kills: &f%stats%'
+      lore-display: "&3MobTrak Kills: &f%stats%"
   holywhitescroll:
     type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40008
     force-glow: false
-    name: '&6&lHoly White Scroll'
+    name: "&f᪟ Rune of Soulbound"
     lore:
-    - '&eA legendary reward that can'
-    - '&ebe applied to armor/weapons,'
-    - '&egives a 100% chance of not losing'
-    - '&ethe blessed item on death.'
+      - ""
+      - "&7A legendary reward that can"
+      - "&7be applied to &fArmor/Weapons,"
+      - "&7gives a &f100% &7chance of not"
+      - "&7lossing the item on death."
+      - ""
+      - "&8Drag and drop the scroll"
+      - "&8onto the item to apply it."
     messages:
       applied:
-      - '&7You successfully applied &6&lHoly White Scroll'
+        - "&7You successfully applied &6&lHoly White Scroll"
     settings:
-      lore-display: '&e&l*&f&lHOLY&e&l* &f&lPROTECTED'
+      lore-display: "&eProtected"
       # Keep holywhitescroll equipped to item even after death
       keep-after-death: false
   # Orbs allow applying x number of enchants
   orb:
-    lore: '&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])'
+    lore: "&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])"
     weapon:
-      material: EYE_OF_ENDER
-      custom-model-data: 0
+      material: PAPER
+      custom-model-data: 40004
       force-glow: false
-      name: '&6&lWeapon Enchantment Orb &6[&a&n%max%&6]'
+      name: "&f᪟ Tome of Weapon &8[&a%max%&8]"
       lore:
-      - '&a%success%% Success Rate'
-      - ''
-      - '&6+%new% Enchantment slots'
-      - '&6%max% Max Enchantment Slots'
-      - ''
-      - '&eIncreases the # of enchantment'
-      - '&eslots on a weapon by %new%,'
-      - '&eup to a maximum of %max%'
-      - '&7Drag n'' Drop onto an item to apply.'
+        - ""
+        - "&7Tome increases the slots"
+        - "&7of enchantment on your"
+        - "&7weapon by &f%new%&7, up to a max"
+        - "&7of &f%max%"
+        - ""
+        - "{#6ab04c}Successful Rate: &f%success%%"
+        - ""
+        - "&8Drag and drop the tome"
+        - "&8onto the item to apply it."
     armor:
-      material: EYE_OF_ENDER
-      custom-model-data: 0
+      material: PAPER
+      custom-model-data: 40002
       force-glow: false
-      name: '&6&lArmor Enchantment Orb &6[&a&n%max%&6]'
+      name: "&f᪟ Tome of Armor &8[&a%max%&8]"
       lore:
-      - '&a%success%% Success Rate'
-      - ''
-      - '&6+%new% Enchantment slots'
-      - '&6%max% Max Enchantment Slots'
-      - ''
-      - '&eIncreases the # of enchantment'
-      - '&eslots on a piece of armor by %new%,'
-      - '&eup to a maximum of %max%'
-      - '&7Drag n'' Drop onto an item to apply.'
+        - ""
+        - "&7Tome increases the slots"
+        - "&7of enchantment on your"
+        - "&7armor by &f%new%&7, up to a max"
+        - "&7of &f%max%"
+        - ""
+        - "{#6ab04c}Successful Rate: &f%success%%"
+        - ""
+        - "&8Drag and drop the tome"
+        - "&8onto the item to apply it."
     tool:
-      material: EYE_OF_ENDER
-      custom-model-data: 0
+      material: PAPER
+      custom-model-data: 40003
       force-glow: false
-      name: '&6&lTool Enchantment Orb &6[&a&n%max%&6]'
+      name: "&f᪟ Tome of Tool &8[&a%max%&8]"
       lore:
-      - '&a%success%% Success Rate'
-      - ''
-      - '&6+%new% Enchantment slots'
-      - '&6%max% Max Enchantment Slots'
-      - ''
-      - '&eIncreases the # of enchantment'
-      - '&eslots on a tool by %new%,'
-      - '&eup to a maximum of %max%'
-      - '&7Drag n'' Drop onto an item to apply.'
+        - ""
+        - "&7Tome increases the slots"
+        - "&7of enchantment on your"
+        - "&7tool by &f%new%&7, up to a max"
+        - "&7of &f%max%"
+        - ""
+        - "{#6ab04c}Successful Rate: &f%success%%"
+        - ""
+        - "&8Drag and drop the tome"
+        - "&8onto the item to apply it."
 
 # Related to armor items, put the
 # material name here to make it
@@ -440,59 +500,57 @@ items:
 armor-items:
   # Items that count as helmet
   helmet:
-  - HEAD
-  - SKULL_ITEM
-  - SKULL
-  - SKELETON_SKULL
-  - WITHER_SKELETON_SKULL
-  - PLAYER_HEAD
-  - CREEPER_HEAD
-  - DRAGON_HEAD
-  - ZOMBIE_HEAD
-  - NETHERITE_HELMET
-  - DIAMOND_HELMET
-  - GOLD_HELMET
-  - GOLDEN_HELMET
-  - IRON_HELMET
-  - CHAINMAIL_HELMET
-  - LEATHER_HELMET
-  - TURTLE_SHELL
-  - PUMPKIN
-  - CARVED_PUMPKIN
-  - TURTLE_HELMET
+    - HEAD
+    - SKULL_ITEM
+    - SKULL
+    - PLAYER_HEAD
+    - CREEPER_HEAD
+    - DRAGON_HEAD
+    - ZOMBIE_HEAD
+    - NETHERITE_HELMET
+    - DIAMOND_HELMET
+    - GOLD_HELMET
+    - GOLDEN_HELMET
+    - IRON_HELMET
+    - CHAINMAIL_HELMET
+    - LEATHER_HELMET
+    - TURTLE_SHELL
+    - PUMPKIN
+    - CARVED_PUMPKIN
+    - TURTLE_HELMET
   # - "FEATHER" # Custom Item Example
   # Items that count as chest plate
   chest-plate:
-  - NETHERITE_CHESTPLATE
-  - DIAMOND_CHESTPLATE
-  - GOLD_CHESTPLATE
-  - GOLDEN_CHESTPLATE
-  - IRON_CHESTPLATE
-  - CHAINMAIL_CHESTPLATE
-  - LEATHER_CHESTPLATE
-  - ELYTRA
+    - NETHERITE_CHESTPLATE
+    - DIAMOND_CHESTPLATE
+    - GOLD_CHESTPLATE
+    - GOLDEN_CHESTPLATE
+    - IRON_CHESTPLATE
+    - CHAINMAIL_CHESTPLATE
+    - LEATHER_CHESTPLATE
+    - ELYTRA
   # - "LEATHER" # Custom Item Example
   # Items that count as leggings
   leggings:
-  - LEGS
-  - DIAMOND_LEGGINGS
-  - NETHERITE_LEGGINGS
-  - GOLD_LEGGINGS
-  - GOLDEN_LEGGINGS
-  - IRON_LEGGINGS
-  - CHAINMAIL_LEGGINGS
-  - LEATHER_LEGGINGS
+    - LEGS
+    - DIAMOND_LEGGINGS
+    - NETHERITE_LEGGINGS
+    - GOLD_LEGGINGS
+    - GOLDEN_LEGGINGS
+    - IRON_LEGGINGS
+    - CHAINMAIL_LEGGINGS
+    - LEATHER_LEGGINGS
   # - "PAPER" # Custom Item Example
   # Items that count as boots
   boots:
-  - FEET
-  - DIAMOND_BOOTS
-  - NETHERITE_BOOTS
-  - GOLD_BOOTS
-  - GOLDEN_BOOTS
-  - IRON_BOOTS
-  - CHAINMAIL_BOOTS
-  - LEATHER_BOOTS
+    - FEET
+    - DIAMOND_BOOTS
+    - NETHERITE_BOOTS
+    - GOLD_BOOTS
+    - GOLDEN_BOOTS
+    - IRON_BOOTS
+    - CHAINMAIL_BOOTS
+    - LEATHER_BOOTS
 # - "EGG"
 
 white-scroll:
@@ -500,17 +558,22 @@ white-scroll:
   # Should the white scroll be removed once applied enchantment fails?
   delete: true
   # Display in item lore
-  lore-display: '&f&lPROTECTED'
+  lore-display: "&aProtected"
   item:
-    type: EMPTY_MAP
+    type: PAPER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 40007
     force-glow: false
-    name: '&fWhite Scroll'
+    name: "&f᪟ Rune of Protection"
     lore:
-    - '&fPrevents an item from being destroyed'
-    - '&fdue to a failed Enchantment Book.'
-    - '&ePlace scroll on item to apply.'
+      - ""
+      - "&7Prevents an item from"
+      - "&7being destroyed due to"
+      - "&7a failed enchantment."
+      - ""
+      - "&8Drag and drop the rune"
+      - "&8onto the item to apply it."
+  custom-model-data: 40007
 
 destroy:
   # Should book be destroyed if it fails?
@@ -541,17 +604,20 @@ enchantment-book:
     custom-model-data: 0
     force-glow: false
   # Variables: %enchant%, %enchant-no-color%, %description%, %level-description%, %applies%, %success%, %destroy%, %color%, %max-level%
-  name: '%group-color%&l&n%enchant-no-color% %level%'
+  name: "&f%group-name% %group-color%%enchant-no-color% &l%level%"
   lore:
-  - '&a%success%% Success Rate'
-  - '&c%destroy%% Destroy Rate'
-  - '&e%description%'
-  - '&7%applies-to% Enchantment'
-  - '&7Drag n'' drop onto item to enchant'
-
+    - ""
+    - "&f%description%"
+    - ""
+    - "{#eb2f06}Destruction Rate: &f%destroy%%"
+    - ""
+    - "&8Drag and drop the book"
+    - "&8onto the item to apply it."
+    - ""
+    - "&7⏏ &f%applies-to%"
 applies-groups:
   MISC_HELMETS:
-  - CARVED_PUMPKIN
+    - CARVED_PUMPKIN
   SKULL_ITEM: []
 
 settings:
@@ -616,24 +682,50 @@ settings:
   # issues with kills not counting towards players. If you find any issues
   # with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
   use-experimental-damage: false
+  # All blocks trench won't break.
+  trench-blacklist: []
+  # Trench Whitelist
+  # If list is not empty, will not allow to break any other blocks than listed here
+  trench-whitelist: []
+  # Whitelist for blocks VEIN_MINE can break.
+  veinmine-whitelist:
+    - COAL_ORE
+    - COPPER_ORE
+    - IRON_ORE
+    - GOLD_ORE
+    - LAPIS_ORE
+    - REDSTONE_ORE
+    - DIAMOND_ORE
+    - EMERALD_ORE
+    - NETHER_QUARTZ_ORE
+    - NETHER_GOLD_ORE
+    - ANCIENT_DEBRIS
+    - DEEPSLATE_COAL_ORE
+    - DEEPSLATE_COPPER_ORE
+    - DEEPSLATE_IRON_ORE
+    - DEEPSLATE_GOLD_ORE
+    - DEEPSLATE_LAPIS_ORE
+    - DEEPSLATE_REDSTONE_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - DEEPSLATE_EMERALD_ORE
   # Blocks that BREAK_EFFECT should ignore
   # WARNING if you remove any values, make sure to handle the blocks with conditions in enchantments
   break-block-effect-blacklist:
-  - SPAWNER
-  - AIR
-  - LAVA
-  - WATER
-  - CAULDRON
-  - BEDROCK
+    - SPAWNER
+    - AIR
+    - LAVA
+    - WATER
+    - CAULDRON
+    - BEDROCK
   # Worlds to disable enchantments in
   enchantment-world-blacklist:
-  - no_enchantments_world
+    - no_enchantments_world
   holy-whitescrolls-world-blacklist:
-  - no_holywhitescrolls_world
+    - no_holywhitescrolls_world
   # If a player is in any of the worlds listed, the FLY effect will not work.
   # Note that the world names are case-sensitive.
   fly-world-blacklist:
-  - no_fly_world
+    - no_fly_world
   open-enchanter-by-right-clicking-enchantment-table: false
   # If this is enabled, "Nether trees" (and mushrooms) will be counted as regular
   # trees for effects like BREAK_TREE.
@@ -646,7 +738,7 @@ settings:
   apply-cooldown: 20
   # White scroll material blacklist
   whitescroll-material-blacklist:
-  - STONE
+    - STONE
   # Amount of souls given per kill
   souls-per-kill: 1
   # TRENCH optimization system configuration
@@ -659,11 +751,15 @@ settings:
     # Setting this to FALSE will only make the plugin work with WorldGuard
     # Setting this to TRUE will let plugin choose between WG-only or Universal method, may cause performance loss
     automaticallyDetect: true
+  # Radius of the "LAVA_WALKER" enchant. Can't be less than 2 or more than 10.
+  lava-walker-radius: 2
+  # Same as lavawalker-range but for WATER_WALKER.
+  water-walker-radius: 2
   # Should souls be collected from mobs?
   collect-souls-from-mobs: false
   # Should souls be collected from players?
   collect-souls-from-players: false
-  
+
   # Show enchantment level for level 1 enchants?
   # E.g. if enabled, enchant "Gears I" would be shown as "Gears', but "Gears II" would stay the same.
   showFirstLevel: true
@@ -690,7 +786,7 @@ settings:
   #   if level description is set, but here it's still to %description%, the placeholder won't parse!
   lore-descriptions:
     enabled: false
-    display: '%group-color%* &8%description%'
+    display: "%group-color%* &8%description%"
   # Should block breaking effects, such as TRENCH or TP_DROPS give McMMO EXP?
   give-mcmmo-with-custom-block-breaks: true
   # Should placing of armor blocks be allowed? (IE CARVED_PUMPKIN's)

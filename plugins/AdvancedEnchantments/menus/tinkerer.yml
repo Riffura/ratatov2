@@ -43,17 +43,17 @@ general:
   # If the price type is exp, the exp item will be used.
   tinkerer-items:
     money:
-      type: PAPER
+      type: FEATHER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 9999
       name: "&cMoney Voucher &7(%amount%)"
       lore:
         - "&cReceived from &fEnchanter"
         - "&cReceived by &f%name%"
     exp:
-      type: EXP_BOTTLE
+      type: FEATHER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 9999
       name: "&a&lExperience Bottle &7(throw)"
       lore:
         - "&dValue &f%amount% XP"
@@ -71,26 +71,26 @@ inventory:
   # Sound on open tinkerer inventory.
   # Set to "none' to disable
   open-sound: "BLOCK_CHEST_OPEN"
-  name: "You                   Tinkerer"
+  name: "&f᪄᪓"
   items:
     # The item to accept the trade.
     accept-trade-item:
-      type: STAINED_GLASS_PANE
+      type: FEATHER
       id: 14
-      custom-model-data: 0
+      custom-model-data: 9999
       slot: 0
       name: "&eClick to ACCEPT trade"
-      lore: [ ]
+      lore: []
     # The item showed after accepting the trade.
     # If you want to disable this item, set
     # enabled-confirm-items to false. (see top of file)
     player-confirm-trade-item:
-      type: STAINED_GLASS_PANE
+      type: FEATHER
       id: 5
-      custom-model-data: 0
+      custom-model-data: 9999
       slot: 0
       name: "&aClick to confirm the transaction"
-      lore: [ ]
+      lore: []
       sound: BLOCK_LEVER_CLICK
     # The item showed after accepting the trade.
     # For default, the item is the same as player-confirm-trade-item
@@ -99,20 +99,20 @@ inventory:
       # If you want to disable this item
       # set to false.
       enabled: true
-      type: STAINED_GLASS_PANE
+      type: FEATHER
       id: 5
-      custom-model-data: 0
+      custom-model-data: 9999
       slot: 8
       name: "&aClick to confirm the transaction"
-      lore: [ ]
+      lore: []
     # The items that separate the player side and tinkerer side.
     splitter-item:
       enabled: true
-      type: THIN_GLASS
+      type: FEATHER
       id: 0
-      custom-model-data: 0
+      custom-model-data: 9999
       name: " "
-      lore: [ ]
+      lore: []
 
 # WARNING: Don't touch this
 version: 1.0.0

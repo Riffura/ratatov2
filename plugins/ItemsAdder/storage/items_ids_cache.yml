@@ -1,0 +1,43 @@
+PAPER:
+  _iainternal:icon_left_blue: 10000
+  _iainternal:icon_right_blue: 10001
+  _iainternal:icon_search: 10002
+  _iainternal:icon_cancel: 10003
+  _iainternal:icon_arrow_chest: 10004
+  _iainternal:icon_back_orange: 10005
+  _iainternal:icon_next_orange: 10006
+  hyronic_ae_configuration:armor_book: 40002
+  hyronic_ae_configuration:tool_book: 40003
+  hyronic_ae_configuration:weapon_book: 40004
+  hyronic_ae_configuration:universal_book: 40005
+  hyronic_ae_configuration:extraction_rune: 40006
+  hyronic_ae_configuration:protection_rune: 40007
+  hyronic_ae_configuration:soulbound_rune: 40008
+  hyronic_ae_configuration:revelation_rune: 40009
+  hyronic_ae_configuration:soul_rune: 40010
+  hyronic_ae_configuration:fisherman_scroll: 40011
+  hyronic_ae_configuration:miner_scroll: 40012
+  hyronic_ae_configuration:slayer_scroll: 40013
+  hyronic_ae_configuration:warrior_scroll: 40014
+  hyronic_ae_configuration:abandon_stone: 40015
+  hyronic_ae_configuration:lucky_gem: 40016
+  hyronic_ae_configuration:soul_gem: 40017
+  hyronic_ae_configuration:rename_quill: 40018
+  hyronic_ae_configuration:renewal_totem: 40019
+  hyronic_ae_configuration:arcane_bundle: 40020
+  hyronic_ae_configuration:simple_book: 40021
+  hyronic_ae_configuration:unique_book: 40022
+  hyronic_ae_configuration:elite_book: 40023
+  hyronic_ae_configuration:ultimate_book: 40024
+  hyronic_ae_configuration:legendary_book: 40025
+  hyronic_ae_configuration:fabled_book: 40026
+  hyronic_ae_configuration:cosmo_book: 40027
+FEATHER:
+  hyronic_utils:hc_transparent_item: 9999
+PLAYER_HEAD:
+  __manually_handled:_iainternal__player_phead_0: 10000
+  __manually_handled:_iainternal__player_parm_left_3: 10001
+  __manually_handled:_iainternal__player_pbody_2: 10002
+  __manually_handled:_iainternal__player_pleg_left_1: 10003
+  __manually_handled:_iainternal__player_pleg_right_5: 10004
+  __manually_handled:_iainternal__player_parm_right_4: 10005

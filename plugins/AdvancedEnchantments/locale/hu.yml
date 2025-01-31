@@ -53,7 +53,7 @@ commands:
       invalid-delay: "&c%delay% nem egy egész szám!"
       success: "&eA(z) &6%gkit%&e készlet késelteltetése meg lett változtatva &6%delay% &eértékre."
   main:
-    unknown-command: "&cHelytelen parancs használat! Írd be az \"/ae\" parancsot a helyes használatért."
+    unknown-command: "&cHelytelen parancs használat! �?rd be az \"/ae\" parancsot a helyes használatért."
     setsouls:
       invalid-usage: "&cHelytelen használat: /ae setsouls <mennyiség>"
       invalid-item: "&chelytelen tétel."
@@ -152,7 +152,7 @@ orbs:
 
 sets:
   commands:
-    unknown-command: "&cParancs nem található! Írd be \"/asets\" parancsot, hogy kilistázd az elérhető parancsokat."
+    unknown-command: "&cParancs nem található! �?rd be \"/asets\" parancsot, hogy kilistázd az elérhető parancsokat."
     invalid-usage: "&cHelytelen használat! Kérlek, futtasd át a(z) /asets parancsot a megfelelő használatért."
     invalid-set: "&cEz a szett helytelen."
     invalid-set-piece: "&cÉrvénytelen szett darab. Csak ezeket használhatod: \n%set pieces%"

@@ -195,7 +195,7 @@ items:
 combining:
   already-max-level: "To zaklęcie jest już na maksymalnym poziomie!"
   success: "&aSukces! &7%enchant% jest teraz na poziomie %level%!"
-  failure: "&cŁączenie się nie powiodło!"
+  failure: "&c�?ączenie się nie powiodło!"
   something-went-wrong: "&cCoś nie powiodło się z łączeniem."
 
 enchant-limitations:
@@ -217,5 +217,3 @@ chances:
 
 destroy:
   book-failed: "&cZaklęcie nie powiodło się!"
-
-#EXaYhEa5wmVWN2T4QVZnJTdNNTY1UERNNTTE5EeZRlT69mVT5GOBR1NWxGTwknejBXUNZzN

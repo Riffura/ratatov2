@@ -2,21 +2,21 @@
 #  Change commands how to access it in top of config.yml
 
 # set to "none" to disable
-open-sound: "ENDERDRAGON_WINGS"
+open-sound: ENDERDRAGON_WINGS
 # In what worlds enchanter is disabled
 disabled-in-worlds:
-  - "bad_world"
+  - bad_world
 messages:
   sound: ENTITY_PLAYER_LEVELUP
 right-click-to-view-enchants: true
 go-back-item:
   enabled: true
   item:
-    type: NETHER_STAR
+    type: FEATHER
     id: 0
-    custom-model-data: 0
+    custom-model-data: 9999
   name: "&c&lGo Back"
-  lore: [ ]
+  lore: []
 # Should enchanter stay open after item is bought?
 keep-open: true
 # Enchanter inventory size
@@ -29,154 +29,355 @@ keep-open: true
 # Economy:
 # exp, money, level, souls (works with items that are held when opening inventory), diamonds, gold (gold ingots), emeralds
 inventory:
-  size: 18
-  name: "&7Server Enchanter"
+  size: 44
+  name: "&f᪄᪐"
   settings:
     # Which level books should enchanter give?
     # "ALL" - gives all levels
     # <number> - Gives specific level of enchant
-    enchanterBookLevel: "ALL"
+    enchanterBookLevel: ALL
   items:
-    0-18:
+    "1":
       item:
-        type: STAINED_GLASS_PANE
-        id: 7
-        custom-model-data: 0
-        force-glow: false
-      name: " "
-      lore: [ ]
-    2:
-      item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 0
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: SIMPLE
       price: exp:400
       sound: BLOCK_ANVIL_LAND
-      name: "&f&lSimple Enchantment &7(Right Click)"
+      name: "&f᪗ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&fsimple &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    3:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪗"
+        - ""
+        - "&f→ &7Click to purchase this book"
+    "3":
       item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 5
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: UNIQUE
       sound: BLOCK_ANVIL_LAND
       price: exp:800
-      name: "&a&lUnique Enchantment &7(Right Click)"
+      name: "&f᪘ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&aunique &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    4:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪘"
+        - ""
+        - "&f→ &7Click to purchase this book"
+    "5":
       item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 3
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: ELITE
       price: exp:2500
       sound: BLOCK_ANVIL_LAND
-      name: "&b&lElite Enchantment &7(Right Click)"
+      name: "&f᪙ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&belite &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    5:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪙"
+        - ""
+        - "&f→ &7Click to purchase this book"
+    "7":
       item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 4
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: ULTIMATE
       price: exp:5000
       sound: BLOCK_ANVIL_LAND
-      name: "&e&lUltimate Enchantment &7(Right Click)"
+      name: "&f᪚ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&eultimate &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    6:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪚"
+        - ""
+        - "&f→ &7Click to purchase this book"
+    "19":
       item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 1
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: LEGENDARY
       price: exp:25000
       sound: BLOCK_ANVIL_LAND
-      name: "&6&lLegendary Enchantment &7(Right Click)"
+      name: "&f᪛ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&6legendary &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    13:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪛"
+        - ""
+        - "&f→ &7Click to purchase this book"
+    "21":
       item:
-        type: STAINED_GLASS_PANE
+        type: FEATHER
         id: 6
-        custom-model-data: 0
+        custom-model-data: 9999
         force-glow: false
       enchant-group: FABLED
       price: exp:40000
       sound: BLOCK_ANVIL_LAND
-      name: "&d&lFabled Enchantment &7(Right Click)"
+      name: "&f᪜ Random Enchantment"
       lore:
-        - "&7Examine to receive a random"
-        - "&dfabled &7enchantment book."
         - ""
-        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
-    9:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "&8You'll receive a random book"
+        - "&8based on rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}%price%&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &f᪜"
+        - ""
+        - "&f→ &7Click to purchase this book"
+
+    "23":
       item:
-        type: ANVIL
+        type: PAPER
         id: 0
-        custom-model-data: 0
+        custom-model-data: 40027
         force-glow: false
       sound: BLOCK_ANVIL_USE
       player-command:
-        - "tinkerer"
-      name: "&fOpen &b&lTinkerer &7(Right Click)"
+        - "buy_random_enchantrcbook"
+      name: "&f᪝ Random Enchantment"
       lore:
-        - "&7Tinker books for Magic Dusts and EXP."
         - ""
-        - "&b&lRight Click to visit"
-    17:
+        - "{#dff9fb}A book with mysterious spirit,"
+        - "{#dff9fb}concealed occult magic inside"
+        - "{#dff9fb}it, emitting an eerie light."
+        - ""
+        - "{#f7d794}You'll receive a random book"
+        - "{#f7d794}with random rarity when used."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}20.000&f᪠"
+        - "&7ʙᴏᴏᴋ ʀᴀʀɪᴛʏ: &fRandom"
+        - ""
+        - "&f→ &7Click to purchase this book"
+
+    "25":
       item:
-        type: ENDER_PORTAL_FRAME
+        type: PAPER
         id: 0
-        custom-model-data: 0
+        custom-model-data: 40020
+        force-glow: false
+      sound: BLOCK_ANVIL_USE
+      player-command:
+        - "buy_arcane_satchel"
+      name: "&f᪝ Arcane Satchel"
+      lore:
+        - ""
+        - "{#e2ace5}A mysterious satchel, when"
+        - "{#e2ace5}opened has a chance to"
+        - "{#e2ace5}receive a {#d696d6}Lucky Gem."
+        - ""
+        - "&7ʙᴜʏ ᴘʀɪᴄᴇ: {#c0e45a}10.000&f᪠"
+        - ""
+        - "&f→ &7Click to purchase this"
+
+    "36":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: BLOCK_ANVIL_USE
+      player-command:
+        - tinkerer
+      name: "&f᪞ Tinkerer Menu"
+      lore:
+        - ""
+        - "{#dff9fb}Convert  your enchant"
+        - "{#dff9fb}books into Secret Gems"
+        - "{#dff9fb}and Experience Bottles"
+        - ""
+        - "&f→&7 Open tinkerer menu"
+    "37":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: BLOCK_ANVIL_USE
+      player-command:
+        - tinkerer
+      name: "&f᪞ Tinkerer Menu"
+      lore:
+        - ""
+        - "{#dff9fb}Convert  your enchant"
+        - "{#dff9fb}books into Secret Gems"
+        - "{#dff9fb}and Experience Bottles"
+        - ""
+        - "&f→&7 Open tinkerer menu"
+    "38":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: BLOCK_ANVIL_USE
+      player-command:
+        - tinkerer
+      name: "&f᪞ Tinkerer Menu"
+      lore:
+        - ""
+        - "{#dff9fb}Convert  your enchant"
+        - "{#dff9fb}books into Secret Gems"
+        - "{#dff9fb}and Experience Bottles"
+        - ""
+        - "&f→&7 Open tinkerer menu"
+
+    "39":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
         force-glow: false
       sound: ENTITY_ARROW_HIT
       player-command:
-        - "alchemist"
-      name: "&fOpen &b&lAlchemist &7(Right Click)"
+        - alchemist
+      name: "&f᪞ Alchemist Menu"
       lore:
-        - "&7Combine Books and Magic Dusts."
         - ""
-        - "&b&lRight Click to visit"
+        - "{#dff9fb}Combine two enchants"
+        - "{#dff9fb}books or Lucky Gems"
+        - "{#dff9fb}into a better one."
+        - ""
+        - "&f→&7 Open alchemist menu"
+    "40":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: ENTITY_ARROW_HIT
+      player-command:
+        - alchemist
+      name: "&f᪞ Alchemist Menu"
+      lore:
+        - ""
+        - "{#dff9fb}Combine two enchants"
+        - "{#dff9fb}books or Lucky Gems"
+        - "{#dff9fb}into a better one."
+        - ""
+        - "&f→&7 Open alchemist menu"
+
+    "41":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: ITEM_BOOK_PAGE_TURN
+      player-command:
+        - enchants
+      name: "&f᪞ Enchantment Dictionary"
+      lore:
+        - ""
+        - "{#dff9fb}View all information about "
+        - "{#dff9fb}the enchants available on"
+        - "{#dff9fb}the server."
+        - ""
+        - "&f→&7 Open the dictionary"
+    "42":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      sound: ITEM_BOOK_PAGE_TURN
+      player-command:
+        - enchants
+      name: "&f᪞ Enchantment Dictionary"
+      lore:
+        - ""
+        - "{#dff9fb}View all information about "
+        - "{#dff9fb}the enchants available on"
+        - "{#dff9fb}the server."
+        - ""
+        - "&f→&7 Open the dictionary menu"
+
+    "43":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      console-command:
+        - closeinv %player%
+      name: "&fClose Menu"
+      lore: []
+    "44":
+      item:
+        type: FEATHER
+        id: 0
+        custom-model-data: 9999
+        force-glow: false
+      console-command:
+        - closeinv %player%
+      name: "&fClose Menu"
+      lore: []
 
 # Confirmation inventory for enchanter payments
 # Confirm or deny the transaction, acts like 2-step confirmation
 confirmation-inventory:
   enabled: true
-  name: "&aConfirmation Inventory"
+  name: "&f᪄᪑"
   accept:
-    material: STAINED_GLASS_PANE
-    damage: 5
-    name: "&aAccept Transaction"
+    material: FEATHER
+    custom-model-data: 9999
+    name: "&aAccept transaction"
     lore:
-      - "&7Click this to pay %price% with %paymentType%"
+      - "&7→ Cost: {#c0e45a}%price%&f᪠"
+    damage: 5
   cancel:
-    material: STAINED_GLASS_PANE
+    material: FEATHER
+    custom-model-data: 9999
+    name: "&cCancel transaction."
+    lore: []
     damage: 14
-    name: "&cClick to cancel"
-    lore: [ ]

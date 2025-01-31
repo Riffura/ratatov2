@@ -25,8 +25,8 @@ general:
       # Only works if let-plugin-count is false.
       custom-price: 250
     other-items-slot:
-      first-item-slot: 3
-      second-item-slot: 5
+      first-item-slot: 10
+      second-item-slot: 12
 
 # Options for customization of alchemist inventory.
 inventory:
@@ -35,7 +35,7 @@ inventory:
   open-sound: "BLOCK_CHEST_OPEN"
 
   # The title of the inventory.
-  name: "&8Alchemist"
+  name: "&f᪄᪒"
 
   # The size of the inventory.
   # Must be a multiple of 9. (9, 18, 27, 36, 45, 54)
@@ -43,49 +43,46 @@ inventory:
 
   items:
     preview-item:
-      type: STAINED_GLASS_PANE
+      type: FEATHER
       damage: 0
-      custom-model-data: 0
-      slot: 13
-      name: "&e&lItem Preview"
+      custom-model-data: 9999
+      slot: 14
+      name: "&fResult Item Preview"
       lore:
-        - "&7A preview of item you will"
-        - "&7receive from the Alchemist"
-        - "&7will be displayed here."
+        - ""
+        - "{#dff9fb}A preview of item you will"
+        - "{#dff9fb}receive from the Alchemist"
+        - "{#dff9fb}will be displayed here."
     explanation-item:
-      type: STAINED_GLASS_PANE
-      damage: 14
-      custom-model-data: 0
-      slot: 22
-      name: "&e&lAlchemist"
+      type: FEATHER
+      damage: 16
+      custom-model-data: 9999
+      slot: 16
+      name: "&7The Alchemist will Exchange:"
       lore:
-        - "&7The Alchemist will Exchange..."
         - ""
         - "&b&l* &f2X Enchantment Books"
-        - "&7(of the same type and level)"
+        - "&7(of the same type & level)"
         - "&d= &f1X Enchantment Book"
         - "&7(of higher level)"
         - ""
-        - "&b&l* &f2X Magic Dust"
+        - "&b&l* &f2X Lucky Gem"
         - "&7(of the same rarity)"
-        - "&d= &f1X Magic Dust"
+        - "&d= &f1X Lucky Gem"
         - "&7(of higher chances)"
     confirm-item:
-      type: STAINED_GLASS_PANE
-      damage: 5
-      custom-model-data: 0
-      slot: 22
-      name: "&b&lCLICK TO EXCHANGE"
+      type: FEATHER
+      damage: 16
+      custom-model-data: 9999
+      slot: 16
+      name: "&fClick confirm to exchange"
       lore:
-        - "&c&lCOSTS &c%price% EXP"
-        - ""
-        - "&7Click here to confirm this"
-        - "&7item exchange and receive your"
-        - "&7epic new item shown above!"
+        - "&7Exchange Price: {#c0e45a}%price%&f᪠"
     filler-item:
       # Enable or disable the filler item.
       enabled: true
-      type: STAINED_GLASS_PANE
+      type: FEATHER
+      custom-model-data: 9999
       damage: 15
       name: " "
-      lore: [ ]
+      lore: []

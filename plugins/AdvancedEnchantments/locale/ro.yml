@@ -25,7 +25,6 @@ effects:
   used: "&r%enchant-color% %level%"
 
 commands:
-
   no-permission: "&cNu ai permisiunea de a face asta!"
   offline-player: "&cAcel jucător nu este online!"
   enchantment-not-found: "&cEnchantul &c&n%enchant%&c nu a putut fi găsit."
@@ -51,7 +50,7 @@ commands:
     less-than-one: "&cNumărul trebuie să fie pozitiv."
     invalid-item: "&cItem invalid."
   aegive:
-    invalid-material: "&cMaterial invalid. Vă rugăm să consultați fișierul "materials.yml" pentru toate materialele valide."
+    invalid-material: '&cMaterial invalid. Vă rugăm să consultați fișierul "materials.yml" pentru toate materialele valide.'
     invalid-item-flag: "&cItemFlag invalid! Puteți alege dintre următoarele opțiuni: %itemflags%"
     invalid-enchantment: "&cEnchant invalid!"
     success: "&aAm dat &2%amount%x %material% &alui %player%&a!"
@@ -71,7 +70,7 @@ commands:
       invalid-delay: "&c%delay% nu este un număr valid!"
       success: "&eAm schimbat întarzierea kitului &6%gkit%&e la &6%delay%"
   main:
-    unknown-command: "&cUtilizare comandă incorectă! Tastează \"/ae\" pentru instrucțiunile corecte de utilizare."
+    unknown-command: '&cUtilizare comandă incorectă! Tastează "/ae" pentru instrucțiunile corecte de utilizare.'
     setsouls:
       invalid-usage: "&cUtilizare incorectă: /ae setsouls <amount>"
       invalid-item: "&cItem invalid."
@@ -170,7 +169,7 @@ orbs:
 
 sets:
   commands:
-    unknown-command: "&cComanda nu a fost găsită! Tastați \"/asets\" pentru o listă cu toate comenzile valide."
+    unknown-command: '&cComanda nu a fost găsită! Tastați "/asets" pentru o listă cu toate comenzile valide.'
     invalid-usage: "&cInvalid usage! Please reference /asets for the proper usage."
     invalid-set: "&cSetul este invalid."
     invalid-set-piece: "&cPiesă de set invalidă, puteți folosi una dintre variantele următoare: \n%set pieces%"
