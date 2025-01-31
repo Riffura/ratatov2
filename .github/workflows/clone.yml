@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone repository to target directory
         env:
-          REPO_URL: "https://github.com/example/repo.git" # Ganti dengan URL repo yang ingin dikloning
+          REPO_URL: "https://github.com/Riffura/pl.git" # Ganti dengan URL repo yang ingin dikloning
           TARGET_DIR: "./plugins" # Ganti dengan direktori target
         run: |
           git clone "$REPO_URL" "$TARGET_DIR"
