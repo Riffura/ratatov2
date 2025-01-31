@@ -25,7 +25,6 @@ _iainternal:cooking: 
 _iainternal:blank_menu: 
 _iainternal:anvil_repair: 
 _iainternal:smithing: 
-hyronic_utils:hu_gui_shift: ᪄
 hyronic_ae_configuration:gui_enchanter: ᪐
 hyronic_ae_configuration:gui_confirm: ᪑
 hyronic_ae_configuration:gui_alchemist: ᪒
@@ -59,3 +58,4 @@ hyronic_ae_configuration:food: ᪭
 hyronic_ae_configuration:chestplate: ᪮
 hyronic_ae_configuration:trident: ᪯
 hyronic_ae_configuration:fishing_rod: ᪰
+hyronic_utils:hu_gui_shift: ᪄
