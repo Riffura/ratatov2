@@ -16,8 +16,8 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1738282904811
-  login: 1738282588680
+  logout: 1738285491626
+  login: 1738285473120
 money: '0'
 last-account-name: mimmichannz
 logoutlocation:
@@ -26,5 +26,5 @@ logoutlocation:
   x: -1265.3759
   y: 63.0
   z: -1764.9056
-  yaw: -9.487167358398438
-  pitch: 7.578033447265625
+  yaw: 0.0
+  pitch: 0.0
