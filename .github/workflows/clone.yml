@@ -20,7 +20,7 @@ jobs:
           TARGET_DIR: "./plugins/" # Ganti dengan direktori target
         run: |
           git clone "$REPO_URL" "$REPO_NAME"
-          mv -f "$REPO_NAME"/* "$TARGET_DIR"/
+          rsync -a --delete "$REPO_NAME"/ "$TARGET_DIR"/
           rm -rf "$REPO_NAME"
 
       - name: Commit and push changes
