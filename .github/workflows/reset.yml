@@ -1,0 +1,16 @@
+name: Reset Commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Reset commit history
+        run: |
+          git reset --hard HEAD~2
+          git push origin HEAD --force
