@@ -138,8 +138,10 @@
       "apple": "2025-01-30 09:30:17 +0000",
       "bread": "2025-01-30 09:25:49 +0000",
       "cooked_mutton": "2025-02-01 02:36:50 +0000",
+      "cooked_beef": "2025-02-01 04:57:02 +0000",
       "beef": "2025-01-30 14:30:43 +0000",
-      "baked_potato": "2025-02-01 02:12:35 +0000"
+      "baked_potato": "2025-02-01 02:12:35 +0000",
+      "porkchop": "2025-02-01 04:56:03 +0000"
     },
     "done": false
   },
@@ -580,6 +582,7 @@
       "minecraft:zombie": "2025-01-30 13:36:51 +0000",
       "minecraft:creeper": "2025-02-01 02:13:28 +0000",
       "minecraft:drowned": "2025-02-01 02:14:07 +0000",
+      "minecraft:zombie_villager": "2025-02-01 05:00:48 +0000",
       "minecraft:ravager": "2025-02-01 01:16:21 +0000"
     },
     "done": false
@@ -1046,105 +1049,21 @@
     },
     "done": true
   },
-  "incendium:technical/sentrys_wrath": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/inventory/sentrys_wrath": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/feed_ghastling": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/on_player_hurt": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/firestorm": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/inventory/firestorm": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/give_ghastling": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/on_kill": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/multiplex_crossbow": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/on_inventory_change": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/holy_wrath": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "incendium:technical/on_block": {
-    "criteria": {
-      "log_spam_fixer": "2025-02-01 02:42:48 +0000"
-    },
-    "done": false
-  },
-  "minecraft:recipes/misc/magenta_dye_from_lilac": {
-    "criteria": {
-      "has_lilac": "2025-02-01 02:36:33 +0000"
-    },
-    "done": true
-  },
-  "kattersstructures:village/village_birch": {
-    "criteria": {
-      "village_mesa": "2025-02-01 02:27:31 +0000"
-    },
-    "done": true
-  },
-  "nova_structures:adventure/find_all_illager_structures": {
-    "criteria": {
-      "illager_camp": "2025-02-01 02:40:11 +0000"
-    },
-    "done": false
-  },
   "minecraft:story/deflect_arrow": {
     "criteria": {
       "deflected_projectile": "2025-02-01 02:12:47 +0000"
     },
     "done": true
   },
-  "kattersstructures:ambient/villager_ocean": {
+  "minecraft:recipes/misc/firework_rocket_simple": {
     "criteria": {
-      "villager_ocean": "2025-02-01 02:39:40 +0000"
+      "has_gunpowder": "2025-02-01 02:13:29 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2025-02-01 02:13:29 +0000"
     },
     "done": true
   },
@@ -1154,45 +1073,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/flint_and_steel": {
-    "criteria": {
-      "has_obsidian": "2025-02-01 02:38:44 +0000"
-    },
-    "done": true
-  },
-  "minecraft:story/form_obsidian": {
-    "criteria": {
-      "obsidian": "2025-02-01 02:38:44 +0000"
-    },
-    "done": true
-  },
-  "kattersstructures:ambient/villager_all": {
-    "criteria": {
-      "villager_ocean": "2025-02-01 02:39:40 +0000"
-    },
-    "done": false
-  },
-  "minecraft:recipes/redstone/dispenser": {
-    "criteria": {
-      "has_bow": "2025-02-01 02:33:47 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/light_gray_banner": {
     "criteria": {
       "has_light_gray_wool": "2025-02-01 02:21:59 +0000"
     },
     "done": true
   },
-  "kattersstructures:ambient/a_villager_statue": {
-    "criteria": {
-      "villager_ocean": "2025-02-01 02:39:40 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/light_gray_carpet": {
     "criteria": {
       "has_light_gray_wool": "2025-02-01 02:21:59 +0000"
+    },
+    "done": true
+  },
+  "kattersstructures:village/village_birch": {
+    "criteria": {
+      "village_mesa": "2025-02-01 02:27:31 +0000"
     },
     "done": true
   },
@@ -1208,21 +1103,148 @@
     },
     "done": false
   },
-  "minecraft:recipes/misc/firework_rocket_simple": {
+  "minecraft:recipes/redstone/dispenser": {
     "criteria": {
-      "has_gunpowder": "2025-02-01 02:13:29 +0000"
+      "has_bow": "2025-02-01 02:33:47 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/tnt": {
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
     "criteria": {
-      "has_gunpowder": "2025-02-01 02:13:29 +0000"
+      "has_lilac": "2025-02-01 02:36:33 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/flint_and_steel": {
+    "criteria": {
+      "has_obsidian": "2025-02-01 02:38:44 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2025-02-01 02:38:44 +0000"
     },
     "done": true
   },
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2025-02-01 02:38:44 +0000"
+    },
+    "done": true
+  },
+  "kattersstructures:ambient/villager_ocean": {
+    "criteria": {
+      "villager_ocean": "2025-02-01 02:39:40 +0000"
+    },
+    "done": true
+  },
+  "kattersstructures:ambient/villager_all": {
+    "criteria": {
+      "villager_ocean": "2025-02-01 02:39:40 +0000"
+    },
+    "done": false
+  },
+  "kattersstructures:ambient/a_villager_statue": {
+    "criteria": {
+      "villager_ocean": "2025-02-01 02:39:40 +0000"
+    },
+    "done": true
+  },
+  "nova_structures:adventure/find_all_illager_structures": {
+    "criteria": {
+      "illager_camp": "2025-02-01 02:40:11 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/sentrys_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/inventory/sentrys_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/feed_ghastling": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/on_player_hurt": {
+    "criteria": {
+      "requirement": "2025-02-01 05:03:38 +0000",
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": true
+  },
+  "incendium:technical/firestorm": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/inventory/firestorm": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/give_ghastling": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/on_kill": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/multiplex_crossbow": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/on_inventory_change": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/holy_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "incendium:technical/on_block": {
+    "criteria": {
+      "log_spam_fixer": "2025-02-01 05:03:02 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/food/cooked_cod_from_smoking": {
+    "criteria": {
+      "has_cod": "2025-02-01 04:59:06 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod_from_campfire_cooking": {
+    "criteria": {
+      "has_cod": "2025-02-01 04:59:06 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod": {
+    "criteria": {
+      "has_cod": "2025-02-01 04:59:06 +0000"
     },
     "done": true
   },
