@@ -2,7 +2,7 @@ uuid: 452cb59a-adf3-3ebe-814b-53015c4e4279
 skills:
   auraskills/agility:
     level: 1
-    xp: 23.301600000000008
+    xp: 31.701600000000006
   auraskills/enchanting:
     level: 0
     xp: 0.0
@@ -29,10 +29,10 @@ skills:
     xp: 0.0
   auraskills/defense:
     level: 0
-    xp: 0.0
+    xp: 78.8736035823822
   auraskills/fighting:
-    level: 1
-    xp: 136.0
+    level: 2
+    xp: 63.80000000000001
 mana: 22.0
 action_bar:
   idle: true
