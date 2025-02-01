@@ -1,6 +1,6 @@
 teleportenabled: true
 teleportauto: false
-godmode: true
+godmode: false
 muted: false
 jailed: false
 ip-address: 103.171.245.75
@@ -17,7 +17,7 @@ timestamps:
   jail: 0
   onlinejail: 0
   logout: 1738341357683
-  login: 1738340461669
+  login: 1738372209705
 money: '0'
 last-account-name: ItzYuuRz
 logoutlocation:
